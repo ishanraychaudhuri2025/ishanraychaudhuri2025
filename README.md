@@ -46,6 +46,13 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
   <img src="https://img.shields.io/badge/N8N-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" />
 </p>
 
+### ☁️ Cloud, DevOps & Infrastructure
+
+<p>
+  <img src="https://img.shields.io/badge/DOCKER-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/WSL-4D4D4D?style=for-the-badge&logo=linux&logoColor=white" />
+</p>
+
 ---
 
 ## 🧠 Areas of Interest
