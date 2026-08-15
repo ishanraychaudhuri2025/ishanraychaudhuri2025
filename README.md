@@ -26,7 +26,9 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
   <img src="https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/JAVA-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
   <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" />
-  <img src="https://img.shields.io/badge/MATLAB-0000A0?style=for-the-badge&logo=matlab&logoColor=white" />
+  <a href="https://www.mathworks.com/products/matlab.html">
+  <img src="https://img.shields.io/badge/MATLAB-0000A0?style=for-the-badge" />
+</a>
 </p>
 
 ### Data Science
@@ -34,7 +36,9 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
 <p>
   <img src="https://img.shields.io/badge/NUMPY-013243?style=for-the-badge&logo=numpy&logoColor=white" />
   <img src="https://img.shields.io/badge/PANDAS-150458?style=for-the-badge&logo=pandas&logoColor=white" />
-  <img src="https://img.shields.io/badge/MATLAB-0000A0?style=for-the-badge&logo=matlab&logoColor=white" />
+  <a href="https://www.mathworks.com/products/matlab.html">
+  <img src="https://img.shields.io/badge/MATLAB-0000A0?style=for-the-badge" />
+</a>
 </p>
 
 ### Scripting & Automation
