@@ -19,8 +19,6 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
 
 ---
 
-## 💻 Tech Stack
-
 ### 💻 Programming Languages
 
 <p>
@@ -29,7 +27,7 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
   <img src="https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/JAVA-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
   <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" />
-  <img src="./assets/matlab-badge.svg" alt="MATLAB" width="110" height="28" />
+  <img src="./assets/matlab-badge.svg" alt="MATLAB" />
 </p>
 
 ### 📊 Data Science & Scientific Computing
@@ -37,29 +35,15 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
 <p>
   <img src="https://img.shields.io/badge/NUMPY-013243?style=for-the-badge&logo=numpy&logoColor=white" />
   <img src="https://img.shields.io/badge/PANDAS-150458?style=for-the-badge&logo=pandas&logoColor=white" />
-  <img src="./assets/matlab-badge.svg" alt="MATLAB" width="110" height="28" />
+  <img src="./assets/matlab-badge.svg" alt="MATLAB" />
 </p>
 
 ### ⚙️ Scripting & Automation
 
 <p>
   <img src="https://img.shields.io/badge/BASH_SCRIPT-121011?style=for-the-badge&logo=gnubash&logoColor=white" />
-  <img src="https://img.shields.io/badge/POWERSHELL-5391FE?style=for-the-badge&logo=powershell&logoColor=white" />
+  <img src="./assets/powershell-badge.svg" alt="PowerShell" />
   <img src="https://img.shields.io/badge/N8N-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" />
-</p>
-
-### 🗄️ Databases
-
-<p>
-  <img src="https://img.shields.io/badge/MYSQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
-  <img src="https://img.shields.io/badge/ORACLE_DATABASE-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
-</p>
-
-### ☁️ Cloud, DevOps & Infrastructure
-
-<p>
-  <img src="https://img.shields.io/badge/DOCKER-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/WSL-4D4D4D?style=for-the-badge&logo=linux&logoColor=white" />
 </p>
 
 ---
