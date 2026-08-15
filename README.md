@@ -1,6 +1,8 @@
-# Hey, Ishan here✌
-🔗 This is my college GitHub account.
-For my main projects, personal work, and broader development journey, visit my official GitHub account
+# Hey, Ishan here ✌️
+
+🔗 **This is my college GitHub account.**  
+For my main projects, personal work, and broader development journey, visit my official GitHub account.
+
 <p>
   <a href="https://github.com/IshanRayC">
     <img src="https://img.icons8.com/ios-filled/30/ffffff/github.png" width="24" />
@@ -10,15 +12,14 @@ For my main projects, personal work, and broader development journey, visit my o
 
 ### Computer Science Student | Learning, Building & Exploring
 
-🎓 **B.Tech Computer Science & Engineering (Core)**
+🎓 **B.Tech Computer Science & Engineering (Core)**  
 🏫 **VIT Chennai** · 3rd Semester
-I'm a Computer Science student interested in **Software Engineering, AI/ML, Data Science, Finance, Quant and High Frequenct Trading, Cloud, DevOps and Automation**.
+
+I'm a Computer Science student interested in **Software Engineering, AI/ML, Data Science, Finance, Quantitative & High-Frequency Trading, Cloud, DevOps and Automation**.
 
 ---
 
 ## 💻 Tech Stack
-
-### 💻 Programming Languages
 
 ### 💻 Programming Languages
 
@@ -31,7 +32,7 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
   <img src="./assets/matlab-badge.svg" alt="MATLAB" width="110" height="28" />
 </p>
 
-### 📊 Data Science
+### 📊 Data Science & Scientific Computing
 
 <p>
   <img src="https://img.shields.io/badge/NUMPY-013243?style=for-the-badge&logo=numpy&logoColor=white" />
@@ -39,7 +40,7 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
   <img src="./assets/matlab-badge.svg" alt="MATLAB" width="110" height="28" />
 </p>
 
-### Scripting & Automation
+### ⚙️ Scripting & Automation
 
 <p>
   <img src="https://img.shields.io/badge/BASH_SCRIPT-121011?style=for-the-badge&logo=gnubash&logoColor=white" />
@@ -47,24 +48,31 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
   <img src="https://img.shields.io/badge/N8N-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" />
 </p>
 
-### Databases
+### 🗄️ Databases
 
 <p>
   <img src="https://img.shields.io/badge/MYSQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
   <img src="https://img.shields.io/badge/ORACLE_DATABASE-F80000?style=for-the-badge&logo=oracle&logoColor=white" />
 </p>
 
+### ☁️ Cloud, DevOps & Infrastructure
+
+<p>
+  <img src="https://img.shields.io/badge/DOCKER-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
+  <img src="https://img.shields.io/badge/WSL-4D4D4D?style=for-the-badge&logo=linux&logoColor=white" />
+</p>
+
 ---
 
 ## 🧠 Areas of Interest
 
-* 💻 Software Engineering
-* 🤖 Artificial Intelligence & Machine Learning
-* 📊 Data Science
-* 📈 Quantitative Finance & HFT
-* ☁️ Cloud Computing & DevOps
-* 🌐 Web Scraping
-* ⚙️ AI Automation
+- 💻 Software Engineering
+- 🤖 Artificial Intelligence & Machine Learning
+- 📊 Data Science
+- 📈 Quantitative Finance & HFT
+- ☁️ Cloud Computing & DevOps
+- 🌐 Web Scraping
+- ⚙️ AI Automation
 
 ---
 
@@ -74,12 +82,12 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
 
 ## 🎯 Goals
 
-* Build strong Computer Science fundamentals
-* Become a better software engineer
-* Develop practical AI/ML and Data Science skills
-* Learn cloud infrastructure and DevOps
-* Explore quantitative finance and high-performance systems
-* Build and contribute to meaningful projects
+- Build strong Computer Science fundamentals
+- Become a better software engineer
+- Develop practical AI/ML and Data Science skills
+- Learn cloud infrastructure and DevOps
+- Explore quantitative finance and high-performance systems
+- Build and contribute to meaningful projects
 
 ---
 
