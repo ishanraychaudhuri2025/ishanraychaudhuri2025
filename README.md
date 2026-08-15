@@ -1,13 +1,20 @@
 # Hey, Ishan here ✌️
 
 🔗 **This is my college GitHub account.**  
-For my main projects, personal work, and broader development journey, visit my official GitHub account.
+For my main projects, personal work, and broader development journey, visit my official GitHub account and Linkedin
 
 <p>
   <a href="https://github.com/IshanRayC">
     <img src="https://img.icons8.com/ios-filled/30/ffffff/github.png" width="24" />
   </a>
   <a href="https://github.com/IshanRayC">IshanRayC</a>
+</p>
+
+<p>
+  <a href="https://www.linkedin.com/in/ishan-ray-chaudhuri/">
+    <img src="https://img.icons8.com/ios-filled/30/0A66C2/linkedin.png" width="24" />
+  </a>
+  <a href="https://www.linkedin.com/in/ishan-ray-chaudhuri/">Ishan Ray Chaudhuri</a>
 </p>
 
 ### Computer Science Student | Learning, Building & Exploring
