@@ -66,7 +66,7 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
 * 📈 Quantitative Finance & HFT
 * ☁️ Cloud Computing & DevOps
 * 🌐 Web Scraping
-* ⚙️ AI Automation
+* ⚙️ AI Automation.
 
 ---
 
