@@ -27,16 +27,14 @@ I'm a Computer Science student interested in **Software Engineering, AI/ML, Data
   <img src="https://img.shields.io/badge/PYTHON-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/JAVA-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
   <img src="https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white" />
-  <img src="./assets/matlab-badge.svg" alt="MATLAB" width="101" height="28" />
-</p>
+<img src="https://img.shields.io/badge/MATLAB-0000A0?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTMgMThoMy4yYzEuNSAwIDIuMi0uOCAyLjktMi40bDIuOC02LjZjLjUtMS4yIDEtMS44IDEuOC0xLjguNyAwIDEuMi41IDEuNyAxLjVsMi41IDYuMWMuNSAxLjIgMSAxLjcgMi4yIDEuN0gyMnYxLjVoLTIuMWMtMS45IDAtMi44LS44LTMuNS0yLjVsLTIuNC01LjdjLS4yLS41LS40LS43LS42LS43LS4zIDAtLjUuMy0uOCAxbC0yLjggNi42QzguOSAxNy4xIDcuOCAxOCA1LjggMThIM3oiLz48L3N2Zz4=&logoColor=white" /></p>
 
 ### 📊 Data Science & Scientific Computing
 
 <p>
   <img src="https://img.shields.io/badge/NUMPY-013243?style=for-the-badge&logo=numpy&logoColor=white" />
   <img src="https://img.shields.io/badge/PANDAS-150458?style=for-the-badge&logo=pandas&logoColor=white" />
-  <img src="./assets/matlab-badge.svg" alt="MATLAB" width="101" height="28" />
-</p>
+<img src="https://img.shields.io/badge/MATLAB-0000A0?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTMgMThoMy4yYzEuNSAwIDIuMi0uOCAyLjktMi40bDIuOC02LjZjLjUtMS4yIDEtMS44IDEuOC0xLjguNyAwIDEuMi41IDEuNyAxLjVsMi41IDYuMWMuNSAxLjIgMSAxLjcgMi4yIDEuN0gyMnYxLjVoLTIuMWMtMS45IDAtMi44LS44LTMuNS0yLjVsLTIuNC01LjdjLS4yLS41LS40LS43LS42LS43LS4zIDAtLjUuMy0uOCAxbC0yLjggNi42QzguOSAxNy4xIDcuOCAxOCA1LjggMThIM3oiLz48L3N2Zz4=&logoColor=white" /></p>
 
 ### ⚙️ Scripting & Automation
 
