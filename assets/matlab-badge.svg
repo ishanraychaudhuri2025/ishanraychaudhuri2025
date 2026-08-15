@@ -1,9 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="101" height="28" viewBox="0 0 101 28">
-  <!-- Background -->
-  <rect width="101" height="28" fill="#0000A0"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="126" height="28" viewBox="0 0 126 28">
 
-  <!-- MATLAB logo -->
-  <g transform="translate(6,6) scale(0.29)">
+  <!-- Badge background -->
+  <rect width="126" height="28" fill="#0000A0"/>
+
+  <!-- MATLAB icon -->
+  <g transform="translate(6,5.5) scale(0.65)">
     <path
       d="M10 43
          C15 43 18 34 22 25
@@ -22,7 +23,7 @@
       fill="#FFFFFF"/>
   </g>
 
-  <!-- MATLAB text -->
+  <!-- Badge text -->
   <text
     x="29"
     y="18"
@@ -32,4 +33,5 @@
     font-weight="700"
     letter-spacing="1.1"
     dominant-baseline="middle">MATLAB</text>
+
 </svg>
