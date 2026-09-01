@@ -1,0 +1,38 @@
+[
+  {
+    "name": "VITalWatch",
+    "repo": "ishanraychaudhuri2025/VITalWatch",
+    "description": "Campus-focused project currently being developed.",
+    "tags": ["Software", "VIT", "Building"]
+  },
+  {
+    "name": "Web-Dev-For-Beginners",
+    "repo": "ishanraychaudhuri2025/Web-Dev-For-Beginners",
+    "description": "A structured web development learning repository.",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "name": "Agent Lightning",
+    "repo": "ishanraychaudhuri2025/agent-lightning",
+    "description": "Exploring agentic AI tooling and reinforcement workflows.",
+    "tags": ["AI", "Agents", "Python"]
+  },
+  {
+    "name": "Paid Internship List",
+    "repo": "ishanraychaudhuri2025/Paid-Internship-List",
+    "description": "A curated resource for finding paid internships.",
+    "tags": ["Resources", "Internships", "Open Source"]
+  },
+  {
+    "name": "250 Company List",
+    "repo": "ishanraychaudhuri2025/250CompanyList",
+    "description": "A company-focused reference list for career preparation.",
+    "tags": ["Career", "Companies", "Research"]
+  },
+  {
+    "name": "Coding Interview University",
+    "repo": "ishanraychaudhuri2025/coding-interview-university",
+    "description": "A structured computer science and interview preparation path.",
+    "tags": ["CS", "DSA", "Interviews"]
+  }
+]
