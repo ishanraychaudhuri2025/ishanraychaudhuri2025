@@ -1,37 +1,60 @@
 # Ishan GitHub Profile Setup
 
-This is the profile README repository for `ishanraychaudhuri2025`.
+This repository is the profile README repository for `ishanraychaudhuri2025`.
 
 ## Theme
 
-The visible profile uses a **2008-inspired Manchester United visual language** rather than violet:
+The profile uses a **2008-inspired red / white / black visual system**:
 
 - Deep red: `#C8102E`
 - Near-black: `#07090D`
 - White: `#FFFFFF`
 - Accent gold: `#D4AF37`
 
-The key motif is **red + white vertical stripe + black mark**, with gold used sparingly for highlights. It is a visual interpretation, not an official club asset reproduction.
+The main motif is a red field with white strips containing the black mark. Gold is only an accent.
 
-## 1. Profile image
+## 1. Hero logo animation
 
-The exact profile picture supplied for this profile has been uploaded to:
+The old profile-photo visual inside `VISUAL.MAP` has been replaced with the uploaded black mark converted into a vector and animated in red.
+
+Files:
+
+- `assets/united-mark.svg` — reusable black vector mark
+- `assets/united-logo-red-animation.svg` — standalone red animated version
+- `dark.svg` — dark-mode hero with animated red mark
+- `light.svg` — light-mode hero with the same animated red mark
+
+The hero also contains a **white horizontal block in the red top bar** with the black mark and red `08` text.
+
+## 2. White stripe beside VISUAL.MAP
+
+The separator beside the visual panel remains exactly `20px` wide and `420px` high. It is now white with the black mark centered vertically, instead of carrying rotated text.
+
+This is intentionally the same length and thickness as the previous separator.
+
+## 3. Signature stripe
+
+`assets/signature-stripe.svg` is the horizontal white stripe under the hero. It contains the black mark and the text:
+
+`BUILD • BREAK • DEBUG • LEARN`
+
+The text and `08` are red.
+
+`README.md` loads this asset directly with a cache-busting query parameter.
+
+## 4. Profile image
+
+The previously uploaded profile picture remains in:
 
 `assets/profile-picture.jpg`
 
-An embedded SVG copy is also available at:
+and its embedded SVG version remains in:
 
 `assets/profile-picture.svg`
 
-The hero uses the embedded version so it does not depend on GitHub's external avatar image loading.
+The current hero intentionally uses the **red animated mark** instead of the profile photo inside `VISUAL.MAP`, per the latest design change.
 
-## 2. Hero banner
-
-`README.md` loads `dark.svg` in dark mode and `light.svg` in light mode.
-
-The hero now contains a red top bar, a white stripe separator, and the uploaded profile image. The layout remains responsive and avoids the broken external-avatar behavior from the old version.
-
-## 3. GitHub stats
+## 5. GitHub stats
 
 The profile generates its own stats cards through `.github/scripts/generate_stats.py` and `.github/workflows/stats.yml`.
 
@@ -42,36 +65,28 @@ Generated files:
 - `assets/langs-dark.svg`
 - `assets/langs-light.svg`
 
-This avoids depending on the public `github-readme-stats` Vercel instance for the main cards.
+## 6. Contribution snake
 
-The workflow runs on pushes to `main`, every 6 hours, and manually through **Actions → Generate Profile Stats → Run workflow**.
+`.github/workflows/snake.yml` generates both theme variants every 12 hours and on pushes to `main`.
 
-## 4. Contribution snake
+The snake remains primarily red with small gold highlights.
 
-`.github/workflows/snake.yml` generates the light and dark snake every 12 hours and on pushes to `main`.
+## 7. Projects panel
 
-The snake stays primarily red, with small gold highlights for the strongest contribution levels. Violet has been removed.
+`projects.json` controls the featured repositories. `.github/workflows/projects.yml` fetches live repository metadata and publishes the generated project panels to the `projects` branch.
 
-Generated files are published to the `output` branch as `snake-light.svg` and `snake-dark.svg`.
+## 8. Cache-busting
 
-## 5. Projects panel
+The README uses `?v=20260901-logo2` on the new SVG URLs so an older GitHub CDN copy is less likely to hide the latest changes.
 
-`projects.json` controls the six featured repositories.
+When testing, open the raw SVG directly first. Confirm that the new red/white/black source is present before judging the rendered profile.
 
-`.github/workflows/projects.yml` fetches live repository data and publishes the generated theme variants to the `projects` branch.
+## 9. Permissions
 
-## 6. Cache-busting while testing
+Open **Settings → Actions → General → Workflow permissions** and select **Read and write permissions** so workflows can publish generated assets.
 
-The README appends `?v=20260901` to raw SVG URLs. This is deliberate: GitHub's CDN can keep an older copy after a successful commit.
+## 10. Maintenance
 
-When debugging an asset, open its raw URL directly and verify the current source before judging the rendered README.
-
-## 7. Permissions
-
-Open **Settings → Actions → General → Workflow permissions** and make sure workflows have **Read and write permissions** so they can publish generated assets.
-
-## 8. Maintenance
-
-Change source files and generators, not generated branch artifacts.
+Edit source SVGs, scripts, workflow files, and `projects.json`; do not manually edit generated `output` or `projects` branch artifacts.
 
 Never commit personal access tokens or other secrets.
