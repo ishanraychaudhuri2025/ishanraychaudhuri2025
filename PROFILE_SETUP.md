@@ -1,100 +1,92 @@
-# GitHub Profile Setup
+# Ishan GitHub Profile Setup
 
-This repository is the profile README repository for `ishanraychaudhuri2025`. GitHub displays a profile README when the public repository name exactly matches the username and the root contains `README.md`.
+This repository is the profile README repository for `ishanraychaudhuri2025`. The visible layout follows the same architecture as the reference profile you selected: theme-aware hero, full-width streak, side-by-side stats, contribution snake, animated projects panel, and social badges.
 
-The profile is intentionally structured like the reference profile: theme-aware hero banner, streak card, stats cards, contribution snake, animated projects panel, and social badges.
+## Theme
 
-## 1. Repository settings
+The profile now uses a **2008-inspired Manchester United-style palette** rather than violet:
 
-Open this repository on GitHub and go to **Settings → Actions → General**.
+- Red: `#C8102E`
+- Black: `#0B0B0F`
+- White: `#F5F5F5`
+- Gold: `#D4AF37`
 
-Under **Workflow permissions**, choose **Read and write permissions** and save.
+This is a visual color theme, not an official club asset or logo reproduction.
 
-This permission is required because the workflows publish generated SVGs to the `output` and `projects` branches.
+## 1. Repository permissions
+
+Open this repository → **Settings → Actions → General**.
+
+Under **Workflow permissions**, select **Read and write permissions** and save.
+
+The snake, projects, and stats workflows publish generated files and therefore need write access.
 
 ## 2. Hero banner
 
-`README.md` loads `dark.svg` for dark mode and `light.svg` for light mode.
+`README.md` loads `dark.svg` in GitHub dark mode and `light.svg` in GitHub light mode.
 
-The banner currently uses your existing animated portrait asset from:
+The hero uses the same profile-picture source currently used by your GitHub account, so the image stays clear instead of rendering the old multi-megabyte animated portrait as a tiny raster fallback.
 
-`https://raw.githubusercontent.com/IshanRayC/IshanRayC/main/assets/portrait.svg`
+The two SVGs are source files and should be edited through the generator/source pipeline rather than manually editing a rendered derivative.
 
-That keeps the profile repo lightweight and avoids duplicating the multi-megabyte portrait SVG.
+## 3. GitHub stats — no broken third-party cards
 
-To generate a new banner locally, use the existing banner generator from the companion workspace repository, or replace the `<image>` reference in `dark.svg` and `light.svg` with a new generated asset. Keep the banner source files as the source of truth rather than editing the rendered SVG by hand.
+The previous setup used the public `github-readme-stats.vercel.app` instance. That service is best-effort and can hit rate limits or traffic spikes, which is why the screenshot showed broken stats cards. The upstream project recommends self-hosting or GitHub Actions for reliable cards. citeturn375897search3turn375897search4
 
-## 3. GitHub stats — recommended self-hosting
+This profile now uses `.github/scripts/generate_stats.py` with `.github/workflows/stats.yml` instead. The workflow queries GitHub using the built-in `GITHUB_TOKEN` and writes:
 
-The visual profile is wired to the standard `github-readme-stats` API so it can render immediately. For a production setup matching the reference architecture, self-host the stats service.
+- `assets/stats-dark.svg`
+- `assets/stats-light.svg`
+- `assets/langs-dark.svg`
+- `assets/langs-light.svg`
 
-### Create the GitHub token
+No personal access token is stored in the repository and no Vercel deployment is required.
 
-1. GitHub → **Settings → Developer settings → Personal access tokens → Tokens (classic)**.
-2. Generate a token with the `repo` scope.
-3. A long-lived/no-expiration token can be used for the stats deployment.
-4. Copy it immediately.
-5. Treat it like a password. Never commit it, put it in `README.md`, or paste it into chat.
-
-### Deploy the stats service
-
-1. Fork `https://github.com/anuraghazra/github-readme-stats`.
-2. Sign into Vercel with GitHub and choose the free Hobby plan.
-3. Import your fork as a new Vercel project.
-4. Leave the normal build settings unchanged.
-5. Add the environment variable `PAT_1` with your token as its value.
-6. Deploy.
-7. Verify the generated `/api?username=ishanraychaudhuri2025&show_icons=true` endpoint.
-8. Replace `https://github-readme-stats.vercel.app` in `README.md` with your own Vercel deployment URL.
-
-The README uses `hide_rank=true` because the rank is heavily influenced by repository stars/followers and can be misleading for newer profiles; the reference implementation deliberately hides it.
+The workflow refreshes every 6 hours, on pushes to `main`, and manually from **Actions → Generate Profile Stats → Run workflow**.
 
 ## 4. Contribution snake
 
-The workflow at `.github/workflows/snake.yml` runs:
+`.github/workflows/snake.yml` generates both theme variants every 12 hours and on pushes to `main`.
 
-- every 12 hours
-- on pushes to `main`
-- manually via **Actions → Generate Contribution Snake → Run workflow**
+The dark palette uses visible empty cells and red/gold contribution levels so the grid remains readable against the black background.
 
-It generates both light and dark SVGs and publishes them to the `output` branch.
+Generated files are published to the `output` branch as:
 
-Important: the first workflow run must succeed before the snake image can render from the `output` branch.
+- `snake-dark.svg`
+- `snake-light.svg`
 
-The dark palette intentionally begins with a visible slate empty-cell colour (`#2d3343`) so the grid remains visible against GitHub dark mode.
+The README reads these files from that branch.
 
 ## 5. Projects panel
 
-`projects.json` controls which six projects appear and their order.
+`projects.json` controls the six featured repositories and their order.
 
-The workflow at `.github/workflows/projects.yml`:
+`.github/workflows/projects.yml` fetches live repository data and runs `.github/scripts/fetch_data.py` plus `.github/scripts/generate_projects.py`. The generated theme variants are published to the `projects` branch.
 
-1. reads `projects.json`
-2. fetches live stars, language bytes, and recent push time from GitHub
-3. generates theme-aware `projects-dark.svg` and `projects-light.svg`
-4. publishes them to the `projects` branch
+To change the projects shown on the profile, edit only `projects.json`.
 
-To change the panel, edit only `projects.json`. The README does not need to change.
+## 6. Why some things may still appear unchanged
 
-Keep project descriptions short enough to fit two lines in the generated cards.
+GitHub aggressively caches raw assets and profile images.
 
-## 6. Testing and cache debugging
+When testing a change, first open the raw SVG and add a harmless query string such as `?v=999`. Verify that the source contains the new color or content. Then check the latest Actions run and confirm you are viewing the intended dark/light theme.
 
-When an asset appears unchanged:
+A browser refresh alone does not necessarily invalidate GitHub's CDN copy.
 
-1. Open its raw GitHub URL and add a query such as `?v=999`.
-2. Check the actual SVG source for the expected colour or content.
-3. Confirm that the latest GitHub Actions run is green.
-4. Check whether GitHub is showing the dark or light asset you intended.
+## 7. Workflow checklist
 
-GitHub/CDN caching can make an already-correct asset appear stale for a while. Browser refresh alone does not always clear GitHub's CDN cache.
+After the latest changes, the expected `main` workflows are:
 
-## 7. Maintenance
+- `Generate Contribution Snake`
+- `Generate Projects Panel`
+- `Generate Profile Stats`
 
-Do not store PATs or other secrets in this repository.
+A green run should produce the corresponding generated files. The profile README should not need manual edits when contributions, languages, stars, or project metadata change.
 
-Do not commit `merged.json` or generated branch output back into `main`; the Actions workflows generate those artifacts for you.
+## 8. Maintenance
 
-Keep the source configuration (`projects.json`, workflow files, and generator scripts) under version control.
+Keep `projects.json`, workflow files, and generator scripts under version control.
 
-The profile's generated assets are intentionally separated from the source files so the README stays small and readable.
+Do not commit PATs or other secrets.
+
+Do not manually edit generated SVGs in the `output` or `projects` branches; change the source workflow/script instead.
