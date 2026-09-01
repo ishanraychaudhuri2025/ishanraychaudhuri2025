@@ -1,5 +1,4 @@
-<!-- Profile architecture inspired by the reference layout at github.com/arifhaxn -->
-<!-- Setup instructions: PROFILE_SETUP.md -->
+<!-- ===== THEME-AWARE HERO BANNER ===== -->
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/dark.svg">
@@ -7,25 +6,33 @@
   <img alt="Ishan Ray Chaudhuri" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/light.svg">
 </picture>
 
+<!-- ===== GITHUB STREAK ===== -->
+
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=true&background=0A101F&stroke=22D3EE&ring=A78BFA&fire=10B981&currStreakLabel=22D3EE&sideLabels=94A3B8&currStreakNum=F8FAFC&sideNums=F8FAFC&dates=64748B&titleColor=22D3EE&card_width=1180">
-  <img width="100%" src="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=true&background=FFFFFF&stroke=0891B2&ring=7C3AED&fire=059669&currStreakLabel=0891B2&sideLabels=475569&currStreakNum=0F172A&sideNums=0F172A&dates=94A3B8&titleColor=0891B2&card_width=1180" alt="Ishan's GitHub streak">
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=true&background=0B0B0F&stroke=C8102E&ring=D4AF37&fire=C8102E&currStreakLabel=C8102E&sideLabels=A8A8B0&currStreakNum=F5F5F5&sideNums=F5F5F5&dates=6B7280&titleColor=C8102E&card_width=1180">
+  <img width="100%" src="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=true&background=FFFFFF&stroke=C8102E&ring=A16D00&fire=C8102E&currStreakLabel=C8102E&sideLabels=5E626B&currStreakNum=111116&sideNums=111116&dates=9CA3AF&titleColor=C8102E&card_width=1180" alt="Ishan's GitHub streak">
 </picture>
 
 <br/>
 
+<!-- ===== STATS + TOP LANGUAGES ===== -->
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=ishanraychaudhuri2025&show_icons=true&count_private=true&include_all_commits=true&hide_rank=true&hide_border=true&title_color=22D3EE&icon_color=A78BFA&text_color=94A3B8&bg_color=0A101F&card_width=500">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=ishanraychaudhuri2025&show_icons=true&count_private=true&include_all_commits=true&hide_rank=true&hide_border=true&title_color=0891B2&icon_color=7C3AED&text_color=0F172A&bg_color=FFFFFF&card_width=500" alt="Ishan's GitHub stats">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/stats-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/stats-light.svg">
+  <img width="49%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/stats-light.svg" alt="Ishan's GitHub stats">
 </picture>
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=ishanraychaudhuri2025&layout=compact&langs_count=8&hide_border=true&title_color=22D3EE&text_color=94A3B8&bg_color=0A101F&card_width=500">
-  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ishanraychaudhuri2025&layout=compact&langs_count=8&hide_border=true&title_color=0891B2&text_color=0F172A&bg_color=FFFFFF&card_width=500" alt="Top languages">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/langs-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/langs-light.svg">
+  <img width="49%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/langs-light.svg" alt="Top languages">
 </picture>
 
 </div>
+
+<!-- ===== CONTRIBUTION SNAKE ===== -->
 
 <div align="center">
 
@@ -36,6 +43,8 @@
 </picture>
 
 </div>
+
+<!-- ===== PROJECTS ===== -->
 
 <br/>
 <br/>
@@ -48,18 +57,20 @@
 </picture>
 </div>
 
+<!-- ===== SOCIAL BADGES ===== -->
+
 <br/>
 
 <div align="center">
 
 <a href="https://www.linkedin.com/in/ishan-ray-chaudhuri/">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
+  <img src="https://img.shields.io/badge/LinkedIn-C8102E?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
 </a>
 &nbsp;&nbsp;
 <a href="https://github.com/IshanRayC">
-  <img src="https://img.shields.io/badge/IshanRayC-0A101F?style=for-the-badge&logo=github&logoColor=22D3EE&labelColor=0A101F" alt="Main GitHub">
+  <img src="https://img.shields.io/badge/IshanRayC-0B0B0F?style=for-the-badge&logo=github&logoColor=D4AF37&labelColor=0B0B0F" alt="Main GitHub">
 </a>
 
 </div>
 
-<!-- Keep the visible profile minimal, like the reference. Detailed setup lives in PROFILE_SETUP.md. -->
+<!-- Detailed setup and maintenance instructions: PROFILE_SETUP.md -->
