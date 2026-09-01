@@ -1,14 +1,14 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/dark.svg?v=20260901-logo2">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/light.svg?v=20260901-logo2">
-  <img alt="Ishan Ray Chaudhuri" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/light.svg?v=20260901-logo2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/dark.svg?v=20260901-final7">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/light.svg?v=20260901-final7">
+  <img alt="Ishan Ray Chaudhuri" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/light.svg?v=20260901-final7">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
 <div align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/signature-stripe.svg?v=20260901-logo2" alt="Ishan signature stripe">
+  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/signature-stripe.svg?v=20260901-final7" alt="Ishan signature stripe">
 </div>
 
 <!-- ===== GITHUB STREAK ===== -->
