@@ -31,9 +31,9 @@ The two SVGs are source files and should be edited through the generator/source 
 
 ## 3. GitHub stats — no broken third-party cards
 
-The previous setup used the public `github-readme-stats.vercel.app` instance. That service is best-effort and can hit rate limits or traffic spikes, which is why the screenshot showed broken stats cards. The upstream project recommends self-hosting or GitHub Actions for reliable cards. citeturn375897search3turn375897search4
+The previous setup used the public `github-readme-stats.vercel.app` instance. That service is best-effort and can hit rate limits or traffic spikes. This profile therefore generates its own cards with GitHub Actions.
 
-This profile now uses `.github/scripts/generate_stats.py` with `.github/workflows/stats.yml` instead. The workflow queries GitHub using the built-in `GITHUB_TOKEN` and writes:
+This profile now uses `.github/scripts/generate_stats.py` with `.github/workflows/stats.yml`. The workflow queries GitHub using the built-in `GITHUB_TOKEN` and writes:
 
 - `assets/stats-dark.svg`
 - `assets/stats-light.svg`
@@ -75,7 +75,7 @@ A browser refresh alone does not necessarily invalidate GitHub's CDN copy.
 
 ## 7. Workflow checklist
 
-After the latest changes, the expected `main` workflows are:
+The expected `main` workflows are:
 
 - `Generate Contribution Snake`
 - `Generate Projects Panel`
