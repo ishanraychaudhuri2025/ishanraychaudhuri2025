@@ -11,6 +11,16 @@
   <img width="100%" src="./assets/signature-stripe.svg" alt="Ishan signature stripe">
 </div>
 
+<!-- ===== SOCIAL ===== -->
+<br/>
+<div align="center">
+<a href="https://www.linkedin.com/in/ishan-ray-chaudhuri/"><img src="https://img.shields.io/badge/LinkedIn-C8102E?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+&nbsp;&nbsp;
+<a href="https://github.com/IshanRayC"><img src="https://img.shields.io/badge/IshanRayC-FFFFFF?style=for-the-badge&logo=github&logoColor=C8102E&labelColor=FFFFFF" alt="Main GitHub"></a>
+<br/><br/>
+
+</div>
+
 <!-- ===== GITHUB STREAK ===== -->
 <div align="center">
 <picture>
@@ -53,14 +63,5 @@
 </picture>
 </div>
 
-<!-- ===== SOCIAL ===== -->
-<br/>
-<div align="center">
-<a href="https://www.linkedin.com/in/ishan-ray-chaudhuri/"><img src="https://img.shields.io/badge/LinkedIn-C8102E?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-&nbsp;&nbsp;
-<a href="https://github.com/IshanRayC"><img src="https://img.shields.io/badge/IshanRayC-FFFFFF?style=for-the-badge&logo=github&logoColor=C8102E&labelColor=FFFFFF" alt="Main GitHub"></a>
-<br/><br/>
-
-</div>
 
 <!-- Detailed setup and maintenance instructions: PROFILE_SETUP.md -->
