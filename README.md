@@ -1,9 +1,9 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-final.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./profile-light-final.svg">
-  <img alt="Ishan Ray Chaudhuri" src="./profile-light-final.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./trophy-final-dark.svg?v=3">
+  <source media="(prefers-color-scheme: light)" srcset="./trophy-final-light.svg?v=3">
+  <img alt="Ishan Ray Chaudhuri" src="./trophy-final-light.svg?v=3">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
