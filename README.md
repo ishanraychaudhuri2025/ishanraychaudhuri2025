@@ -1,9 +1,9 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/dark.svg?v=20260902-final">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/light.svg?v=20260902-final">
-  <img alt="Ishan Ray Chaudhuri" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/light.svg?v=20260902-final">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-final.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./profile-light-final.svg">
+  <img alt="Ishan Ray Chaudhuri" src="./profile-light-final.svg">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
