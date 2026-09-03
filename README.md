@@ -11,11 +11,6 @@
   <img width="100%" src="./assets/signature-stripe.svg" alt="Ishan signature stripe">
 </div>
 
-<!-- ===== TROPHY CABINET ===== -->
-<div align="center">
-  <img width="100%" src="./assets/trophy-cabinet.webp?v=20260903-final6" alt="Custom trophy cabinet">
-</div>
-
 <!-- ===== SOCIAL ===== -->
 <br/>
 <div align="center">
