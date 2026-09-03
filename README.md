@@ -13,7 +13,7 @@
 
 <!-- ===== TROPHY CABINET ===== -->
 <div align="center">
-  <img width="100%" src="./assets/trophy-cabinet.webp?v=20260903-final2" alt="Custom trophy cabinet">
+  <img width="100%" src="./assets/trophy-cabinet.webp?v=20260903-final3" alt="Custom trophy cabinet">
 </div>
 
 <!-- ===== SOCIAL ===== -->
