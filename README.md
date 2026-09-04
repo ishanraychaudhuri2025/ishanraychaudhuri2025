@@ -1,10 +1,10 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
-<!-- profile-render-refresh-2026-09-04 -->
+<!-- profile-render-refresh-2026-09-04-trophies-final -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-final.svg?v=stable6">
-  <source media="(prefers-color-scheme: light)" srcset="./profile-light-final.svg?v=stable6">
-  <img alt="Ishan Ray Chaudhuri" src="./profile-light-final.svg?v=stable6">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-final.svg?v=stable7">
+  <source media="(prefers-color-scheme: light)" srcset="./profile-light-final.svg?v=stable7">
+  <img alt="Ishan Ray Chaudhuri" src="./profile-light-final.svg?v=stable7">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
@@ -12,9 +12,9 @@
   <img width="100%" src="./assets/signature-stripe.svg" alt="Ishan signature stripe">
 </div>
 
-<!-- ===== TROPHIES ===== -->
+<!-- ===== TROPHY CABINET ===== -->
 <div align="center">
-  <img width="100%" src="./assets/trophy-cabinet-exact.svg?v=20260904-final4" alt="Ishan trophy cabinet">
+  <img width="100%" src="./assets/trophy-cabinet-exact.svg?v=20260904-final" alt="Ishan trophy cabinet">
 </div>
 
 <!-- ===== SOCIAL ===== -->
