@@ -14,7 +14,7 @@
 
 <!-- ===== TROPHIES ===== -->
 <div align="center">
-  <img width="100%" src="./assets/trophy-cabinet-exact.svg?v=20260904-final1" alt="Ishan trophy cabinet">
+  <img width="100%" src="./assets/trophy-cabinet-exact.svg?v=20260904-final2" alt="Ishan trophy cabinet">
 </div>
 
 <!-- ===== SOCIAL ===== -->
