@@ -30,18 +30,23 @@ jobs:
           b64 = ''.join(b64_path.read_text(encoding='utf-8').split())
 
           if len(b64) < 9000:
-              raise SystemExit(f'Exact trophy base64 is unexpectedly short: {len(b64)} bytes')
+              raise SystemExit(f'Exact trophy base64 is unexpectedly short: {len(b64)} characters')
 
-          replacement = f'<image href="data:image/webp;base64,{b64}" x="939" y="131" width="158" height="392" preserveAspectRatio="xMidYMid meet"/>'
-          svg, count = re.subn(r'<image\b[^>]*\bx="939"\b[^>]*/>', replacement, svg, count=1)
+          replacement = f'<image href="data:image/webp;base64,{b64}" x="938" y="130" width="160" height="394" preserveAspectRatio="xMidYMid meet"/>'
 
+          # The current profile has exactly one raster image: the trophy panel.
+          # Replace that element regardless of its previous href/coordinates.
+          svg2, count = re.subn(r'(?s)<image\b[^>]*/>', replacement, svg, count=1)
           if count != 1:
-              # Also handle the older placeholder position from the previous profile revision.
-              svg, count = re.subn(r'<image\b[^>]*\bx="940"\b[^>]*/>', replacement, svg, count=1)
-          if count != 1:
-              raise SystemExit('Could not find the trophy image placeholder in profile-dark-exact-trophies.svg')
+              raise SystemExit(f'Expected one trophy image element, found {count}')
 
-          svg_path.write_text(svg, encoding='utf-8')
+          # Verify the replacement is actually embedded and complete.
+          if 'data:image/webp;base64,' not in svg2:
+              raise SystemExit('Trophy data URI was not inserted')
+          if len(svg2) < len(svg) + 8000:
+              raise SystemExit('Embedded SVG is unexpectedly short')
+
+          svg_path.write_text(svg2, encoding='utf-8')
           print(f'Embedded exact trophy artwork: {len(b64)} base64 characters')
           PY
 
