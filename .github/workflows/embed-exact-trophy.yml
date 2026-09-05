@@ -3,6 +3,10 @@ name: Render exact trophy cabinet
 on:
   push:
     branches: [main]
+    paths:
+      - '.github/workflows/embed-exact-trophy.yml'
+      - 'assets/trophy-panel-exact-logos.webp.txt'
+      - 'profile-dark-exact-trophies.svg'
   workflow_dispatch:
 
 permissions:
@@ -14,28 +18,38 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Use the exact uploaded trophy panel
+      - name: Inline exact uploaded trophy artwork
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
 
-          path = Path('profile-dark-exact-trophies.svg')
-          svg = path.read_text(encoding='utf-8')
+          svg_path = Path('profile-dark-exact-trophies.svg')
+          b64_path = Path('assets/trophy-panel-exact-logos.webp.txt')
+          svg = svg_path.read_text(encoding='utf-8')
+          b64 = ''.join(b64_path.read_text(encoding='utf-8').split())
 
-          replacement = '<image href="./assets/trophy-panel-exact-logos.webp" x="940" y="124" width="202" height="442" preserveAspectRatio="xMidYMid meet"/>'
-          svg, count = re.subn(r'<image\b[^>]*\bx="940"\b[^>]*/>', replacement, svg, count=1)
+          if len(b64) < 9000:
+              raise SystemExit(f'Exact trophy base64 is unexpectedly short: {len(b64)} bytes')
+
+          replacement = f'<image href="data:image/webp;base64,{b64}" x="939" y="131" width="158" height="392" preserveAspectRatio="xMidYMid meet"/>'
+          svg, count = re.subn(r'<image\b[^>]*\bx="939"\b[^>]*/>', replacement, svg, count=1)
+
           if count != 1:
-              raise SystemExit('Expected exactly one trophy image placeholder in profile-dark-exact-trophies.svg')
+              # Also handle the older placeholder position from the previous profile revision.
+              svg, count = re.subn(r'<image\b[^>]*\bx="940"\b[^>]*/>', replacement, svg, count=1)
+          if count != 1:
+              raise SystemExit('Could not find the trophy image placeholder in profile-dark-exact-trophies.svg')
 
-          path.write_text(svg, encoding='utf-8')
+          svg_path.write_text(svg, encoding='utf-8')
+          print(f'Embedded exact trophy artwork: {len(b64)} base64 characters')
           PY
 
-      - name: Commit rendered profile
+      - name: Commit updated profile
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add profile-dark-exact-trophies.svg
           if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'fix(profile): render exact trophy panel [skip ci]'
+          git commit -m 'fix(profile): embed exact trophy artwork [skip ci]'
           git push
