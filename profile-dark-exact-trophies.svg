@@ -38,7 +38,7 @@
 <text x="502" y="472" fill="#F5F5F5" font-size="15">SOFTWARE · AI/ML · CLOUD · DEVOPS · QUANT · HFT</text>
 </g>
 <line x1="925" y1="124" x2="925" y2="566" stroke="#4A0E18" stroke-width="1"/>
-<!-- EXACT USER-UPLOADED TROPHY LOGOS: no recoloring, tracing, cropping, or overlay -->
+<!-- EXACT USER-UPLOADED TROPHY LOGOS -->
 <rect x="938" y="130" width="160" height="394" rx="14" fill="#06080B" stroke="#C8102E" stroke-width="2"/>
 <image href="./assets/trophy-panel-exact-logos.webp" x="939" y="131" width="158" height="392" preserveAspectRatio="xMidYMid meet"/>
 </svg>
