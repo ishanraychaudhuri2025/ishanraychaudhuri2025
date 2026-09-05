@@ -11,10 +11,11 @@ on:
     - cron: "0 */6 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -28,14 +29,21 @@ jobs:
 
       - name: Generate project SVGs
         run: |
+          rm -rf out
           mkdir -p out
           python3 .github/scripts/generate_projects.py merged.json out
+          touch out/.nojekyll
 
       - name: Publish projects branch
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: projects
-          build_dir: out
-          commit_message: "Update projects panel [skip ci]"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout --orphan projects-publish
+          git rm -rf .
+          cp -R out/. .
+          git add -A
+          git commit -m "Update projects panel [skip ci]"
+          git push origin HEAD:projects --force
