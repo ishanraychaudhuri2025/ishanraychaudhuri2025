@@ -7,6 +7,7 @@ on:
       - "projects.json"
       - ".github/scripts/fetch_data.py"
       - ".github/scripts/generate_projects.py"
+      - ".github/workflows/projects.yml"
   schedule:
     - cron: "0 */6 * * *"
   workflow_dispatch:
