@@ -1,8 +1,8 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
-<!-- profile-render-refresh-2026-09-05-exact-trophies -->
+<!-- profile-render-refresh-2026-09-05-exact-trophies-v2 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-exact-trophies.svg?v=20260905-exact">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-exact-trophies.svg?v=20260905-exact-v2">
   <source media="(prefers-color-scheme: light)" srcset="./profile-light-integrated-v2.svg?v=20260904-v2">
   <img alt="Ishan Ray Chaudhuri" src="./profile-light-integrated-v2.svg?v=20260904-v2">
 </picture>
@@ -19,7 +19,6 @@
 &nbsp;&nbsp;
 <a href="https://github.com/IshanRayC"><img src="https://img.shields.io/badge/IshanRayC-FFFFFF?style=for-the-badge&logo=github&logoColor=C8102E&labelColor=FFFFFF" alt="Main GitHub"></a>
 <br/><br/>
-
 </div>
 
 <!-- ===== GITHUB STREAK ===== -->
@@ -63,6 +62,5 @@
   <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260901-logo2" alt="Ishan's projects">
 </picture>
 </div>
-
 
 <!-- Detailed setup and maintenance instructions: PROFILE_SETUP.md -->
