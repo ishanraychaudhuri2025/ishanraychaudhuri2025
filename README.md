@@ -1,10 +1,10 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
-<!-- profile-render-refresh-2026-09-05-exact-trophies-v5 -->
+<!-- profile-render-refresh-2026-09-05-exact-trophies-v6 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-exact-trophies.svg?v=20260905-exact-v5">
-  <source media="(prefers-color-scheme: light)" srcset="./profile-light-integrated-v2.svg?v=20260905-v5">
-  <img alt="Ishan Ray Chaudhuri" src="./profile-light-integrated-v2.svg?v=20260905-v5">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-exact-trophies.svg?v=20260905-exact-v6">
+  <source media="(prefers-color-scheme: light)" srcset="./profile-light-integrated-v2.svg?v=20260905-v6">
+  <img alt="Ishan Ray Chaudhuri" src="./profile-light-integrated-v2.svg?v=20260905-v6">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
