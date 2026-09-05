@@ -7,10 +7,11 @@ on:
     - cron: "0 */12 * * *"
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   generate:
-    permissions:
-      contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -19,13 +20,21 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/snake-light.svg?palette=github-light&color_snake=%23002366&color_dots=#e5e7eb,#F4B4BD,#D96A7A,#C8102E,#D4AF37
-            dist/snake-dark.svg?palette=github-dark&color_snake=%23002366&color_dots=#26262E,#5A242D,#8F1830,#C8102E,#D4AF37
+            dist/snake-light.svg?palette=github-light&color_snake=%23002366&color_dots=%23e5e7eb,%23F4B4BD,%23D96A7A,%23C8102E,%23D4AF37
+            dist/snake-dark.svg?palette=github-dark&color_snake=%23002366&color_dots=%2326262E,%235A242D,%238F1830,%23C8102E,%23D4AF37
+
       - name: Publish generated SVGs
-        uses: crazy-max/ghaction-github-pages@v3.1.0
-        with:
-          target_branch: output
-          build_dir: dist
-          commit_message: "Update contribution snake [skip ci]"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin output || true
+          git checkout --orphan output-publish
+          git rm -rf .
+          cp -R dist/. .
+          touch .nojekyll
+          git add -A
+          git commit -m "Update contribution snake [skip ci]"
+          git push origin HEAD:output --force
