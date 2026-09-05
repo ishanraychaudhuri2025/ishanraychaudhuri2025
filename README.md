@@ -1,10 +1,10 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
-<!-- profile-render-refresh-2026-09-05-exact-trophies-v7 -->
+<!-- profile-render-refresh-2026-09-05-exact-trophies-v8 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-exact-trophies.svg?v=20260905-exact-v7">
-  <source media="(prefers-color-scheme: light)" srcset="./profile-light-integrated-v2.svg?v=20260905-v7">
-  <img alt="Ishan Ray Chaudhuri" src="./profile-light-integrated-v2.svg?v=20260905-v7">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-exact-trophies.svg?v=20260905-exact-v8">
+  <source media="(prefers-color-scheme: light)" srcset="./profile-light-integrated-v2.svg?v=20260905-v8">
+  <img alt="Ishan Ray Chaudhuri" src="./profile-light-integrated-v2.svg?v=20260905-v8">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
@@ -46,9 +46,9 @@
 <!-- ===== CONTRIBUTION SNAKE ===== -->
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-dark.svg?v=20260901-logo2">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-light.svg?v=20260901-logo2">
-  <img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-light.svg?v=20260901-logo2">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-dark.svg?v=20260905-v8">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-light.svg?v=20260905-v8">
+  <img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-light.svg?v=20260905-v8">
 </picture>
 </div>
 
@@ -57,9 +57,9 @@
 <br/>
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20260901-logo2">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260901-logo2">
-  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260901-logo2" alt="Ishan's projects">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20260905-v8">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260905-v8">
+  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260905-v8" alt="Ishan's projects">
 </picture>
 </div>
 
