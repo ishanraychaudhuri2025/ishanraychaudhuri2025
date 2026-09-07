@@ -1,14 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610" role="img" aria-label="Ishan Ray Chaudhuri GitHub profile">
   <defs>
-    <!-- Slight alpha erosion trims the source image's outer white halo without drawing a new border. -->
     <filter id="cleanEdges" x="-5%" y="-3%" width="110%" height="106%" color-interpolation-filters="sRGB">
       <feMorphology in="SourceAlpha" operator="erode" radius="1.6" result="trimmed"/>
       <feComposite in="SourceGraphic" in2="trimmed" operator="in"/>
     </filter>
   </defs>
-  <image href="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/profile-light-integrated-v2.svg?v=20260907-final4" x="0" y="0" width="1180" height="610" preserveAspectRatio="none"/>
-  <!-- Remove the old built-in cabinet. The area is intentionally borderless. -->
-  <rect x="923" y="118" width="257" height="452" fill="#FFFFFF"/>
-  <!-- One cabinet only: the exact trophy artwork supplied by the user. -->
-  <image href="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/trophy-cabinet-exact.svg?v=20260907-final4" x="934" y="124" width="238" height="444" preserveAspectRatio="xMidYMid meet" filter="url(#cleanEdges)"/>
+  <image href="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/light.svg?v=20260907-mainbox-v5" x="0" y="0" width="1180" height="610" preserveAspectRatio="none"/>
+  <!-- Remove the internal divider/cabinet only; keep the single outer Red Devils box. -->
+  <rect x="920" y="112" width="222" height="458" fill="#FFFFFF"/>
+  <!-- User-supplied Trophy Cabinet, integrated directly inside the same outer box. -->
+  <image href="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/trophy-cabinet-exact.svg?v=20260907-mainbox-v5" x="930" y="126" width="202" height="432" preserveAspectRatio="xMidYMid meet" filter="url(#cleanEdges)"/>
 </svg>
