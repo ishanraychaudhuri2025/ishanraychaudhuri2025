@@ -1,6 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610" role="img" aria-label="Ishan Ray Chaudhuri GitHub profile">
-  <image href="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/profile-light-integrated-v2.svg?v=20260907-final3" x="0" y="0" width="1180" height="610" preserveAspectRatio="none"/>
-  <!-- Keep only the extreme-right trophy cabinet. No extra border. -->
+  <defs>
+    <!-- Slight alpha erosion trims the source image's outer white halo without drawing a new border. -->
+    <filter id="cleanEdges" x="-5%" y="-3%" width="110%" height="106%" color-interpolation-filters="sRGB">
+      <feMorphology in="SourceAlpha" operator="erode" radius="1.6" result="trimmed"/>
+      <feComposite in="SourceGraphic" in2="trimmed" operator="in"/>
+    </filter>
+  </defs>
+  <image href="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/profile-light-integrated-v2.svg?v=20260907-final4" x="0" y="0" width="1180" height="610" preserveAspectRatio="none"/>
+  <!-- Remove the old built-in cabinet. The area is intentionally borderless. -->
   <rect x="923" y="118" width="257" height="452" fill="#FFFFFF"/>
-  <image href="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/trophy-cabinet-exact.svg?v=20260907-final3" x="934" y="124" width="238" height="444" preserveAspectRatio="xMidYMid meet"/>
+  <!-- One cabinet only: the exact trophy artwork supplied by the user. -->
+  <image href="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/trophy-cabinet-exact.svg?v=20260907-final4" x="934" y="124" width="238" height="444" preserveAspectRatio="xMidYMid meet" filter="url(#cleanEdges)"/>
 </svg>
