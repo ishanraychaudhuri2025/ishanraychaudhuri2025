@@ -1,3 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="917" viewBox="0 0 512 917">
-<image width="512" height="917" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAOdCAYAAADvL4i4AAAgAElEQVR4nOzde3xV5Z3v8c8JCQkJCEhIS...PLACEHOLDER..." preserveAspectRatio="none"/>
+<rect width="512" height="917" fill="#06080B"/>
+<g fill="#C8102E" stroke="#C8102E" stroke-width="5" stroke-linejoin="round">
+  <!-- European Cup -->
+  <path d="M72 106c-10-55 11-86 40-87 25-1 36 18 28 37-6 15-26 17-39 20-15 4-17 20-5 30l-18 7c-10-2-13-4-6-7z" fill="none"/>
+  <path d="M112 87h65c-3 54-10 92-32 116h-3c-22-24-29-62-30-116z"/>
+  <path d="M125 203h39v20h-39zM109 223h71v12h-71z"/>
+  <path d="M177 106c10-55-11-86-40-87-25-1-36 18-28 37 6 15 26 17 39 20 15 4 17 20 5 30l18 7c10-2 13-4 6-7z" fill="none"/>
+  <circle cx="144" cy="132" r="13" fill="#06080B"/>
+  <!-- FA Cup -->
+  <path d="M337 60h-34v109l18 41h-8v23h48v-23h-8l18-41V60h-34z"/>
+  <path d="M303 67l-23-27-12 12 35 42zM337 67l23-27 12 12-35 42z"/>
+  <path d="M310 37h54l-27-25z"/>
+  <!-- Ballon d'Or -->
+  <circle cx="128" cy="340" r="70"/>
+  <g fill="none" stroke="#F4C7CF" stroke-width="3"><path d="M64 318c34 25 83 25 128 0"/><path d="M67 359c39-27 91-27 122 0"/><path d="M97 277c20 18 28 36 31 63"/><path d="M159 277c-20 18-28 36-31 63"/></g>
+  <path d="M93 410h70l-10 25H103zM78 435h100v13H78z"/>
+  <!-- FIFA Best -->
+  <path d="M337 285c-28 0-45 22-42 50 3 29 19 51 42 67 23-16 39-38 42-67 3-28-14-50-42-50z"/>
+  <path d="M324 402h27v38h-27zM307 440h61v15h-61z"/>
+  <path d="M306 351h62" stroke="#F4C7CF"/>
+  <!-- World Cup -->
+  <path d="M111 495c-23 0-44 17-44 40 0 28 21 45 37 58h14c17-13 37-30 37-58 0-23-21-40-44-40z"/>
+  <path d="M102 593h18v89h-18zM87 682h48v13H87z"/>
+  <path d="M87 555c10 8 18 12 24 12s14-4 24-12" fill="none" stroke="#F4C7CF"/>
+  <!-- Jersey -->
+  <path d="M303 516l30-26 21 21 34-13 43 45-19 31-14-8v111H292V566l-14 8-19-31 43-45z"/>
+  <circle cx="350" cy="548" r="20" fill="#06080B"/>
+  <!-- Football boot -->
+  <path d="M63 800l76-50 47 24 22 43-22 23H63z"/>
+  <path d="M95 805l72-34" fill="none" stroke="#F4C7CF" stroke-width="5"/>
+  <path d="M126 787l30 7M119 775l31 8M111 763l29 9" fill="none" stroke="#F4C7CF" stroke-width="4"/>
+  <path d="M50 840h170v17H50z"/>
+  <!-- Goal + ball -->
+  <path d="M285 842l25-18v-68l135-48v92l-18 18-23-8 16-10v-67l-91 32v57z" fill="none"/>
+  <circle cx="369" cy="766" r="23" fill="#06080B" stroke="#C8102E" stroke-width="8"/>
+  <path d="M349 766l20-8 19 8-19 13z" fill="#C8102E"/>
+</g>
+<g fill="#F4C7CF" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" text-anchor="middle">
+  <text x="144" y="168">UCL</text>
+  <text x="337" y="178">FA CUP</text>
+  <text x="128" y="357">BALLON D'OR</text>
+  <text x="337" y="365">FIFA</text>
+  <text x="112" y="566">WORLD CUP</text>
+  <text x="350" y="557">UEFA</text>
+  <text x="135" y="833">GOLDEN BOOT</text>
+  <text x="389" y="804">FINAL</text>
+</g>
 </svg>
