@@ -1,11 +1,18 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
-<!-- profile-render-refresh-2026-09-07-single-trophy-final -->
+<!-- profile-render-final-2026-09-07-single-exact-cabinet-v4 -->
 
+<table><tr>
+<td width="80%" valign="top">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-dark-final.svg?v=20260907-single-final">
-  <source media="(prefers-color-scheme: light)" srcset="./profile-light-final.svg?v=20260907-single-final">
-  <img alt="Ishan Ray Chaudhuri" src="./profile-light-final.svg?v=20260907-single-final">
+  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg?v=20260907-v4">
+  <source media="(prefers-color-scheme: light)" srcset="./light.svg?v=20260907-v4">
+  <img alt="Ishan Ray Chaudhuri" src="./light.svg?v=20260907-v4">
 </picture>
+</td>
+<td width="20%" valign="middle" align="center">
+<img src="./assets/trophy-cabinet-exact.svg?v=20260907-v4" alt="Trophy Cabinet" width="230">
+</td>
+</tr></table>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
 <div align="center">
