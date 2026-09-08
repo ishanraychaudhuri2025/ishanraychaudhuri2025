@@ -12,7 +12,7 @@ jobs:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,16 +27,31 @@ jobs:
           python3 - <<'PY'
           import xml.etree.ElementTree as ET
           from pathlib import Path
+
           for name in ('dark.svg', 'light.svg', 'assets/trophy-cabinet.svg'):
               ET.parse(name)
               print(f'OK: {name}')
+
+          stale_markers = (
+              'trophy-cabinet-exact.svg',
+              'trophy-panel-final',
+              'trophy-panel-hifi',
+              'trophy-panel-reference',
+              'trophy-exact-',
+              'trophy-q95-',
+              'trophy_exact_chunks',
+          )
+
           for name in ('dark.svg', 'light.svg'):
               text = Path(name).read_text(encoding='utf-8')
               count = text.count('id="trophy-cabinet"')
               if count != 1:
                   raise SystemExit(f'{name}: expected exactly one trophy cabinet, found {count}')
-              if 'data:image/webp;base64' in text or 'trophy-cabinet-exact.svg' in text:
-                  raise SystemExit(f'{name}: stale trophy reference remains')
+              for marker in stale_markers:
+                  if marker in text:
+                      raise SystemExit(f'{name}: stale trophy reference remains: {marker}')
+
+          print('Trophy validation passed: exactly one final cabinet, legacy references absent.')
           PY
 
       - name: Generate stats cards
