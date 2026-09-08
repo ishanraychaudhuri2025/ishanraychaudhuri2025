@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE = ROOT / 'trophy.png'
@@ -17,20 +18,32 @@ new_image = (
 for name in ('dark.svg', 'light.svg'):
     path = ROOT / name
     svg = path.read_text(encoding='utf-8')
+
+    # Remove any standalone legacy cabinet image first. This is important
+    # because older revisions could contain an image before the old group.
+    svg = re.sub(
+        r'\s*<image\b[^>]*\bid=["\']trophy-cabinet["\'][^>]*/>\s*',
+        '\n',
+        svg,
+        flags=re.DOTALL | re.IGNORECASE,
+    )
+
+    # The trophy cabinet is always the final generated block in these SVGs.
+    # Remove everything from the first legacy cabinet group to </svg>, then
+    # append exactly one direct reference to the repository PNG.
     marker = '<g id="trophy-cabinet"'
     start = svg.lower().find(marker.lower())
+    end = svg.lower().rfind('</svg>')
 
     if start >= 0:
-        end = svg.lower().rfind('</svg>')
         if end <= start:
             raise SystemExit(f'{name}: malformed SVG around trophy cabinet')
         svg = svg[:start].rstrip() + '\n\n' + new_image + '\n' + svg[end:]
     else:
-        idx = svg.lower().rfind('</svg>')
-        if idx < 0:
+        if end < 0:
             raise SystemExit(f'{name}: missing closing svg tag')
-        svg = svg[:idx] + '\n' + new_image + '\n' + svg[idx:]
+        svg = svg[:end] + '\n' + new_image + '\n' + svg[end:]
 
     path.write_text(svg, encoding='utf-8')
 
-print('Embedded the exact repository trophy.png in dark.svg and light.svg')
+print('Embedded exactly one direct reference to trophy.png in dark.svg and light.svg')
