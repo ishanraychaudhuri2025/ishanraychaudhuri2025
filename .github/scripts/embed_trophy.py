@@ -1,26 +1,31 @@
 from pathlib import Path
-import base64
 import re
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / '.github' / 'trophy-cabinet-source.b64'
-ASSET = ROOT / 'assets' / 'trophy-cabinet.webp'
-X, Y, W, H = 950, 132, 180, 323
+SOURCE = ROOT / 'assets' / 'trophy-cabinet.svg'
+X, Y, W, H = 950, 128, 180, 323
 
-b64 = ''.join(SOURCE.read_text(encoding='utf-8').split())
-data = base64.b64decode(b64, validate=True)
-ASSET.write_bytes(data)
+source = SOURCE.read_text(encoding='utf-8')
+match = re.fullmatch(r'\s*<svg\b[^>]*>(.*)</svg>\s*', source, flags=re.DOTALL | re.IGNORECASE)
+if not match:
+    raise SystemExit('trophy-cabinet.svg is not a valid self-contained SVG')
+inner = match.group(1).strip()
 
-image = f'<image id="trophy-cabinet" x="{X}" y="{Y}" width="{W}" height="{H}" preserveAspectRatio="xMidYMid meet" href="data:image/webp;base64,{base64.b64encode(data).decode()}"/>'
-pattern = re.compile(r'\s*<image\s+id="trophy-cabinet"[^>]*/>', re.IGNORECASE)
+# Remove any previous generated trophy group, then insert the vector artwork.
+old = re.compile(r'\s*<g id="trophy-cabinet"[^>]*>.*?</g>\s*', flags=re.DOTALL | re.IGNORECASE)
+new_group = (
+    f'<g id="trophy-cabinet" transform="translate({X} {Y}) scale({W/150:.6f} {H/269:.6f})">'
+    f'{inner}</g>'
+)
 
 for name in ('dark.svg', 'light.svg'):
     path = ROOT / name
     svg = path.read_text(encoding='utf-8')
-    svg = pattern.sub('', svg)
-    if '</svg>' not in svg:
+    svg = old.sub('\n', svg)
+    if '</svg>' not in svg.lower():
         raise SystemExit(f'{name}: missing closing svg tag')
-    svg = svg.replace('</svg>', image + '\n</svg>')
+    idx = svg.lower().rfind('</svg>')
+    svg = svg[:idx] + '\n' + new_group + '\n' + svg[idx:]
     path.write_text(svg, encoding='utf-8')
 
-print(f'Embedded trophy cabinet into dark.svg and light.svg; asset bytes={len(data)}')
+print('Embedded transparent vector trophy cabinet into dark.svg and light.svg')
