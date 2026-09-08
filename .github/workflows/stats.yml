@@ -28,10 +28,6 @@ jobs:
           import xml.etree.ElementTree as ET
           from pathlib import Path
 
-          for name in ('dark.svg', 'light.svg', 'assets/trophy-cabinet.svg'):
-              ET.parse(name)
-              print(f'OK: {name}')
-
           stale_markers = (
               'trophy-cabinet-exact.svg',
               'trophy-panel-final',
@@ -40,18 +36,25 @@ jobs:
               'trophy-exact-',
               'trophy-q95-',
               'trophy_exact_chunks',
+              'data:image/webp;base64',
           )
 
           for name in ('dark.svg', 'light.svg'):
+              ET.parse(name)
               text = Path(name).read_text(encoding='utf-8')
               count = text.count('id="trophy-cabinet"')
               if count != 1:
                   raise SystemExit(f'{name}: expected exactly one trophy cabinet, found {count}')
+              if 'href="trophy.png"' not in text:
+                  raise SystemExit(f'{name}: exact trophy.png reference missing')
               for marker in stale_markers:
                   if marker in text:
                       raise SystemExit(f'{name}: stale trophy reference remains: {marker}')
 
-          print('Trophy validation passed: exactly one final cabinet, legacy references absent.')
+          if not Path('trophy.png').is_file():
+              raise SystemExit('root trophy.png is missing')
+
+          print('Trophy validation passed: one exact trophy.png cabinet, no legacy cabinet implementation.')
           PY
 
       - name: Generate stats cards
@@ -64,7 +67,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dark.svg light.svg assets/trophy-cabinet.svg assets/stats-dark.svg assets/stats-light.svg assets/langs-dark.svg assets/langs-light.svg
+          git add dark.svg light.svg assets/stats-dark.svg assets/stats-light.svg assets/langs-dark.svg assets/langs-light.svg
           if git diff --cached --quiet; then
             echo "No generated profile changes."
             exit 0
