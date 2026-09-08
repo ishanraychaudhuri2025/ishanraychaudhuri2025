@@ -1,0 +1,36 @@
+name: Embed Trophy Cabinet
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/trophy-cabinet-source.b64'
+      - '.github/scripts/embed_trophy.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  embed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Embed supplied trophy image
+        run: python3 .github/scripts/embed_trophy.py
+
+      - name: Commit generated banner
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/trophy-cabinet.webp dark.svg light.svg
+          if git diff --cached --quiet; then
+            echo 'No trophy changes to commit.'
+            exit 0
+          fi
+          git commit -m 'build(profile): embed supplied trophy cabinet [skip ci]'
+          git push origin HEAD:main
