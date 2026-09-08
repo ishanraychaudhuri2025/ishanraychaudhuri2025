@@ -3,13 +3,14 @@ name: Embed Trophy Cabinet
 on:
   push:
     branches: [main]
-    paths:
-      - 'assets/trophy-cabinet.svg'
-      - '.github/scripts/embed_trophy.py'
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: trophy-cabinet
+  cancel-in-progress: true
 
 jobs:
   embed:
@@ -22,6 +23,21 @@ jobs:
 
       - name: Embed trophy vector
         run: python3 .github/scripts/embed_trophy.py
+
+      - name: Validate generated SVGs
+        run: |
+          python3 - <<'PY'
+          import xml.etree.ElementTree as ET
+          for name in ('dark.svg', 'light.svg', 'assets/trophy-cabinet.svg'):
+              ET.parse(name)
+              print(f'OK: {name}')
+          for name in ('dark.svg', 'light.svg'):
+              text = open(name, encoding='utf-8').read()
+              if text.count('id="trophy-cabinet"') != 1:
+                  raise SystemExit(f'{name}: expected exactly one trophy cabinet, found {text.count("id=\\\"trophy-cabinet\\\"")}')
+              if 'data:image/webp;base64' in text or 'trophy-cabinet-exact.svg' in text:
+                  raise SystemExit(f'{name}: stale trophy reference remains')
+          PY
 
       - name: Commit generated profile banners
         run: |
