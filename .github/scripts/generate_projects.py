@@ -58,9 +58,11 @@ def panel(projects, theme):
     height = 58 + rows * (CARD_H + GAP) + 6
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{height}" viewBox="0 0 {W} {height}" font-family="{FONT}" role="img" aria-label="Ishan projects">',
-        f'<rect width="{W}" height="{height}" fill="{t["BG"]}"/>',
-        f'<text x="5" y="24" fill="{t["RED"]}" font-size="13">PROJECTS</text>',
-        f'<path d="M92 20 H1175" stroke="{t["STROKE"]}" stroke-dasharray="2 7"/>',
+        # Rounded outer project frame: the background and border use the same radius.
+        f'<rect x="1" y="1" width="{W-2}" height="{height-2}" rx="14" fill="{t["BG"]}" stroke="{t["RED"]}" stroke-width="2"/>',
+        # Centered title and divider.
+        f'<text x="{W/2:.1f}" y="24" text-anchor="middle" fill="{t["RED"]}" font-size="13">PROJECTS</text>',
+        f'<path d="M108 20 H1175" stroke="{t["STROKE"]}" stroke-dasharray="2 7"/>',
     ]
     for idx, project in enumerate(projects):
         x = 5 + (idx % 2) * (CARD_W + GAP)
