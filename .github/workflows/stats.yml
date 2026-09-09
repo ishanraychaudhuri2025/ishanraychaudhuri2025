@@ -20,7 +20,18 @@ jobs:
           fetch-depth: 0
 
       - name: Remove legacy trophy cabinet
-        run: python3 .github/scripts/remove_trophy.py
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          for name in ("dark.svg", "light.svg"):
+              path = Path(name)
+              text = path.read_text(encoding="utf-8")
+              text = re.sub(r'\s*<g\s+id=["\']trophy-cabinet["\'][^>]*>.*?</g>\s*', '\n', text, flags=re.DOTALL | re.IGNORECASE)
+              text = re.sub(r'\s*<image\s+id=["\']trophy-cabinet["\'][^>]*/>\s*', '\n', text, flags=re.DOTALL | re.IGNORECASE)
+              path.write_text(text, encoding="utf-8")
+          print("Removed all trophy cabinet markup")
+          PY
 
       - name: Generate stats cards
         env:
