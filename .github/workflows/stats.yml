@@ -25,15 +25,21 @@ jobs:
           OUTPUT_DIR: assets
         run: python3 .github/scripts/generate_stats.py
 
+      - name: Build activity frame assets
+        run: python3 .github/scripts/generate_activity.py
+
       - name: Commit generated profile assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats-dark.svg assets/stats-light.svg assets/langs-dark.svg assets/langs-light.svg
+          git add assets/stats-dark.svg assets/stats-light.svg assets/langs-dark.svg assets/langs-light.svg \
+            assets/streak-dark.svg assets/streak-light.svg \
+            assets/activity-snake-dark.svg assets/activity-snake-light.svg \
+            assets/profile-activity-dark.svg assets/profile-activity-light.svg
           if git diff --cached --quiet; then
             echo "No generated profile changes."
             exit 0
           fi
-          git commit -m "chore(profile): refresh generated profile stats [skip ci]"
+          git commit -m "chore(profile): refresh generated profile assets [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
