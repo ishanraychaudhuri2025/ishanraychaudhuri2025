@@ -17,12 +17,12 @@ FONT = "ui-monospace,SFMono-Regular,Menlo,Consolas,'Liberation Mono',monospace"
 THEMES = {
     "dark": {
         "BG": "#0B0B0F", "PANEL": "#111116", "BAR": "#09090C", "RED": "#C8102E",
-        "GOLD": "#D4AF37", "TEXT": "#F5F5F5", "MUTED": "#A8A8B0", "DIM": "#5F5F69",
+        "FRAME_RED": "#4A0E18", "GOLD": "#D4AF37", "TEXT": "#F5F5F5", "MUTED": "#A8A8B0", "DIM": "#5F5F69",
         "STROKE": "rgba(200,16,46,0.42)", "PILL": "rgba(200,16,46,0.12)", "PILL_STROKE": "rgba(212,175,55,0.42)",
     },
     "light": {
         "BG": "#F5F5F5", "PANEL": "#FFFFFF", "BAR": "#EFEFEF", "RED": "#C8102E",
-        "GOLD": "#A16D00", "TEXT": "#111116", "MUTED": "#5E626B", "DIM": "#9CA3AF",
+        "FRAME_RED": "#4A0E18", "GOLD": "#A16D00", "TEXT": "#111116", "MUTED": "#5E626B", "DIM": "#9CA3AF",
         "STROKE": "rgba(200,16,46,0.28)", "PILL": "rgba(200,16,46,0.06)", "PILL_STROKE": "rgba(161,109,0,0.38)",
     },
 }
@@ -58,7 +58,7 @@ def panel(projects, theme):
     height = 58 + rows * (CARD_H + GAP) + 6
     parts = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{height}" viewBox="0 0 {W} {height}" font-family="{FONT}" role="img" aria-label="Ishan projects">',
-        f'<rect x="1" y="1" width="{W-2}" height="{height-2}" rx="14" fill="{t["BG"]}" stroke="{t["RED"]}" stroke-opacity="0.65" stroke-width="2"/>',
+        f'<rect x="1" y="1" width="{W-2}" height="{height-2}" rx="14" fill="{t["BG"]}" stroke="{t["FRAME_RED"]}" stroke-width="2"/>',
         f'<text x="{W/2:.1f}" y="24" text-anchor="middle" fill="{t["RED"]}" font-size="13">PROJECTS</text>',
         f'<path d="M108 20 H1175" stroke="{t["STROKE"]}" stroke-dasharray="2 7"/>',
     ]
