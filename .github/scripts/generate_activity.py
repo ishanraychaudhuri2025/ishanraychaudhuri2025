@@ -42,7 +42,7 @@ def frame(theme):
       grp(stats,'translate(26 202) scale(1.1 1)'),
       grp(langs,'translate(604 202) scale(1.1 1)'),
       grp(snake,f'translate({26+16*sx:.8f} {458+32*sy:.8f}) scale({sx:.8f} {sy:.8f})'),
-      '<rect x="1" y="1" width="1178" height="668" rx="16" fill="none" stroke="#C8102E" stroke-width="2"/>',
+      '<rect x="1" y="1" width="1178" height="668" rx="16" fill="none" stroke="#C8102E" stroke-opacity="0.65" stroke-width="2"/>',
       '</svg>'
     ])
 
