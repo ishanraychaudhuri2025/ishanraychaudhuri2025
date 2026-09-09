@@ -21,11 +21,14 @@
 <br/><br/>
 </div>
 
-<!-- ===== GITHUB STREAK ===== -->
-<div align="center">
+<!-- ===== STREAK + STATS + LANGUAGES + SNAKE : ONE FRAME ===== -->
+<table width="100%" cellpadding="12" cellspacing="0" border="2" bordercolor="#C8102E" bgcolor="#06080B">
+<tr>
+<td align="center" bgcolor="#06080B">
+
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=false&border=C8102E&border_radius=14&background=0B0B0F&stroke=C8102E&ring=C8102E&fire=D4AF37&currStreakLabel=FFFFFF&sideLabels=A8A8B0&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=777B85&titleColor=C8102E&card_width=1180">
-  <img width="100%" src="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=false&border=C8102E&border_radius=14&background=FFFFFF&stroke=C8102E&ring=C8102E&fire=D4AF37&currStreakLabel=111116&sideLabels=5E626B&currStreakNum=111116&sideNums=111116&dates=9CA3AF&titleColor=C8102E&card_width=1180" alt="Ishan's GitHub streak">
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=true&background=0B0B0F&stroke=C8102E&ring=C8102E&fire=D4AF37&currStreakLabel=FFFFFF&sideLabels=A8A8B0&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=777B85&titleColor=C8102E&card_width=1180">
+  <img width="100%" src="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=true&background=FFFFFF&stroke=C8102E&ring=C8102E&fire=D4AF37&currStreakLabel=111116&sideLabels=5E626B&currStreakNum=111116&sideNums=111116&dates=9CA3AF&titleColor=C8102E&card_width=1180" alt="Ishan's GitHub streak">
 </picture>
 
 <br/>
@@ -41,25 +44,28 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/langs-light.svg?v=20260901-logo2">
   <img width="49%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/langs-light.svg?v=20260901-logo2" alt="Top languages">
 </picture>
-</div>
+
+<br/>
 
 <!-- ===== CONTRIBUTION SNAKE ===== -->
-<div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-dark.svg?v=20260905-v8">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-light.svg?v=20260905-v8">
   <img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-light.svg?v=20260905-v8">
 </picture>
-</div>
+
+</td>
+</tr>
+</table>
 
 <!-- ===== PROJECTS ===== -->
 <br/>
 <br/>
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20260909-frame1">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260909-frame1">
-  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260909-frame1" alt="Ishan's projects">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20260909-frame2">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260909-frame2">
+  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260909-frame2" alt="Ishan's projects">
 </picture>
 </div>
 
