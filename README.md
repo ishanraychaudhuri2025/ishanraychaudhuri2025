@@ -1,5 +1,5 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
-<!-- profile-render-mainbox-v9 -->
+<!-- profile-render-mainbox-v10 -->
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./dark.svg?v=20260908-mainbox-v9">
@@ -21,42 +21,14 @@
 <br/><br/>
 </div>
 
-<!-- ===== STREAK + STATS + LANGUAGES + SNAKE : ONE FRAME ===== -->
-<table width="100%" cellpadding="12" cellspacing="0" border="2" bordercolor="#C8102E" bgcolor="#06080B">
-<tr>
-<td align="center" bgcolor="#06080B">
-
+<!-- ===== STREAK + STATS + LANGUAGES + SNAKE : ONE RED FRAME ===== -->
+<div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=true&background=0B0B0F&stroke=C8102E&ring=C8102E&fire=D4AF37&currStreakLabel=FFFFFF&sideLabels=A8A8B0&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=777B85&titleColor=C8102E&card_width=1180">
-  <img width="100%" src="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=true&background=FFFFFF&stroke=C8102E&ring=C8102E&fire=D4AF37&currStreakLabel=111116&sideLabels=5E626B&currStreakNum=111116&sideNums=111116&dates=9CA3AF&titleColor=C8102E&card_width=1180" alt="Ishan's GitHub streak">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-activity-dark.svg?v=20260909-frame3">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/profile-activity-light.svg?v=20260909-frame3">
+  <img width="100%" src="./assets/profile-activity-light.svg?v=20260909-frame3" alt="GitHub streak, stats, top languages and contribution snake">
 </picture>
-
-<br/>
-
-<!-- ===== STATS + TOP LANGUAGES ===== -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/stats-dark.svg?v=20260901-logo2">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/stats-light.svg?v=20260901-logo2">
-  <img width="49%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/stats-light.svg?v=20260901-logo2" alt="Ishan's GitHub stats">
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/langs-dark.svg?v=20260901-logo2">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/langs-light.svg?v=20260901-logo2">
-  <img width="49%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/assets/langs-light.svg?v=20260901-logo2" alt="Top languages">
-</picture>
-
-<br/>
-
-<!-- ===== CONTRIBUTION SNAKE ===== -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-dark.svg?v=20260905-v8">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-light.svg?v=20260905-v8">
-  <img alt="Snake eating my contributions" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/output/snake-light.svg?v=20260905-v8">
-</picture>
-
-</td>
-</tr>
-</table>
+</div>
 
 <!-- ===== PROJECTS ===== -->
 <br/>
