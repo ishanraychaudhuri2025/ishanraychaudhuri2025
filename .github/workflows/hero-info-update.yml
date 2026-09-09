@@ -1,0 +1,80 @@
+name: Update Hero System Info
+
+on:
+  push:
+    paths:
+      - ".github/workflows/hero-info-update.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update system info text
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          def update(path, theme):
+              p = Path(path)
+              s = p.read_text(encoding="utf-8")
+              text_fill = "#F5F5F5" if theme == "dark" else "#111116"
+              label_stroke = "#332229" if theme == "dark" else "#E1D5D8"
+
+              s = re.sub(r'(<text x="930" y="177"[^>]*>).*?(</text>)', r'\\1CSE AND DATA SCIENCE STUDENT\\2', s, count=1)
+              s = re.sub(r'(<text x="930" y="200"[^>]*>).*?(</text>)', r'\\1UNKNOWN\\2', s, count=1)
+
+              s = s.replace("VIT CHENNAI · B.TECH CSE", "BTECH CSE · VIT CHENNAI")
+              s = s.replace("VIT · BTECH CSE", "BTECH CSE · VIT CHENNAI")
+
+              # Education gets a second line; shift Status/Core rows down to keep spacing clean.
+              s = s.replace(
+                  f'<text x="522" y="246">Status</text><path d="M610 242 H900" stroke="{label_stroke}" stroke-dasharray="2 6"/><text x="930" y="246" fill="{text_fill}" text-anchor="end">LEARNING + BUILDING + SHIPPING</text>',
+                  f'<path d="M610 242 H900" stroke="{label_stroke}" stroke-dasharray="2 6"/><text x="930" y="246" fill="{text_fill}" text-anchor="end">BS DATA SCIENCE · IIT MADRAS</text><text x="522" y="270">Status</text><path d="M610 266 H900" stroke="{label_stroke}" stroke-dasharray="2 6"/><text x="930" y="270" fill="{text_fill}" text-anchor="end">LEARNING + BUILDING + SHIPPING</text>'
+              )
+
+              # Shift the remaining Core rows by 23px.
+              for label, old_y, old_path, new_y, new_path in [
+                  ("Core.Lang", 280, 276, 303, 299),
+                  ("Core.Data", 303, 299, 326, 322),
+                  ("Core.Infra", 326, 322, 349, 345),
+              ]:
+                  pattern = rf'(<text x="522" y="{old_y}">{re.escape(label)}</text><path d="M610 {old_path} H900" stroke="{re.escape(label_stroke)}"[^>]*/><text x="930" y="{old_y}"[^>]*>)(.*?)(</text>)'
+                  repl = rf'<text x="522" y="{new_y}">{label}</text><path d="M610 {new_path} H900" stroke="{label_stroke}" stroke-dasharray="2 6"/><text x="930" y="{new_y}" fill="{text_fill}" text-anchor="end">\\2</text>'
+                  s = re.sub(pattern, repl, s, count=1)
+
+              # Remove Interests row entirely.
+              s = re.sub(r'<text x="522" y="349">Interests</text><path d="M610 345 H900" stroke="[^"]+" stroke-dasharray="2 6"/><text x="930" y="349"[^>]*>.*?</text>', '', s, count=1)
+
+              # Target gets a second line.
+              s = s.replace(
+                  f'<text x="522" y="472" fill="{text_fill}" font-size="15">SOFTWARE · AI/ML · CLOUD · DEVOPS · QUANT · HFT</text>',
+                  f'<text x="522" y="472" fill="{text_fill}" font-size="15">SOFTWARE · AI/ML · CLOUD · DEVOPS · QUANT · HFT</text><text x="522" y="496" fill="{text_fill}" font-size="15">AUTOMATION · SYSTEM DESIGNS</text>'
+              )
+              p.write_text(s, encoding="utf-8")
+
+          update("dark.svg", "dark")
+          update("light.svg", "light")
+
+          r = Path("README.md")
+          readme = r.read_text(encoding="utf-8")
+          readme = readme.replace("dark.svg?v=20260908-mainbox-v9", "dark.svg?v=20260909-systeminfo-v1")
+          readme = readme.replace("light.svg?v=20260908-mainbox-v9", "light.svg?v=20260909-systeminfo-v1")
+          r.write_text(readme, encoding="utf-8")
+          PY
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dark.svg light.svg README.md
+          git diff --cached --quiet && exit 0
+          git commit -m "fix(profile): update hero system info"
+          git push origin HEAD:main
