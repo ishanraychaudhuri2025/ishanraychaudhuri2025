@@ -24,8 +24,8 @@
 <!-- ===== GITHUB STREAK ===== -->
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=true&background=0B0B0F&stroke=C8102E&ring=C8102E&fire=D4AF37&currStreakLabel=FFFFFF&sideLabels=A8A8B0&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=777B85&titleColor=C8102E&card_width=1180">
-  <img width="100%" src="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=true&background=FFFFFF&stroke=C8102E&ring=C8102E&fire=D4AF37&currStreakLabel=111116&sideLabels=5E626B&currStreakNum=111116&sideNums=111116&dates=9CA3AF&titleColor=C8102E&card_width=1180" alt="Ishan's GitHub streak">
+  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=false&border=C8102E&border_radius=14&background=0B0B0F&stroke=C8102E&ring=C8102E&fire=D4AF37&currStreakLabel=FFFFFF&sideLabels=A8A8B0&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=777B85&titleColor=C8102E&card_width=1180">
+  <img width="100%" src="https://streak-stats.demolab.com/?user=ishanraychaudhuri2025&hide_border=false&border=C8102E&border_radius=14&background=FFFFFF&stroke=C8102E&ring=C8102E&fire=D4AF37&currStreakLabel=111116&sideLabels=5E626B&currStreakNum=111116&sideNums=111116&dates=9CA3AF&titleColor=C8102E&card_width=1180" alt="Ishan's GitHub streak">
 </picture>
 
 <br/>
@@ -57,9 +57,9 @@
 <br/>
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20260905-v8">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260905-v8">
-  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260905-v8" alt="Ishan's projects">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20260909-frame1">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260909-frame1">
+  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260909-frame1" alt="Ishan's projects">
 </picture>
 </div>
 
