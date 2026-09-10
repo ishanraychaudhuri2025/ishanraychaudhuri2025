@@ -1,5 +1,5 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
-<!-- profile-render-mainbox-v11 -->
+<!-- profile-render-mainbox-v12 -->
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./dark.svg?v=20260909-systeminfo-v1">
@@ -20,9 +20,9 @@
 <!-- ===== STREAK + STATS + LANGUAGES + SNAKE : ONE RED FRAME ===== -->
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-activity-dark.svg?v=202609101600">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/profile-activity-light.svg?v=202609101600">
-  <img width="100%" src="./assets/profile-activity-light.svg?v=202609101600" alt="GitHub streak, stats, top languages and contribution snake">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-activity-final-dark.svg?v=2026091016-final">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/profile-activity-final-light.svg?v=2026091016-final">
+  <img width="100%" src="./assets/profile-activity-final-light.svg?v=2026091016-final" alt="GitHub streak, stats, top languages and contribution snake">
 </picture>
 </div>
 
