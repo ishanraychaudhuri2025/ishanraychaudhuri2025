@@ -117,7 +117,7 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
   <line x1="393.33" y1="28" x2="393.33" y2="170" stroke="{accent}" stroke-width="1"/>
   <line x1="786.67" y1="28" x2="786.67" y2="170" stroke="{accent}" stroke-width="1"/>
 
-  <!-- ACTIVE DAYS: colored number, label and accent line -->
+  <!-- ACTIVE DAYS -->
   <g transform="translate(196.67 40)" fill="none" stroke="{accent}" stroke-width="2.2">
     <rect x="-12" y="-8" width="24" height="19" rx="3"/>
     <line x1="-12" y1="-2" x2="12" y2="-2"/>
@@ -132,7 +132,7 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
   <text x="196.67" y="143" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">last 400 days</text>
   <rect x="172" y="153" width="49" height="4" rx="2" fill="{accent}"/>
 
-  <!-- CURRENT STREAK: reference geometry, static -->
+  <!-- CURRENT STREAK -->
   <g mask="url(#ringMask)">
     <circle cx="590" cy="71" r="40" fill="none" stroke="{accent}" stroke-width="5"/>
   </g>
@@ -150,8 +150,8 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
     <text x="0" y="21" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-weight="400" font-size="12">{current_range}</text>
   </g>
 
-  <!-- LONGEST STREAK: centered trophy, colored number, label and accent line -->
-  <g transform="translate(983.33 40)" fill="{gold}">
+  <!-- LONGEST STREAK -->
+  <g transform="translate(983.33 32)" fill="{gold}">
     <path d="M-9 -8 H9 V0 C9 7 5 11 0 13 C-5 11 -9 7 -9 0 Z"/>
     <path d="M-9 -4 H-16 V1 C-16 8 -12 12 -6 12 V8 C-9 7 -11 4 -11 0 H-9 Z"/>
     <path d="M9 -4 H16 V1 C16 8 12 12 6 12 V8 C9 7 11 4 11 0 H9 Z"/>
@@ -196,7 +196,6 @@ def main():
         (A / f"activity-snake-{theme}.svg").write_text(snake, encoding="utf-8")
         rendered = frame(theme)
         (A / f"profile-activity-{theme}.svg").write_text(rendered, encoding="utf-8")
-        # Deliberately use a new filename to bypass GitHub's cached image proxy.
         (A / f"profile-activity-final-{theme}.svg").write_text(rendered, encoding="utf-8")
 
 
