@@ -194,7 +194,10 @@ def main():
         (A / f"streak-{theme}.svg").write_text(streak_card(theme, *metrics), encoding="utf-8")
         snake = get(SNAKE + f"snake-{theme}.svg")
         (A / f"activity-snake-{theme}.svg").write_text(snake, encoding="utf-8")
-        (A / f"profile-activity-{theme}.svg").write_text(frame(theme), encoding="utf-8")
+        rendered = frame(theme)
+        (A / f"profile-activity-{theme}.svg").write_text(rendered, encoding="utf-8")
+        # Deliberately use a new filename to bypass GitHub's cached image proxy.
+        (A / f"profile-activity-final-{theme}.svg").write_text(rendered, encoding="utf-8")
 
 
 if __name__ == "__main__":
