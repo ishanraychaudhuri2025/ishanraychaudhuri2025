@@ -18,7 +18,7 @@
 <a href="https://www.linkedin.com/in/ishan-ray-chaudhuri/"><img src="https://img.shields.io/badge/LinkedIn-C8102E?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 &nbsp;&nbsp;
 <a href="https://github.com/IshanRayC"><img src="https://img.shields.io/badge/IshanRayC-FFFFFF?style=for-the-badge&logo=github&logoColor=C8102E&labelColor=FFFFFF" alt="Main GitHub"></a>
-<br/><br/>
+<br/>
 </div>
 
 <!-- ===== STREAK + STATS + LANGUAGES + SNAKE : ONE RED FRAME ===== -->
@@ -31,7 +31,6 @@
 </div>
 
 <!-- ===== PROJECTS ===== -->
-<br/>
 <div align="center">
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20260909-frame4">
