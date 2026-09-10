@@ -133,12 +133,15 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
   <rect x="174" y="151" width="45" height="4" rx="2" fill="{accent}" opacity="0.9"/>
 
   <!-- CURRENT STREAK -->
-  <circle cx="590" cy="62" r="35" fill="none" stroke="{accent}" stroke-width="5"/>
-  <path d="M1.5 0.67 C1.5 0.67 2.24 3.32 2.24 5.47 C2.24 7.53 0.89 9.2 -1.17 9.2 C-3.23 9.2 -4.79 7.53 -4.79 5.47 L-4.76 5.11 C-6.78 7.51 -8 10.62 -8 13.99 C-8 18.41 -4.42 22 0 22 C4.42 22 8 18.41 8 13.99 C8 8.6 5.41 3.79 1.5 0.67 Z M-0.29 19 C-2.07 19 -3.51 17.6 -3.51 15.86 C-3.51 14.24 -2.46 13.1 -0.7 12.74 C1.07 12.38 2.9 11.53 3.92 10.16 C4.31 11.45 4.51 12.81 4.51 14.2 C4.51 16.85 2.36 19 -0.29 19 Z" fill="{gold}" transform="translate(590 14)"/>
-  <text x="590" y="73" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">{current}</text>
-  <text x="590" y="111" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Current Streak</text>
-  <text x="590" y="139" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">{cs}</text>
-  <rect x="566" y="151" width="48" height="4" rx="2" fill="{gold}" opacity="0.9"/>
+  <circle cx="590" cy="68" r="33" fill="none" stroke="{accent}" stroke-width="5"/>
+  <path d="M590 7 C590 14 583 18 583 24 C583 30 587 34 590 34 C593 34 597 31 597 25 C597 22 595 19 593 17 C593 22 590 23 589 20 C587 16 590 12 590 7 Z" fill="{gold}"/>
+  <path d="M590 17 C590 21 587 23 587 26 C587 29 589 31 590 31 C592 31 594 29 594 26 C594 24 593 22 592 21 C592 24 590 25 590 23 C589 21 590 19 590 17 Z" fill="#FFE7A3"/>
+  <text x="590" y="77" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">{current}</text>
+  <g font-family="Segoe UI,Ubuntu,sans-serif" text-anchor="middle">
+    <text x="590" y="116" fill="{text}" font-size="14" font-weight="700">Current Streak</text>
+    <text x="590" y="143" fill="{muted}" font-size="12">{cs}</text>
+    <rect x="566" y="153" width="48" height="4" rx="2" fill="{gold}" opacity="0.9"/>
+  </g>
 
   <!-- LONGEST STREAK -->
   <g transform="translate(983.33 40)">
