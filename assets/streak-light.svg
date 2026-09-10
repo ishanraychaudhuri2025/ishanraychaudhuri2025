@@ -5,37 +5,36 @@
   <line x1="393.33" y1="28" x2="393.33" y2="170" stroke="#C8102E" stroke-width="1"/>
   <line x1="786.67" y1="28" x2="786.67" y2="170" stroke="#C8102E" stroke-width="1"/>
 
-  <!-- ACTIVE DAYS: approved design -->
+  <!-- ACTIVE DAYS -->
   <g transform="translate(196.67 40)" fill="none" stroke="#C8102E" stroke-width="2">
     <rect x="-11" y="-8" width="22" height="18" rx="3"/>
     <line x1="-11" y1="-2" x2="11" y2="-2"/>
     <line x1="-6" y1="-12" x2="-6" y2="-5"/>
     <line x1="6" y1="-12" x2="6" y2="-5"/>
-    <circle cx="-5" cy="4" r="1.2" fill="#C8102E" stroke="none"/>
-    <circle cx="0" cy="4" r="1.2" fill="#C8102E" stroke="none"/>
-    <circle cx="5" cy="4" r="1.2" fill="#C8102E" stroke="none"/>
+    <circle cx="-5" cy="4" r="1.2" fill="#C8102E" stroke="none"/><circle cx="0" cy="4" r="1.2" fill="#C8102E" stroke="none"/><circle cx="5" cy="4" r="1.2" fill="#C8102E" stroke="none"/>
   </g>
   <text x="196.67" y="82" text-anchor="middle" fill="#C8102E" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">12</text>
   <text x="196.67" y="112" text-anchor="middle" fill="#111116" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Active Days</text>
   <text x="196.67" y="139" text-anchor="middle" fill="#8A8F98" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">last 400 days</text>
   <rect x="174" y="151" width="45" height="4" rx="2" fill="#C8102E" opacity="0.9"/>
 
-  <!-- CURRENT STREAK: compact classic ring + centered flame -->
+  <!-- CURRENT STREAK: exact uploaded reference flame, recolored to profile gold -->
   <circle cx="590" cy="68" r="34" fill="none" stroke="#C8102E" stroke-width="5"/>
-  <path d="M590 17 C590 11 594 8 594 4 C600 11 600 18 597 22 C596 24 594 25 592 25 C586 25 582 21 582 16 C582 12 584 9 587 6 C587 11 589 13 590 17 Z" fill="#A87800"/>
-  <path d="M591 13 C591 10 593 8 593 6 C596 11 596 15 594 18 C593 19 592 20 591 20 C589 20 587 18 587 16 C587 14 588 12 590 11 C590 12 591 13 591 13 Z" fill="#FFE7A3"/>
+  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAfCAYAAAAbW8YEAAABVUlEQVR42mO8st6cgd6AiWEAwKilg95SAwYGBh9SNLBQwdILDAwMG6DsLfQO3ikMDAwq9LT0DZTeQE1LRRgYGATwyPMg0QXUsnQLAwODAx55DiQ2VSyNYWBgkGBgYOhB8hEy2IBDD0WW1iCl9DMMDAwB0OA2YWBgWAPNMuggg5IsY4AWdBwMDAwTcKj9gaRWhhKfEpvpnzAwMGigiZmQa6kFAfkf0Li2gfJvoIUSWcErgcOiKVCMDh4g+ViBXEvR8+YXBgYGHTzqXyCxZcgN3jdYijpChQhyPJNl6QEswYcPeCCxj5Br6QJiUyQDA0MOWnTtINfSG2jxhKukSWFgYChB4i+htD61gFrOAcUPoGXxCSi/BK0AuYJUimEFjCQ0QS8QqGlgaSCBmvWpAbQI/IGjRIohxkJSfYqeNQwYGBg+QCsBkgC5baQ3DAwMe0bbvaOWwgAA/8w25q3CQ+oAAAAASUVORK5CYII=" x="576" y="2" width="29" height="31" preserveAspectRatio="none" style="filter:brightness(0) saturate(100%) invert(73%) sepia(45%) saturate(630%) hue-rotate(5deg) brightness(91%) contrast(88%);"/>
   <text x="590" y="77" text-anchor="middle" fill="#111116" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">4</text>
-  <text x="590" y="116" text-anchor="middle" fill="#111116" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Current Streak</text>
+  <text x="590" y="116" text-anchor="middle" fill="#A87800" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Current Streak</text>
   <text x="590" y="143" text-anchor="middle" fill="#8A8F98" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">Sep 7 - 10</text>
   <rect x="566" y="153" width="48" height="4" rx="2" fill="#A87800" opacity="0.9"/>
 
-  <!-- LONGEST STREAK: fully filled trophy -->
-  <g transform="translate(983.33 41)" fill="#A87800">
-    <path d="M-8 -6 H8 V1 C8 7 4 11 0 11 C-4 11 -8 7 -8 1 Z"/>
-    <path d="M-8 -3 H-13 V1 C-13 6 -10 9 -6 9 H-4 V5 H-6 C-8 5 -9 3 -9 0 H-8 Z"/>
-    <path d="M8 -3 H13 V1 C13 6 10 9 6 9 H4 V5 H6 C8 5 9 3 9 0 H8 Z"/>
-    <rect x="-2.5" y="11" width="5" height="6" rx="1"/>
-    <rect x="-8" y="17" width="16" height="3" rx="1.5"/>
+  <!-- LONGEST STREAK: premium filled championship cup -->
+  <g transform="translate(983.33 38)" fill="#A87800">
+    <path d="M-11 -4 H11 V5 C11 14 6 20 0 22 C-6 20 -11 14 -11 5 Z"/>
+    <path d="M-11 -1 H-18 V4 C-18 12 -14 17 -7 18 V13 C-11 11 -13 8 -13 3 H-11 Z"/>
+    <path d="M11 -1 H18 V4 C18 12 14 17 7 18 V13 C11 11 13 8 13 3 H11 Z"/>
+    <path d="M-4 22 H4 V30 H-4 Z"/>
+    <rect x="-13" y="29" width="26" height="5" rx="2"/>
+    <path d="M-7 1 H7 V6 C7 11 4 15 0 15 C-4 15 -7 11 -7 6 Z" fill="#FFFFFF" opacity="0.22"/>
+    <path d="M-2 -1 H2 V4 H-2 Z" fill="#FFFFFF" opacity="0.28"/>
   </g>
   <text x="983.33" y="82" text-anchor="middle" fill="#A87800" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">5</text>
   <text x="983.33" y="112" text-anchor="middle" fill="#111116" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Longest Streak</text>
