@@ -1,44 +1,58 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="195" viewBox="0 0 1180 195">
-<defs><clipPath id="outer"><rect width="1180" height="195" rx="12"/></clipPath></defs>
-<g clip-path="url(#outer)">
+<defs>
+  <clipPath id="outer"><rect width="1180" height="195" rx="12"/></clipPath>
+  <mask id="mask_out_ring_behind_fire">
+    <rect width="1180" height="195" fill="white"/>
+    <ellipse cx="590" cy="32" rx="13" ry="18" fill="black"/>
+  </mask>
+</defs>
+<g clip-path="url(#outer)" style="isolation:isolate">
   <rect x="0.5" y="0.5" width="1179" height="194" rx="12" fill="#0B0B0F" stroke="#4A0E18"/>
   <line x1="393.33" y1="28" x2="393.33" y2="170" stroke="#C8102E" stroke-width="1"/>
   <line x1="786.67" y1="28" x2="786.67" y2="170" stroke="#C8102E" stroke-width="1"/>
 
-  <!-- ACTIVE DAYS -->
+  <!-- ACTIVE DAYS: keep approved design -->
   <g transform="translate(196.67 40)" fill="none" stroke="#C8102E" stroke-width="2">
     <rect x="-11" y="-8" width="22" height="18" rx="3"/>
     <line x1="-11" y1="-2" x2="11" y2="-2"/>
     <line x1="-6" y1="-12" x2="-6" y2="-5"/>
     <line x1="6" y1="-12" x2="6" y2="-5"/>
-    <circle cx="-5" cy="4" r="1.2" fill="#C8102E" stroke="none"/><circle cx="0" cy="4" r="1.2" fill="#C8102E" stroke="none"/><circle cx="5" cy="4" r="1.2" fill="#C8102E" stroke="none"/>
+    <circle cx="-5" cy="4" r="1.2" fill="#C8102E" stroke="none"/>
+    <circle cx="0" cy="4" r="1.2" fill="#C8102E" stroke="none"/>
+    <circle cx="5" cy="4" r="1.2" fill="#C8102E" stroke="none"/>
   </g>
-  <text x="196.67" y="82" text-anchor="middle" fill="#C8102E" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">12</text>
-  <text x="196.67" y="112" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Active Days</text>
-  <text x="196.67" y="139" text-anchor="middle" fill="#777B85" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">last 400 days</text>
-  <rect x="174" y="151" width="45" height="4" rx="2" fill="#C8102E" opacity="0.9"/>
+  <text x="196.67" y="80" text-anchor="middle" fill="#C8102E" font-family=""Segoe UI", Ubuntu, sans-serif" font-size="28" font-weight="700">12</text>
+  <text x="196.67" y="116" text-anchor="middle" fill="#FFFFFF" font-family=""Segoe UI", Ubuntu, sans-serif" font-size="14" font-weight="400">Active Days</text>
+  <text x="196.67" y="146" text-anchor="middle" fill="#777B85" font-family=""Segoe UI", Ubuntu, sans-serif" font-size="12" font-weight="400">last 400 days</text>
 
-  <!-- CURRENT STREAK: exact uploaded reference flame, recolored to profile gold -->
-  <circle cx="590" cy="68" r="34" fill="none" stroke="#C8102E" stroke-width="5"/>
-  <image href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAfCAYAAAAbW8YEAAABVUlEQVR42mO8st6cgd6AiWEAwKilg95SAwYGBh9SNLBQwdILDAwMG6DsLfQO3ikMDAwq9LT0DZTeQE1LRRgYGATwyPMg0QXUsnQLAwODAx55DiQ2VSyNYWBgkGBgYOhB8hEy2IBDD0WW1iCl9DMMDAwB0OA2YWBgWAPNMuggg5IsY4AWdBwMDAwTcKj9gaRWhhKfEpvpnzAwMGigiZmQa6kFAfkf0Li2gfJvoIUSWcErgcOiKVCMDh4g+ViBXEvR8+YXBgYGHTzqXyCxZcgN3jdYijpChQhyPJNl6QEswYcPeCCxj5Br6QJiUyQDA0MOWnTtINfSG2jxhKukSWFgYChB4i+htD61gFrOAcUPoGXxCSi/BK0AuYJUimEFjCQ0QS8QqGlgaSCBmvWpAbQI/IGjRIohxkJSfYqeNQwYGBg+QCsBkgC5baQ3DAwMe0bbvaOWwgAA/8w25q3CQ+oAAAAASUVORK5CYII=" x="576" y="2" width="29" height="31" preserveAspectRatio="none" style="filter:brightness(0) saturate(100%) invert(73%) sepia(45%) saturate(630%) hue-rotate(5deg) brightness(91%) contrast(88%);"/>
-  <text x="590" y="77" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">4</text>
-  <text x="590" y="116" text-anchor="middle" fill="#D4AF37" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Current Streak</text>
-  <text x="590" y="143" text-anchor="middle" fill="#777B85" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">Sep 7 - 10</text>
-  <rect x="566" y="153" width="48" height="4" rx="2" fill="#D4AF37" opacity="0.9"/>
-
-  <!-- LONGEST STREAK: premium filled championship cup -->
-  <g transform="translate(983.33 38)" fill="#D4AF37">
-    <path d="M-11 -4 H11 V5 C11 14 6 20 0 22 C-6 20 -11 14 -11 5 Z"/>
-    <path d="M-11 -1 H-18 V4 C-18 12 -14 17 -7 18 V13 C-11 11 -13 8 -13 3 H-11 Z"/>
-    <path d="M11 -1 H18 V4 C18 12 14 17 7 18 V13 C11 11 13 8 13 3 H11 Z"/>
-    <path d="M-4 22 H4 V30 H-4 Z"/>
-    <rect x="-13" y="29" width="26" height="5" rx="2"/>
-    <path d="M-7 1 H7 V6 C7 11 4 15 0 15 C-4 15 -7 11 -7 6 Z" fill="#0B0B0F" opacity="0.22"/>
-    <path d="M-2 -1 H2 V4 H-2 Z" fill="#0B0B0F" opacity="0.28"/>
+  <!-- CURRENT STREAK: exact github-readme-streak-stats geometry, recolored -->
+  <g mask="url(#mask_out_ring_behind_fire)">
+    <circle cx="590" cy="71" r="40" fill="none" stroke="#C8102E" stroke-width="5"/>
   </g>
-  <text x="983.33" y="82" text-anchor="middle" fill="#D4AF37" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">5</text>
-  <text x="983.33" y="112" text-anchor="middle" fill="#FFFFFF" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Longest Streak</text>
-  <text x="983.33" y="139" text-anchor="middle" fill="#777B85" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">Sep 1 - 5</text>
-  <rect x="959" y="151" width="48" height="4" rx="2" fill="#D4AF37" opacity="0.9"/>
+  <g transform="translate(590 19.5)" stroke-opacity="0">
+    <path d="M -12 -0.5 L 15 -0.5 L 15 23.5 L -12 23.5 L -12 -0.5 Z" fill="none"/>
+    <path d="M 1.5 0.67 C 1.5 0.67 2.24 3.32 2.24 5.47 C 2.24 7.53 0.89 9.2 -1.17 9.2 C -3.23 9.2 -4.79 7.53 -4.79 5.47 L -4.76 5.11 C -6.78 7.51 -8 10.62 -8 13.99 C -8 18.41 -4.42 22 0 22 C 4.42 22 8 18.41 8 13.99 C 8 8.6 5.41 3.79 1.5 0.67 Z M -0.29 19 C -2.07 19 -3.51 17.6 -3.51 15.86 C -3.51 14.24 -2.46 13.1 -0.7 12.74 C 1.07 12.38 2.9 11.53 3.92 10.16 C 4.31 11.45 4.51 12.81 4.51 14.2 C 4.51 16.85 2.36 19 -0.29 19 Z" fill="#D4AF37" stroke-opacity="0"/>
+  </g>
+  <g transform="translate(590 48)">
+    <text x="0" y="32" text-anchor="middle" fill="#FFFFFF" font-family=""Segoe UI", Ubuntu, sans-serif" font-weight="700" font-size="28">4</text>
+  </g>
+  <g transform="translate(590 108)">
+    <text x="0" y="32" text-anchor="middle" fill="#D4AF37" font-family=""Segoe UI", Ubuntu, sans-serif" font-weight="700" font-size="14">Current Streak</text>
+  </g>
+  <g transform="translate(590 145)">
+    <text x="0" y="21" text-anchor="middle" fill="#777B85" font-family=""Segoe UI", Ubuntu, sans-serif" font-weight="400" font-size="12">Sep 7 - 10</text>
+  </g>
+
+  <!-- LONGEST STREAK: simple filled trophy, vertically aligned with Active Days -->
+  <g transform="translate(983.33 35)" fill="#D4AF37">
+    <path d="M-10 -5 H10 V2 C10 9 5 14 0 16 C-5 14 -10 9 -10 2 Z"/>
+    <path d="M-10 -2 H-16 V2 C-16 9 -12 13 -7 14 V9 C-10 8 -12 5 -12 1 H-10 Z"/>
+    <path d="M10 -2 H16 V2 C16 9 12 13 7 14 V9 C10 8 12 5 12 1 H10 Z"/>
+    <rect x="-3" y="16" width="6" height="7" rx="1"/>
+    <rect x="-12" y="23" width="24" height="4" rx="2"/>
+  </g>
+  <text x="983.33" y="80" text-anchor="middle" fill="#D4AF37" font-family=""Segoe UI", Ubuntu, sans-serif" font-size="28" font-weight="700">5</text>
+  <text x="983.33" y="116" text-anchor="middle" fill="#FFFFFF" font-family=""Segoe UI", Ubuntu, sans-serif" font-size="14" font-weight="400">Longest Streak</text>
+  <text x="983.33" y="146" text-anchor="middle" fill="#777B85" font-family=""Segoe UI", Ubuntu, sans-serif" font-size="12" font-weight="400">Sep 1 - 5</text>
 </g>
 </svg>
