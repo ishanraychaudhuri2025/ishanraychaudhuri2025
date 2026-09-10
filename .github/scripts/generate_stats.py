@@ -3,12 +3,14 @@
 from __future__ import annotations
 
 import html
+import json
 import os
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from collections import Counter
 from typing import Any
-import json
 
 USER = "ishanraychaudhuri2025"
 W = 500
@@ -27,17 +29,40 @@ THEMES = {
 
 
 def api(path: str, token: str) -> Any:
-    req = urllib.request.Request(
-        "https://api.github.com" + path,
-        headers={
+    """Call GitHub's API with retries for rate limits, transient HTTP errors and network hiccups."""
+    url = "https://api.github.com" + path
+    last_error: Exception | None = None
+
+    for attempt in range(4):
+        headers = {
             "Accept": "application/vnd.github+json",
-            "Authorization": f"Bearer {token}",
             "X-GitHub-Api-Version": "2022-11-28",
             "User-Agent": "ishan-profile-stats",
-        },
-    )
-    with urllib.request.urlopen(req, timeout=30) as response:
-        return json.load(response)
+        }
+        if token:
+            headers["Authorization"] = f"Bearer {token}"
+
+        req = urllib.request.Request(url, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=30) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as exc:
+            last_error = exc
+            if exc.code not in {408, 429, 500, 502, 503, 504}:
+                raise
+            retry_after = exc.headers.get("Retry-After")
+            if retry_after and retry_after.isdigit():
+                delay = min(30, int(retry_after))
+            else:
+                delay = 2 ** attempt
+            time.sleep(delay)
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
+            last_error = exc
+            time.sleep(2 ** attempt)
+
+    if last_error:
+        raise RuntimeError(f"GitHub API request failed after retries: {path}: {last_error}") from last_error
+    raise RuntimeError(f"GitHub API request failed: {path}")
 
 
 def count_search_issues(q: str, token: str) -> int:
