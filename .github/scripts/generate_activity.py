@@ -110,7 +110,7 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
   <line x1="393.33" y1="28" x2="393.33" y2="170" stroke="{accent}" stroke-width="1"/>
   <line x1="786.67" y1="28" x2="786.67" y2="170" stroke="{accent}" stroke-width="1"/>
 
-  <!-- ACTIVE DAYS: keep the approved design -->
+  <!-- ACTIVE DAYS: approved design -->
   <g transform="translate(196.67 40)" fill="none" stroke="{accent}" stroke-width="2">
     <rect x="-11" y="-8" width="22" height="18" rx="3"/>
     <line x1="-11" y1="-2" x2="11" y2="-2"/>
@@ -125,20 +125,22 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
   <text x="196.67" y="139" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">last 400 days</text>
   <rect x="174" y="151" width="45" height="4" rx="2" fill="{accent}" opacity="0.9"/>
 
-  <!-- CURRENT STREAK: classic yesterday-style layout, fully static -->
-  <circle cx="590" cy="62" r="35" fill="none" stroke="{accent}" stroke-width="5"/>
-  <path d="M1.5 0.67 C1.5 0.67 2.24 3.32 2.24 5.47 C2.24 7.53 0.89 9.2 -1.17 9.2 C-3.23 9.2 -4.79 7.53 -4.79 5.47 L-4.76 5.11 C-6.78 7.51 -8 10.62 -8 13.99 C-8 18.41 -4.42 22 0 22 C4.42 22 8 18.41 8 13.99 C8 8.6 5.41 3.79 1.5 0.67 Z M-0.29 19 C-2.07 19 -3.51 17.6 -3.51 15.86 C-3.51 14.24 -2.46 13.1 -0.7 12.74 C1.07 12.38 2.9 11.53 3.92 10.16 C4.31 11.45 4.51 12.81 4.51 14.2 C4.51 16.85 2.36 19 -0.29 19 Z" fill="{gold}" transform="translate(590 14)"/>
-  <text x="590" y="73" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">{current}</text>
-  <text x="590" y="111" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Current Streak</text>
-  <text x="590" y="139" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">{cs}</text>
-  <rect x="566" y="151" width="48" height="4" rx="2" fill="{gold}" opacity="0.9"/>
+  <!-- CURRENT STREAK: compact classic ring + centered flame -->
+  <circle cx="590" cy="68" r="34" fill="none" stroke="{accent}" stroke-width="5"/>
+  <path d="M590 17 C590 11 594 8 594 4 C600 11 600 18 597 22 C596 24 594 25 592 25 C586 25 582 21 582 16 C582 12 584 9 587 6 C587 11 589 13 590 17 Z" fill="{gold}"/>
+  <path d="M591 13 C591 10 593 8 593 6 C596 11 596 15 594 18 C593 19 592 20 591 20 C589 20 587 18 587 16 C587 14 588 12 590 11 C590 12 591 13 591 13 Z" fill="#FFE7A3"/>
+  <text x="590" y="77" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">{current}</text>
+  <text x="590" y="116" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Current Streak</text>
+  <text x="590" y="143" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">{cs}</text>
+  <rect x="566" y="153" width="48" height="4" rx="2" fill="{gold}" opacity="0.9"/>
 
-  <!-- LONGEST STREAK: distinct trophy treatment -->
-  <g transform="translate(983.33 39)" fill="none" stroke="{gold}" stroke-width="2">
-    <path d="M-7 -4 H7 V2 C7 7 4 10 0 10 C-4 10 -7 7 -7 2 Z" fill="{gold}" stroke="none"/>
-    <path d="M-7 -1 H-11 C-11 5 -8 7 -5 7 M7 -1 H11 C11 5 8 7 5 7"/>
-    <path d="M-3 10 V14 H3 V10 M-7 15 H7"/>
-    <circle cx="0" cy="2" r="2.5" fill="{bg}" stroke="none"/>
+  <!-- LONGEST STREAK: fully filled trophy -->
+  <g transform="translate(983.33 41)" fill="{gold}">
+    <path d="M-8 -6 H8 V1 C8 7 4 11 0 11 C-4 11 -8 7 -8 1 Z"/>
+    <path d="M-8 -3 H-13 V1 C-13 6 -10 9 -6 9 H-4 V5 H-6 C-8 5 -9 3 -9 0 H-8 Z"/>
+    <path d="M8 -3 H13 V1 C13 6 10 9 6 9 H4 V5 H6 C8 5 9 3 9 0 H8 Z"/>
+    <rect x="-2.5" y="11" width="5" height="6" rx="1"/>
+    <rect x="-8" y="17" width="16" height="3" rx="1.5"/>
   </g>
   <text x="983.33" y="82" text-anchor="middle" fill="{gold}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">{longest}</text>
   <text x="983.33" y="112" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Longest Streak</text>
