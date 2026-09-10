@@ -109,61 +109,45 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
         bg, label, text, accent, gold, muted = "#FFFFFF", "#5E626B", "#111116", "#C8102E", "#A87800", "#8A8F98"
 
     cs, ce = fmt_range(current_start, current_end), fmt_range(longest_start, longest_end)
-    fire = "M 1.5 0.67 C 1.5 0.67 2.24 3.32 2.24 5.47 C 2.24 7.53 0.89 9.2 -1.17 9.2 C -3.23 9.2 -4.79 7.53 -4.79 5.47 L -4.76 5.11 C -6.78 7.51 -8 10.62 -8 13.99 C -8 18.41 -4.42 22 0 22 C 4.42 22 8 18.41 8 13.99 C 8 8.6 5.41 3.79 1.5 0.67 Z M -0.29 19 C -2.07 19 -3.51 17.6 -3.51 15.86 C -3.51 14.24 -2.46 13.1 -0.7 12.74 C 1.07 12.38 2.9 11.53 3.92 10.16 C 4.31 11.45 4.51 12.81 4.51 14.2 C 4.51 16.85 2.36 19 -0.29 19 Z"
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="195" viewBox="0 0 1180 195">
-<style>
-@keyframes fadein {{from {{opacity:0}} to {{opacity:1}}}}
-@keyframes pop {{0% {{font-size:3px;opacity:.15}} 80% {{font-size:34px;opacity:1}} 100% {{font-size:28px;opacity:1}}}}
-@keyframes ring {{from {{stroke-dashoffset:214;opacity:.2}} to {{stroke-dashoffset:0;opacity:1}}}}
-@keyframes iconin {{0% {{opacity:0;transform:translateY(5px)}} 100% {{opacity:1;transform:translateY(0)}}}}
-</style>
-<defs>
-  <clipPath id="outer"><rect width="1180" height="195" rx="12"/></clipPath>
-  <mask id="mask"><rect width="1180" height="195" fill="white"/><ellipse cx="590" cy="23" rx="11" ry="14" fill="black"/></mask>
-</defs>
+<defs><clipPath id="outer"><rect width="1180" height="195" rx="12"/></clipPath></defs>
 <g clip-path="url(#outer)">
   <rect x="0.5" y="0.5" width="1179" height="194" rx="12" fill="{bg}" stroke="{FRAME_RED}"/>
   <line x1="393.33" y1="28" x2="393.33" y2="167" stroke="{accent}" stroke-width="1"/>
   <line x1="786.67" y1="28" x2="786.67" y2="167" stroke="{accent}" stroke-width="1"/>
 
-  <!-- LEFT / ACTIVE DAYS -->
-  <g font-family="Segoe UI,Ubuntu,sans-serif" text-anchor="middle">
-    <g transform="translate(196.67 47)" fill="none" stroke="{accent}" stroke-width="2" opacity="0" style="animation:iconin .45s ease-out forwards .05s">
-      <rect x="-9" y="-7" width="18" height="16" rx="2"/><line x1="-9" y1="-2" x2="9" y2="-2"/>
-      <line x1="-5" y1="-11" x2="-5" y2="-5"/><line x1="5" y1="-11" x2="5" y2="-5"/>
-      <circle cx="-4" cy="2" r="1" fill="{accent}" stroke="none"/><circle cx="1" cy="2" r="1" fill="{accent}" stroke="none"/><circle cx="6" cy="2" r="1" fill="{accent}" stroke="none"/>
-    </g>
-    <text x="196.67" y="76" fill="{accent}" font-size="30" font-weight="700" style="opacity:0;animation:pop .55s linear forwards .15s">{active_days}</text>
-    <text x="196.67" y="112" fill="{text}" font-size="14" font-weight="700" style="opacity:0;animation:fadein .45s linear forwards .3s">Active Days</text>
-    <text x="196.67" y="140" fill="{muted}" font-size="12" style="opacity:0;animation:fadein .45s linear forwards .4s">last 400 days</text>
-    <rect x="175" y="151" width="43" height="4" rx="2" fill="{accent}" opacity=".8" style="opacity:0;animation:fadein .35s linear forwards .48s"/>
+  <!-- ACTIVE DAYS -->
+  <g transform="translate(196.67 40)" fill="none" stroke="{accent}" stroke-width="2">
+    <rect x="-11" y="-8" width="22" height="18" rx="3"/>
+    <line x1="-11" y1="-2" x2="11" y2="-2"/>
+    <line x1="-6" y1="-12" x2="-6" y2="-5"/>
+    <line x1="6" y1="-12" x2="6" y2="-5"/>
+    <circle cx="-5" cy="4" r="1.2" fill="{accent}" stroke="none"/>
+    <circle cx="0" cy="4" r="1.2" fill="{accent}" stroke="none"/>
+    <circle cx="5" cy="4" r="1.2" fill="{accent}" stroke="none"/>
   </g>
+  <text x="196.67" y="82" text-anchor="middle" fill="{accent}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">{active_days}</text>
+  <text x="196.67" y="112" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Active Days</text>
+  <text x="196.67" y="139" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">last 400 days</text>
+  <rect x="174" y="151" width="45" height="4" rx="2" fill="{accent}" opacity="0.9"/>
 
-  <!-- CENTER / CURRENT STREAK -->
-  <g mask="url(#mask)">
-    <circle cx="590" cy="58" r="34" fill="none" stroke="{accent}" stroke-width="5" stroke-dasharray="214" stroke-dashoffset="214" style="animation:ring .7s ease-out forwards .15s"/>
-  </g>
-  <g transform="translate(590 12)" opacity="0" style="animation:iconin .45s ease-out forwards .28s">
-    <path d="{fire}" fill="{gold}"/>
-  </g>
-  <text x="590" y="67" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700" style="opacity:0;animation:pop .55s linear forwards .32s">{current}</text>
-  <g font-family="Segoe UI,Ubuntu,sans-serif" text-anchor="middle">
-    <text x="590" y="111" fill="{text}" font-size="14" font-weight="700" style="opacity:0;animation:fadein .45s linear forwards .5s">Current Streak</text>
-    <text x="590" y="140" fill="{muted}" font-size="12" style="opacity:0;animation:fadein .45s linear forwards .58s">{cs}</text>
-    <rect x="566" y="151" width="48" height="4" rx="2" fill="{gold}" opacity=".85" style="opacity:0;animation:fadein .35s linear forwards .65s"/>
-  </g>
+  <!-- CURRENT STREAK -->
+  <circle cx="590" cy="62" r="35" fill="none" stroke="{accent}" stroke-width="5"/>
+  <path d="M1.5 0.67 C1.5 0.67 2.24 3.32 2.24 5.47 C2.24 7.53 0.89 9.2 -1.17 9.2 C-3.23 9.2 -4.79 7.53 -4.79 5.47 L-4.76 5.11 C-6.78 7.51 -8 10.62 -8 13.99 C-8 18.41 -4.42 22 0 22 C4.42 22 8 18.41 8 13.99 C8 8.6 5.41 3.79 1.5 0.67 Z M-0.29 19 C-2.07 19 -3.51 17.6 -3.51 15.86 C-3.51 14.24 -2.46 13.1 -0.7 12.74 C1.07 12.38 2.9 11.53 3.92 10.16 C4.31 11.45 4.51 12.81 4.51 14.2 C4.51 16.85 2.36 19 -0.29 19 Z" fill="{gold}" transform="translate(590 14)"/>
+  <text x="590" y="73" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">{current}</text>
+  <text x="590" y="111" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Current Streak</text>
+  <text x="590" y="139" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">{cs}</text>
+  <rect x="566" y="151" width="48" height="4" rx="2" fill="{gold}" opacity="0.9"/>
 
-  <!-- RIGHT / LONGEST STREAK -->
-  <g font-family="Segoe UI,Ubuntu,sans-serif" text-anchor="middle">
-    <g transform="translate(983.33 47)" fill="none" stroke="{gold}" stroke-width="2" opacity="0" style="animation:iconin .45s ease-out forwards .12s">
-      <path d="M-8 6 L-6 -3 L-1 0 L2 -8 L8 1 L4 2 L7 7 Z" fill="{gold}" stroke="none"/>
-    </g>
-    <text x="983.33" y="76" fill="{gold}" font-size="30" font-weight="700" style="opacity:0;animation:pop .55s linear forwards .2s">{longest}</text>
-    <text x="983.33" y="112" fill="{text}" font-size="14" font-weight="700" style="opacity:0;animation:fadein .45s linear forwards .35s">Longest Streak</text>
-    <text x="983.33" y="140" fill="{muted}" font-size="12" style="opacity:0;animation:fadein .45s linear forwards .45s">{ce}</text>
-    <rect x="959" y="151" width="48" height="4" rx="2" fill="{gold}" opacity=".85" style="opacity:0;animation:fadein .35s linear forwards .55s"/>
+  <!-- LONGEST STREAK -->
+  <g transform="translate(983.33 40)">
+    <path d="M-8 7 L-5 -4 L-1 0 L2 -9 L8 2 L4 3 L7 8 Z" fill="{gold}"/>
   </g>
+  <text x="983.33" y="82" text-anchor="middle" fill="{gold}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">{longest}</text>
+  <text x="983.33" y="112" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Longest Streak</text>
+  <text x="983.33" y="139" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">{ce}</text>
+  <rect x="959" y="151" width="48" height="4" rx="2" fill="{gold}" opacity="0.9"/>
 </g>
 </svg>'''
 
