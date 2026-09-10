@@ -20,18 +20,20 @@
   <text x="196.67" y="139" text-anchor="middle" fill="#8A8F98" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">last 400 days</text>
   <rect x="174" y="151" width="45" height="4" rx="2" fill="#C8102E" opacity="0.9"/>
 
-  <!-- CURRENT STREAK: restored to the classic version, fully static -->
-  <circle cx="590" cy="71" r="40" fill="none" stroke="#C8102E" stroke-width="5"/>
-  <path d="M0 0 C0 7 -7 11 -7 17 C-7 23 -3 27 0 27 C3 27 7 24 7 18 C7 15 5 12 3 10 C3 15 0 16 -1 13 C-3 9 0 5 0 0 Z M0 10 C0 14 -3 16 -3 19 C-3 22 -1 24 0 24 C2 24 4 22 4 19 C4 17 2 15 2 14 C2 17 0 18 0 16 C-1 14 0 12 0 10 Z" fill="#A87800" transform="translate(590 7)"/>
-  <text x="590" y="80" text-anchor="middle" fill="#111116" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">4</text>
-  <text x="590" y="116" text-anchor="middle" fill="#111116" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Current Streak</text>
-  <text x="590" y="143" text-anchor="middle" fill="#8A8F98" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">Sep 7 - 10</text>
-  <rect x="566" y="153" width="48" height="4" rx="2" fill="#A87800" opacity="0.9"/>
+  <!-- CURRENT STREAK: classic yesterday-style layout, fully static -->
+  <circle cx="590" cy="62" r="35" fill="none" stroke="#C8102E" stroke-width="5"/>
+  <path d="M1.5 0.67 C1.5 0.67 2.24 3.32 2.24 5.47 C2.24 7.53 0.89 9.2 -1.17 9.2 C-3.23 9.2 -4.79 7.53 -4.79 5.47 L-4.76 5.11 C-6.78 7.51 -8 10.62 -8 13.99 C-8 18.41 -4.42 22 0 22 C4.42 22 8 18.41 8 13.99 C8 8.6 5.41 3.79 1.5 0.67 Z M-0.29 19 C-2.07 19 -3.51 17.6 -3.51 15.86 C-3.51 14.24 -2.46 13.1 -0.7 12.74 C1.07 12.38 2.9 11.53 3.92 10.16 C4.31 11.45 4.51 12.81 4.51 14.2 C4.51 16.85 2.36 19 -0.29 19 Z" fill="#A87800" transform="translate(590 14)"/>
+  <text x="590" y="73" text-anchor="middle" fill="#111116" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">4</text>
+  <text x="590" y="111" text-anchor="middle" fill="#111116" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Current Streak</text>
+  <text x="590" y="139" text-anchor="middle" fill="#8A8F98" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">Sep 7 - 10</text>
+  <rect x="566" y="151" width="48" height="4" rx="2" fill="#A87800" opacity="0.9"/>
 
-  <!-- LONGEST STREAK: new medal/crown treatment -->
-  <g transform="translate(983.33 40)" stroke="#A87800" stroke-width="1.5">
-    <path d="M-10 -3 L-5 1 L0 -7 L5 1 L10 -3 L8 8 L-8 8 Z" fill="#A87800" stroke="none"/>
-    <circle cx="0" cy="2" r="3" fill="#FFFFFF" stroke="#A87800"/>
+  <!-- LONGEST STREAK: distinct trophy treatment -->
+  <g transform="translate(983.33 39)" fill="none" stroke="#A87800" stroke-width="2">
+    <path d="M-7 -4 H7 V2 C7 7 4 10 0 10 C-4 10 -7 7 -7 2 Z" fill="#A87800" stroke="none"/>
+    <path d="M-7 -1 H-11 C-11 5 -8 7 -5 7 M7 -1 H11 C11 5 8 7 5 7"/>
+    <path d="M-3 10 V14 H3 V10 M-7 15 H7"/>
+    <circle cx="0" cy="2" r="2.5" fill="#FFFFFF" stroke="none"/>
   </g>
   <text x="983.33" y="82" text-anchor="middle" fill="#A87800" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">5</text>
   <text x="983.33" y="112" text-anchor="middle" fill="#111116" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Longest Streak</text>
