@@ -32,11 +32,17 @@ jobs:
       - name: Build activity frame assets
         run: python3 .github/scripts/generate_activity.py
 
+      - name: Refresh profile image cache key
+        run: |
+          CACHE_KEY=$(date -u +%Y%m%d%H%M)
+          sed -i -E "s/profile-activity-(dark|light)\.svg\?v=[^\"]+/profile-activity-\1.svg?v=${CACHE_KEY}/g" README.md
+
       - name: Commit generated profile assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/stats-dark.svg assets/stats-light.svg assets/langs-dark.svg assets/langs-light.svg \
+          git add README.md \
+            assets/stats-dark.svg assets/stats-light.svg assets/langs-dark.svg assets/langs-light.svg \
             assets/streak-dark.svg assets/streak-light.svg \
             assets/activity-snake-dark.svg assets/activity-snake-light.svg \
             assets/profile-activity-dark.svg assets/profile-activity-light.svg
