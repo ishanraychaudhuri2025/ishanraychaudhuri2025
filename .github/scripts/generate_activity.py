@@ -117,15 +117,15 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
   <line x1="393.33" y1="28" x2="393.33" y2="170" stroke="{accent}" stroke-width="1"/>
   <line x1="786.67" y1="28" x2="786.67" y2="170" stroke="{accent}" stroke-width="1"/>
 
-  <!-- ACTIVE DAYS -->
-  <g transform="translate(196.67 40)" fill="none" stroke="{accent}" stroke-width="2.2">
-    <rect x="-12" y="-8" width="24" height="19" rx="3"/>
-    <line x1="-12" y1="-2" x2="12" y2="-2"/>
-    <line x1="-6" y1="-13" x2="-6" y2="-5"/>
-    <line x1="6" y1="-13" x2="6" y2="-5"/>
-    <circle cx="-5" cy="4" r="1.25" fill="{accent}" stroke="none"/>
-    <circle cx="0" cy="4" r="1.25" fill="{accent}" stroke="none"/>
-    <circle cx="5" cy="4" r="1.25" fill="{accent}" stroke="none"/>
+  <!-- ACTIVE DAYS: enlarged to match the trophy and aligned on the same horizontal icon line -->
+  <g transform="translate(196.67 40)" fill="none" stroke="{accent}" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-15" y="-3" width="30" height="21" rx="3"/>
+    <line x1="-15" y1="3" x2="15" y2="3"/>
+    <line x1="-8" y1="-10" x2="-8" y2="-2"/>
+    <line x1="8" y1="-10" x2="8" y2="-2"/>
+    <circle cx="-7" cy="10" r="1.5" fill="{accent}" stroke="none"/>
+    <circle cx="0" cy="10" r="1.5" fill="{accent}" stroke="none"/>
+    <circle cx="7" cy="10" r="1.5" fill="{accent}" stroke="none"/>
   </g>
   <text x="196.67" y="86" text-anchor="middle" fill="{accent}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">{active_days}</text>
   <text x="196.67" y="116" text-anchor="middle" fill="{accent}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Active Days</text>
