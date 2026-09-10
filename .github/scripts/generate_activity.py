@@ -24,8 +24,8 @@ def unwrap(s):
     return m.group(1)
 
 
-def grp(s, t):
-    return f'<g transform="{t}">{unwrap(s)}</g>'
+def grp(s, transform):
+    return f'<g transform="{transform}">{unwrap(s)}</g>'
 
 
 def fetch_contributions():
@@ -33,15 +33,9 @@ def fetch_contributions():
     start = end - timedelta(days=400)
     url = f"https://github.com/users/{USER}/contributions?from={start.isoformat()}&to={end.isoformat()}"
     html = get(url)
-    cells = re.findall(
-        r'<td[^>]*data-date=["\'](\d{4}-\d{2}-\d{2})["\'][^>]*data-level=["\'](\d)["\'][^>]*>',
-        html, re.I
-    )
+    cells = re.findall(r'<td[^>]*data-date=["\'](\d{4}-\d{2}-\d{2})["\'][^>]*data-level=["\'](\d)["\'][^>]*>', html, re.I)
     if not cells:
-        cells = re.findall(
-            r'<td[^>]*data-level=["\'](\d)["\'][^>]*data-date=["\'](\d{4}-\d{2}-\d{2})["\'][^>]*>',
-            html, re.I
-        )
+        cells = re.findall(r'<td[^>]*data-level=["\'](\d)["\'][^>]*data-date=["\'](\d{4}-\d{2}-\d{2})["\'][^>]*>', html, re.I)
         cells = [(d, level) for level, d in cells]
     if not cells:
         raise RuntimeError("Could not parse GitHub contribution calendar")
@@ -57,9 +51,9 @@ def streak_metrics(levels):
 
     longest = 0
     longest_start = longest_end = None
+    run = 0
     run_start = None
     previous = None
-    run = 0
     for day in days:
         if day in active and (previous is None or day == previous + timedelta(days=1)):
             if run == 0:
@@ -77,9 +71,7 @@ def streak_metrics(levels):
         previous = day
 
     today = date.today()
-    anchor = today if today in active else (
-        today - timedelta(days=1) if today - timedelta(days=1) in active else None
-    )
+    anchor = today if today in active else (today - timedelta(days=1) if today - timedelta(days=1) in active else None)
     current = 0
     current_start = current_end = None
     if anchor is not None:
@@ -104,20 +96,21 @@ def fmt_range(start, end):
 
 def streak_card(theme, active_days, current, longest, current_start, current_end, longest_start, longest_end):
     if theme == "dark":
-        bg, label, text, accent, gold, muted = "#0B0B0F", "#A8A8B0", "#FFFFFF", "#C8102E", "#D4AF37", "#777B85"
+        bg, text, accent, gold, muted = "#0B0B0F", "#FFFFFF", "#C8102E", "#D4AF37", "#777B85"
     else:
-        bg, label, text, accent, gold, muted = "#FFFFFF", "#5E626B", "#111116", "#C8102E", "#A87800", "#8A8F98"
+        bg, text, accent, gold, muted = "#FFFFFF", "#111116", "#C8102E", "#A87800", "#8A8F98"
 
-    cs, ce = fmt_range(current_start, current_end), fmt_range(longest_start, longest_end)
+    cs = fmt_range(current_start, current_end)
+    ce = fmt_range(longest_start, longest_end)
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="195" viewBox="0 0 1180 195">
 <defs><clipPath id="outer"><rect width="1180" height="195" rx="12"/></clipPath></defs>
 <g clip-path="url(#outer)">
   <rect x="0.5" y="0.5" width="1179" height="194" rx="12" fill="{bg}" stroke="{FRAME_RED}"/>
-  <line x1="393.33" y1="28" x2="393.33" y2="167" stroke="{accent}" stroke-width="1"/>
-  <line x1="786.67" y1="28" x2="786.67" y2="167" stroke="{accent}" stroke-width="1"/>
+  <line x1="393.33" y1="28" x2="393.33" y2="170" stroke="{accent}" stroke-width="1"/>
+  <line x1="786.67" y1="28" x2="786.67" y2="170" stroke="{accent}" stroke-width="1"/>
 
-  <!-- ACTIVE DAYS -->
+  <!-- ACTIVE DAYS: keep the approved design -->
   <g transform="translate(196.67 40)" fill="none" stroke="{accent}" stroke-width="2">
     <rect x="-11" y="-8" width="22" height="18" rx="3"/>
     <line x1="-11" y1="-2" x2="11" y2="-2"/>
@@ -132,20 +125,18 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
   <text x="196.67" y="139" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">last 400 days</text>
   <rect x="174" y="151" width="45" height="4" rx="2" fill="{accent}" opacity="0.9"/>
 
-  <!-- CURRENT STREAK -->
-  <circle cx="590" cy="68" r="33" fill="none" stroke="{accent}" stroke-width="5"/>
-  <path d="M590 7 C590 14 583 18 583 24 C583 30 587 34 590 34 C593 34 597 31 597 25 C597 22 595 19 593 17 C593 22 590 23 589 20 C587 16 590 12 590 7 Z" fill="{gold}"/>
-  <path d="M590 17 C590 21 587 23 587 26 C587 29 589 31 590 31 C592 31 594 29 594 26 C594 24 593 22 592 21 C592 24 590 25 590 23 C589 21 590 19 590 17 Z" fill="#FFE7A3"/>
-  <text x="590" y="77" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">{current}</text>
-  <g font-family="Segoe UI,Ubuntu,sans-serif" text-anchor="middle">
-    <text x="590" y="116" fill="{text}" font-size="14" font-weight="700">Current Streak</text>
-    <text x="590" y="143" fill="{muted}" font-size="12">{cs}</text>
-    <rect x="566" y="153" width="48" height="4" rx="2" fill="{gold}" opacity="0.9"/>
-  </g>
+  <!-- CURRENT STREAK: restored to the classic version, fully static -->
+  <circle cx="590" cy="71" r="40" fill="none" stroke="{accent}" stroke-width="5"/>
+  <path d="M0 0 C0 7 -7 11 -7 17 C-7 23 -3 27 0 27 C3 27 7 24 7 18 C7 15 5 12 3 10 C3 15 0 16 -1 13 C-3 9 0 5 0 0 Z M0 10 C0 14 -3 16 -3 19 C-3 22 -1 24 0 24 C2 24 4 22 4 19 C4 17 2 15 2 14 C2 17 0 18 0 16 C-1 14 0 12 0 10 Z" fill="{gold}" transform="translate(590 7)"/>
+  <text x="590" y="80" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700">{current}</text>
+  <text x="590" y="116" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Current Streak</text>
+  <text x="590" y="143" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">{cs}</text>
+  <rect x="566" y="153" width="48" height="4" rx="2" fill="{gold}" opacity="0.9"/>
 
-  <!-- LONGEST STREAK -->
-  <g transform="translate(983.33 40)">
-    <path d="M-8 7 L-5 -4 L-1 0 L2 -9 L8 2 L4 3 L7 8 Z" fill="{gold}"/>
+  <!-- LONGEST STREAK: new medal/crown treatment -->
+  <g transform="translate(983.33 40)" stroke="{gold}" stroke-width="1.5">
+    <path d="M-10 -3 L-5 1 L0 -7 L5 1 L10 -3 L8 8 L-8 8 Z" fill="{gold}" stroke="none"/>
+    <circle cx="0" cy="2" r="3" fill="{bg}" stroke="{gold}"/>
   </g>
   <text x="983.33" y="82" text-anchor="middle" fill="{gold}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">{longest}</text>
   <text x="983.33" y="112" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Longest Streak</text>
