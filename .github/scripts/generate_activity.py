@@ -33,9 +33,15 @@ def fetch_contributions():
     start = end - timedelta(days=400)
     url = f"https://github.com/users/{USER}/contributions?from={start.isoformat()}&to={end.isoformat()}"
     html = get(url)
-    cells = re.findall(r'<td[^>]*data-date=["\'](\d{4}-\d{2}-\d{2})["\'][^>]*data-level=["\'](\d)["\'][^>]*>', html, re.I)
+    cells = re.findall(
+        r'<td[^>]*data-date=["\'](\d{4}-\d{2}-\d{2})["\'][^>]*data-level=["\'](\d)["\'][^>]*>',
+        html, re.I
+    )
     if not cells:
-        cells = re.findall(r'<td[^>]*data-level=["\'](\d)["\'][^>]*data-date=["\'](\d{4}-\d{2}-\d{2})["\'][^>]*>', html, re.I)
+        cells = re.findall(
+            r'<td[^>]*data-level=["\'](\d)["\'][^>]*data-date=["\'](\d{4}-\d{2}-\d{2})["\'][^>]*>',
+            html, re.I
+        )
         cells = [(d, level) for level, d in cells]
     if not cells:
         raise RuntimeError("Could not parse GitHub contribution calendar")
@@ -71,7 +77,9 @@ def streak_metrics(levels):
         previous = day
 
     today = date.today()
-    anchor = today if today in active else (today - timedelta(days=1) if today - timedelta(days=1) in active else None)
+    anchor = today if today in active else (
+        today - timedelta(days=1) if today - timedelta(days=1) in active else None
+    )
     current = 0
     current_start = current_end = None
     if anchor is not None:
@@ -106,35 +114,58 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="195" viewBox="0 0 1180 195">
 <style>
 @keyframes fadein {{from {{opacity:0}} to {{opacity:1}}}}
-@keyframes pop {{0% {{font-size:3px;opacity:.2}} 80% {{font-size:34px;opacity:1}} 100% {{font-size:28px;opacity:1}}}}
-@keyframes ring {{from {{stroke-dashoffset:260;opacity:.2}} to {{stroke-dashoffset:0;opacity:1}}}}
-@keyframes pulse {{0%,100% {{transform:translate(590px,19.5px) scale(1)}} 50% {{transform:translate(590px,19.5px) scale(1.08)}}}}
+@keyframes pop {{0% {{font-size:3px;opacity:.15}} 80% {{font-size:34px;opacity:1}} 100% {{font-size:28px;opacity:1}}}}
+@keyframes ring {{from {{stroke-dashoffset:214;opacity:.2}} to {{stroke-dashoffset:0;opacity:1}}}}
+@keyframes iconin {{0% {{opacity:0;transform:translateY(5px)}} 100% {{opacity:1;transform:translateY(0)}}}}
 </style>
-<defs><clipPath id="outer"><rect width="1180" height="195" rx="12"/></clipPath></defs>
+<defs>
+  <clipPath id="outer"><rect width="1180" height="195" rx="12"/></clipPath>
+  <mask id="mask"><rect width="1180" height="195" fill="white"/><ellipse cx="590" cy="23" rx="11" ry="14" fill="black"/></mask>
+</defs>
 <g clip-path="url(#outer)">
-<rect x="0.5" y="0.5" width="1179" height="194" rx="12" fill="{bg}" stroke="{FRAME_RED}"/>
-<line x1="393.33" y1="28" x2="393.33" y2="170" stroke="{accent}" stroke-width="1"/>
-<line x1="786.67" y1="28" x2="786.67" y2="170" stroke="{accent}" stroke-width="1"/>
-<g font-family="Segoe UI,Ubuntu,sans-serif">
-<text x="196.67" y="80" text-anchor="middle" fill="{text}" font-size="28" font-weight="700" style="opacity:0;animation:fadein .5s linear forwards .45s">{active_days}</text>
-<text x="196.67" y="116" text-anchor="middle" fill="{label}" font-size="14" style="opacity:0;animation:fadein .5s linear forwards .55s">Active Days</text>
-<text x="196.67" y="143" text-anchor="middle" fill="{muted}" font-size="12" style="opacity:0;animation:fadein .5s linear forwards .65s">last 400 days</text>
-<text x="590" y="116" text-anchor="middle" fill="{text}" font-size="14" font-weight="700" style="opacity:0;animation:fadein .5s linear forwards .85s">Current Streak</text>
-<text x="590" y="145" text-anchor="middle" fill="{muted}" font-size="12" style="opacity:0;animation:fadein .5s linear forwards .9s">{cs}</text>
-<text x="983.33" y="80" text-anchor="middle" fill="{text}" font-size="28" font-weight="700" style="opacity:0;animation:fadein .5s linear forwards 1.05s">{longest}</text>
-<text x="983.33" y="116" text-anchor="middle" fill="{label}" font-size="14" style="opacity:0;animation:fadein .5s linear forwards 1.15s">Longest Streak</text>
-<text x="983.33" y="143" text-anchor="middle" fill="{muted}" font-size="12" style="opacity:0;animation:fadein .5s linear forwards 1.25s">{ce}</text>
+  <rect x="0.5" y="0.5" width="1179" height="194" rx="12" fill="{bg}" stroke="{FRAME_RED}"/>
+  <line x1="393.33" y1="28" x2="393.33" y2="167" stroke="{accent}" stroke-width="1"/>
+  <line x1="786.67" y1="28" x2="786.67" y2="167" stroke="{accent}" stroke-width="1"/>
+
+  <!-- LEFT / ACTIVE DAYS -->
+  <g font-family="Segoe UI,Ubuntu,sans-serif" text-anchor="middle">
+    <g transform="translate(196.67 47)" fill="none" stroke="{accent}" stroke-width="2" opacity="0" style="animation:iconin .45s ease-out forwards .05s">
+      <rect x="-9" y="-7" width="18" height="16" rx="2"/><line x1="-9" y1="-2" x2="9" y2="-2"/>
+      <line x1="-5" y1="-11" x2="-5" y2="-5"/><line x1="5" y1="-11" x2="5" y2="-5"/>
+      <circle cx="-4" cy="2" r="1" fill="{accent}" stroke="none"/><circle cx="1" cy="2" r="1" fill="{accent}" stroke="none"/><circle cx="6" cy="2" r="1" fill="{accent}" stroke="none"/>
+    </g>
+    <text x="196.67" y="76" fill="{accent}" font-size="30" font-weight="700" style="opacity:0;animation:pop .55s linear forwards .15s">{active_days}</text>
+    <text x="196.67" y="112" fill="{text}" font-size="14" font-weight="700" style="opacity:0;animation:fadein .45s linear forwards .3s">Active Days</text>
+    <text x="196.67" y="140" fill="{muted}" font-size="12" style="opacity:0;animation:fadein .45s linear forwards .4s">last 400 days</text>
+    <rect x="175" y="151" width="43" height="4" rx="2" fill="{accent}" opacity=".8" style="opacity:0;animation:fadein .35s linear forwards .48s"/>
+  </g>
+
+  <!-- CENTER / CURRENT STREAK -->
+  <g mask="url(#mask)">
+    <circle cx="590" cy="58" r="34" fill="none" stroke="{accent}" stroke-width="5" stroke-dasharray="214" stroke-dashoffset="214" style="animation:ring .7s ease-out forwards .15s"/>
+  </g>
+  <g transform="translate(590 12)" opacity="0" style="animation:iconin .45s ease-out forwards .28s">
+    <path d="{fire}" fill="{gold}"/>
+  </g>
+  <text x="590" y="67" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700" style="opacity:0;animation:pop .55s linear forwards .32s">{current}</text>
+  <g font-family="Segoe UI,Ubuntu,sans-serif" text-anchor="middle">
+    <text x="590" y="111" fill="{text}" font-size="14" font-weight="700" style="opacity:0;animation:fadein .45s linear forwards .5s">Current Streak</text>
+    <text x="590" y="140" fill="{muted}" font-size="12" style="opacity:0;animation:fadein .45s linear forwards .58s">{cs}</text>
+    <rect x="566" y="151" width="48" height="4" rx="2" fill="{gold}" opacity=".85" style="opacity:0;animation:fadein .35s linear forwards .65s"/>
+  </g>
+
+  <!-- RIGHT / LONGEST STREAK -->
+  <g font-family="Segoe UI,Ubuntu,sans-serif" text-anchor="middle">
+    <g transform="translate(983.33 47)" fill="none" stroke="{gold}" stroke-width="2" opacity="0" style="animation:iconin .45s ease-out forwards .12s">
+      <path d="M-8 6 L-6 -3 L-1 0 L2 -8 L8 1 L4 2 L7 7 Z" fill="{gold}" stroke="none"/>
+    </g>
+    <text x="983.33" y="76" fill="{gold}" font-size="30" font-weight="700" style="opacity:0;animation:pop .55s linear forwards .2s">{longest}</text>
+    <text x="983.33" y="112" fill="{text}" font-size="14" font-weight="700" style="opacity:0;animation:fadein .45s linear forwards .35s">Longest Streak</text>
+    <text x="983.33" y="140" fill="{muted}" font-size="12" style="opacity:0;animation:fadein .45s linear forwards .45s">{ce}</text>
+    <rect x="959" y="151" width="48" height="4" rx="2" fill="{gold}" opacity=".85" style="opacity:0;animation:fadein .35s linear forwards .55s"/>
+  </g>
 </g>
-<g mask="url(#mask)">
-<circle cx="590" cy="71" r="40" fill="none" stroke="{accent}" stroke-width="5" stroke-dasharray="251" stroke-dashoffset="260" style="animation:ring .7s ease-out forwards .25s"/>
-</g>
-<defs><mask id="mask"><rect width="1180" height="195" fill="white"/><ellipse cx="590" cy="32" rx="13" ry="18" fill="black"/></mask></defs>
-<g style="animation:pulse 1.8s ease-in-out infinite" transform-origin="590px 19.5px" opacity="0">
-<path d="{fire}" fill="{gold}" transform="translate(0 0)"/>
-<animate attributeName="opacity" values="0;1;1" dur=".6s" begin=".55s" fill="freeze"/>
-</g>
-<text x="590" y="80" text-anchor="middle" fill="{text}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="28" font-weight="700" style="animation:pop .6s linear forwards .55s">{current}</text>
-</g></svg>'''
+</svg>'''
 
 
 def frame(theme):
