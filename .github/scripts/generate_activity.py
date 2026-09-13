@@ -96,29 +96,22 @@ def fmt_range(start, end):
 
 def calendar_icon(accent):
     return f'''<g transform="translate(196.67 34) scale(0.78)">
-  <defs>
-    <linearGradient id="calendarRed" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FF4A3D"/>
-      <stop offset="0.55" stop-color="{accent}"/>
-      <stop offset="1" stop-color="#8F0B20"/>
-    </linearGradient>
-  </defs>
   <ellipse cx="0" cy="29" rx="25" ry="4" fill="#000000" opacity="0.12"/>
-  <rect x="-28" y="-18" width="56" height="48" rx="7" fill="url(#calendarRed)"/>
-  <rect x="-28" y="-18" width="56" height="16" rx="7" fill="#FF4038"/>
-  <rect x="-28" y="-10" width="56" height="8" fill="#E5232E"/>
+  <rect x="-28" y="-18" width="56" height="48" rx="7" fill="{accent}"/>
+  <rect x="-28" y="-18" width="56" height="16" rx="7" fill="{accent}"/>
+  <rect x="-28" y="-10" width="56" height="8" fill="{accent}"/>
   <rect x="-23" y="-1" width="46" height="26" rx="3" fill="#FFFFFF"/>
-  <g fill="none" stroke="#E5232E" stroke-width="1.7">
+  <g fill="none" stroke="{accent}" stroke-width="1.7">
     <path d="M-12 -6 V-20"/><path d="M0 -6 V-20"/><path d="M12 -6 V-20"/>
   </g>
-  <g fill="#E5232E">
+  <g fill="{accent}">
     <circle cx="-19" cy="5" r="1.7"/><circle cx="-7" cy="5" r="1.7"/><circle cx="5" cy="5" r="1.7"/><circle cx="17" cy="5" r="1.7"/>
     <circle cx="-19" cy="14" r="1.7"/><circle cx="-7" cy="14" r="1.7"/><circle cx="5" cy="14" r="1.7"/><circle cx="17" cy="14" r="1.7"/>
   </g>
   <g fill="#FFFFFF">
     <circle cx="-12" cy="-18" r="5"/><circle cx="0" cy="-18" r="5"/><circle cx="12" cy="-18" r="5"/>
   </g>
-  <g fill="#E5232E">
+  <g fill="{accent}">
     <circle cx="-12" cy="-18" r="2"/><circle cx="0" cy="-18" r="2"/><circle cx="12" cy="-18" r="2"/>
   </g>
 </g>'''
@@ -126,21 +119,12 @@ def calendar_icon(accent):
 
 def trophy_icon(gold):
     return f'''<g transform="translate(983.33 34) scale(0.78)">
-  <defs>
-    <linearGradient id="trophyGold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFE88A"/>
-      <stop offset="0.42" stop-color="#F4C542"/>
-      <stop offset="0.75" stop-color="{gold}"/>
-      <stop offset="1" stop-color="#A86A00"/>
-    </linearGradient>
-  </defs>
   <ellipse cx="0" cy="29" rx="27" ry="4" fill="#000000" opacity="0.12"/>
-  <path d="M-10 -20 H10 V-3 C10 7 5 14 0 17 C-5 14 -10 7 -10 -3 Z" fill="url(#trophyGold)"/>
-  <path d="M-10 -15 H-22 V-5 C-22 6 -15 13 -7 13 V7 C-12 6 -15 2 -15 -4 H-10 Z" fill="url(#trophyGold)"/>
-  <path d="M10 -15 H22 V-5 C22 6 15 13 7 13 V7 C12 6 15 2 15 -4 H10 Z" fill="url(#trophyGold)"/>
-  <path d="M-3 15 H3 V23 H-3 Z" fill="url(#trophyGold)"/>
-  <rect x="-18" y="22" width="36" height="8" rx="3" fill="url(#trophyGold)"/>
-  <path d="M-7 -14 C-3 -17 3 -17 7 -14" fill="none" stroke="#FFF2B0" stroke-width="2" opacity="0.8" stroke-linecap="round"/>
+  <path d="M-10 -20 H10 V-3 C10 7 5 14 0 17 C-5 14 -10 7 -10 -3 Z" fill="{gold}"/>
+  <path d="M-10 -15 H-22 V-5 C-22 6 -15 13 -7 13 V7 C-12 6 -15 2 -15 -4 H-10 Z" fill="{gold}"/>
+  <path d="M10 -15 H22 V-5 C22 6 15 13 7 13 V7 C12 6 15 2 15 -4 H10 Z" fill="{gold}"/>
+  <path d="M-3 15 H3 V23 H-3 Z" fill="{gold}"/>
+  <rect x="-18" y="22" width="36" height="8" rx="3" fill="{gold}"/>
 </g>'''
 
 
@@ -216,7 +200,6 @@ def main():
         rendered = frame(theme)
         (A / f"profile-activity-{theme}.svg").write_text(rendered, encoding="utf-8")
         (A / f"profile-activity-final-{theme}.svg").write_text(rendered, encoding="utf-8")
-
 
 if __name__ == "__main__":
     main()
