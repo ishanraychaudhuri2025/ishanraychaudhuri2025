@@ -96,20 +96,30 @@ def fmt_range(start, end):
 
 def calendar_icon(accent):
     return f'''<g transform="translate(196.67 34) scale(0.78)">
+  <defs>
+    <linearGradient id="calendarRed" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF4A3D"/>
+      <stop offset="0.55" stop-color="{accent}"/>
+      <stop offset="1" stop-color="#8F0B20"/>
+    </linearGradient>
+  </defs>
   <ellipse cx="0" cy="29" rx="25" ry="4" fill="#000000" opacity="0.12"/>
-  <rect x="-28" y="-18" width="56" height="48" rx="7" fill="{accent}"/>
-  <rect x="-28" y="-18" width="56" height="16" rx="7" fill="{accent}"/>
-  <rect x="-28" y="-10" width="56" height="8" fill="{accent}"/>
-  <rect x="-23" y="-1" width="46" height="26" rx="3" fill="{accent}"/>
-  <g fill="none" stroke="{accent}" stroke-width="1.7">
+  <rect x="-28" y="-18" width="56" height="48" rx="7" fill="url(#calendarRed)"/>
+  <rect x="-28" y="-18" width="56" height="16" rx="7" fill="#FF4038"/>
+  <rect x="-28" y="-10" width="56" height="8" fill="#E5232E"/>
+  <rect x="-23" y="-1" width="46" height="26" rx="3" fill="#FFFFFF"/>
+  <g fill="none" stroke="#E5232E" stroke-width="1.7">
     <path d="M-12 -6 V-20"/><path d="M0 -6 V-20"/><path d="M12 -6 V-20"/>
   </g>
-  <g fill="{accent}">
+  <g fill="#E5232E">
     <circle cx="-19" cy="5" r="1.7"/><circle cx="-7" cy="5" r="1.7"/><circle cx="5" cy="5" r="1.7"/><circle cx="17" cy="5" r="1.7"/>
     <circle cx="-19" cy="14" r="1.7"/><circle cx="-7" cy="14" r="1.7"/><circle cx="5" cy="14" r="1.7"/><circle cx="17" cy="14" r="1.7"/>
   </g>
-  <g fill="{accent}">
+  <g fill="#FFFFFF">
     <circle cx="-12" cy="-18" r="5"/><circle cx="0" cy="-18" r="5"/><circle cx="12" cy="-18" r="5"/>
+  </g>
+  <g fill="#E5232E">
+    <circle cx="-12" cy="-18" r="2"/><circle cx="0" cy="-18" r="2"/><circle cx="12" cy="-18" r="2"/>
   </g>
 </g>'''
 
