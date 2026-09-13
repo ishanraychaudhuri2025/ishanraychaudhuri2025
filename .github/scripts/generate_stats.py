@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate compact GitHub stats SVGs with the supplied reference-style symbols."""
+"""Generate compact GitHub stats SVGs with a clean reference-style icon set."""
 from __future__ import annotations
 
 import html
@@ -29,10 +29,8 @@ THEMES = {
 
 
 def api(path: str, token: str) -> Any:
-    """Call GitHub's API with retries for rate limits, transient HTTP errors and network hiccups."""
     url = "https://api.github.com" + path
     last_error: Exception | None = None
-
     for attempt in range(4):
         headers = {
             "Accept": "application/vnd.github+json",
@@ -41,7 +39,6 @@ def api(path: str, token: str) -> Any:
         }
         if token:
             headers["Authorization"] = f"Bearer {token}"
-
         req = urllib.request.Request(url, headers=headers)
         try:
             with urllib.request.urlopen(req, timeout=30) as response:
@@ -56,7 +53,6 @@ def api(path: str, token: str) -> Any:
         except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
             last_error = exc
             time.sleep(2 ** attempt)
-
     if last_error:
         raise RuntimeError(f"GitHub API request failed after retries: {path}: {last_error}") from last_error
     raise RuntimeError(f"GitHub API request failed: {path}")
@@ -82,7 +78,6 @@ def collect(token: str) -> dict[str, Any]:
     user = api(f"/users/{USER}", token)
     repos = api(f"/users/{USER}/repos?per_page=100&type=owner&sort=pushed", token)
     repos = [r for r in repos if not r.get("fork")]
-
     stars = sum(int(r.get("stargazers_count", 0)) for r in repos)
     languages: Counter[str] = Counter()
     for repo in repos:
@@ -92,7 +87,6 @@ def collect(token: str) -> dict[str, Any]:
                 languages[lang] += int(amount)
         except Exception:
             continue
-
     return {
         "repos": len(repos),
         "stars": stars,
@@ -119,47 +113,49 @@ def shell(t: dict[str, str], title: str) -> list[str]:
 
 
 def stat_icon(kind: str, x: int, y: int, color: str) -> str:
-    """Render compact reference-style symbols with distinct icons per statistic."""
-    common = f'fill="none" stroke="{color}" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"'
+    """Clean, small line icons matching the supplied reference family."""
+    common = f'fill="none" stroke="{color}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"'
 
     if kind == "repo":
         body = (
-            f'<rect x="-7" y="-5.5" width="14" height="11" rx="1.5" {common}/>'
-            f'<path d="M-7 2.5 H7" {common}/>'
-            f'<path d="M-2.7 7 H2.7" {common}/>'
+            f'<path d="M-7 -6.5 H5.5 C6.3 -6.5 7 -5.8 7 -5 V6.5 H-5.5 C-6.3 6.5 -7 5.8 -7 5 Z" {common}/>'
+            f'<path d="M-4.2 -6.5 V6.5" {common}/>'
+            f'<path d="M-2  -2.5 H4" {common}/>'
+            f'<path d="M-2 1 H4" {common}/>'
+            f'<path d="M-2 4.5 H2" {common}/>'
         )
     elif kind == "star":
-        body = f'<path d="M0 -8 L2.2 -2.5 L8 -2 L3.5 1.5 L4.7 7.5 L0 4.1 L-4.7 7.5 L-3.5 1.5 L-8 -2 L-2.2 -2.5 Z" {common}/>'
+        body = f'<path d="M0 -8 L2.1 -2.6 L7.8 -2.1 L3.4 1.5 L4.8 7.4 L0 4.3 L-4.8 7.4 L-3.4 1.5 L-7.8 -2.1 L-2.1 -2.6 Z" {common}/>'
     elif kind == "followers":
         body = (
-            f'<circle cx="-2.8" cy="-2.4" r="3.5" {common}/>'
-            f'<path d="M-8 7 C-7.2 2.8 -5.1 1.1 -2.8 1.1 C-0.5 1.1 1.7 2.8 2.4 7" {common}/>'
-            f'<circle cx="5.2" cy="-1.3" r="2.6" {common}/>'
-            f'<path d="M3.1 2.1 C6.1 2.1 7.8 3.6 8.4 6.2" {common}/>'
+            f'<circle cx="-2.7" cy="-2.9" r="3.2" {common}/>'
+            f'<path d="M-8.5 6.5 C-7.7 2.8 -5.7 1.1 -2.7 1.1 C0.2 1.1 2.3 2.8 3.1 6.5" {common}/>'
+            f'<circle cx="5.2" cy="-1.4" r="2.3" {common}/>'
+            f'<path d="M3.6 2.4 C6 2.5 7.4 3.7 8.1 5.8" {common}/>'
         )
     elif kind == "commit":
         body = (
             f'<circle cx="0" cy="0" r="7.2" {common}/>'
-            f'<path d="M0 -4.1 V0 L3.1 2.1" {common}/>'
-            f'<path d="M-5.4 -6.1 C-7 -4.6 -8 -2.5 -8 0" {common}/>'
-            f'<path d="M-8 0 L-6.2 -0.6 M-8 0 L-6.8 1.6" {common}/>'
+            f'<path d="M0 -4 V0 L2.9 2" {common}/>'
+            f'<path d="M-6.1 0 H-4.5 M4.5 0 H6.1" {common}/>'
+            f'<path d="M-5.2 -4.8 C-6.5 -3.4 -7  -1.9 -7 0" {common}/>'
         )
     elif kind == "pr":
         body = (
-            f'<circle cx="-5.2" cy="-6" r="2.25" {common}/>'
-            f'<circle cx="-5.2" cy="6" r="2.25" {common}/>'
-            f'<circle cx="5.2" cy="-6" r="2.25" {common}/>'
-            f'<path d="M-5.2 -3.75 V3.75" {common}/>'
-            f'<path d="M-3 6 C2.6 6 5.2 3 5.2 -2 V-3.75" {common}/>'
+            f'<circle cx="-5.5" cy="-6" r="2.15" {common}/>'
+            f'<circle cx="-5.5" cy="6" r="2.15" {common}/>'
+            f'<circle cx="5.5" cy="-6" r="2.15" {common}/>'
+            f'<path d="M-5.5 -3.85 V3.85" {common}/>'
+            f'<path d="M-3.2 6 C2.4 6 5.5 3 5.5 -2.2 V-3.85" {common}/>'
         )
     else:
         body = (
-            f'<circle cx="0" cy="0" r="7.1" {common}/>'
-            f'<path d="M0 -3.4 V1.25" {common}/>'
-            f'<circle cx="0" cy="4" r="0.75" fill="{color}" stroke="none"/>'
+            f'<circle cx="0" cy="0" r="7.2" {common}/>'
+            f'<path d="M0 -3.6 V1.2" {common}/>'
+            f'<circle cx="0" cy="4.2" r="0.75" fill="{color}" stroke="none"/>'
         )
 
-    return f'<g transform="translate({x} {y}) scale(0.78)">{body}</g>'
+    return f'<g transform="translate({x} {y}) scale(0.62)">{body}</g>'
 
 
 def make_stats(data: dict[str, Any], theme: str) -> str:
@@ -170,23 +166,23 @@ def make_stats(data: dict[str, Any], theme: str) -> str:
         ("Followers", data["followers"], "followers"), ("Commits", data["commits"], "commit"),
         ("Pull Requests", data["prs"], "pr"), ("Issues", data["issues"], "issue"),
     ]
-    positions = [(24, 70), (260, 70), (24, 124), (260, 124), (24, 178), (260, 178)]
+    positions = [(24, 68), (260, 68), (24, 117), (260, 117), (24, 166), (260, 166)]
 
     for (label, value, icon), (x, y) in zip(items, positions):
         parts.append(stat_icon(icon, x + 7, y - 3, t["red"]))
         parts.append(
-            f'<text x="{x + 20}" y="{y}" fill="{t["muted"]}" font-size="10.5" '
+            f'<text x="{x + 18}" y="{y}" fill="{t["muted"]}" font-size="9" '
             'font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-weight="600">'
             f'{esc(label)}</text>'
         )
         parts.append(
-            f'<text x="{x + 20}" y="{y + 23}" fill="{t["text"]}" font-size="19" '
+            f'<text x="{x + 18}" y="{y + 21}" fill="{t["text"]}" font-size="17" '
             'font-weight="700" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">'
             f'{esc(value)}</text>'
         )
 
     parts.append(
-        f'<text x="24" y="211" fill="{t["gold"]}" font-size="9" '
+        f'<text x="24" y="207" fill="{t["gold"]}" font-size="9" '
         'font-family="ui-monospace,SFMono-Regular,Menlo,monospace">generated by GitHub Actions</text>'
     )
     parts.append('</svg>')
