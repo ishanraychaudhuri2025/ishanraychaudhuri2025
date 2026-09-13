@@ -100,7 +100,7 @@ def calendar_icon(accent):
   <rect x="-28" y="-18" width="56" height="48" rx="7" fill="{accent}"/>
   <rect x="-28" y="-18" width="56" height="16" rx="7" fill="{accent}"/>
   <rect x="-28" y="-10" width="56" height="8" fill="{accent}"/>
-  <rect x="-23" y="-1" width="46" height="26" rx="3" fill="#FFFFFF"/>
+  <rect x="-23" y="-1" width="46" height="26" rx="3" fill="{accent}"/>
   <g fill="none" stroke="{accent}" stroke-width="1.7">
     <path d="M-12 -6 V-20"/><path d="M0 -6 V-20"/><path d="M12 -6 V-20"/>
   </g>
@@ -108,11 +108,8 @@ def calendar_icon(accent):
     <circle cx="-19" cy="5" r="1.7"/><circle cx="-7" cy="5" r="1.7"/><circle cx="5" cy="5" r="1.7"/><circle cx="17" cy="5" r="1.7"/>
     <circle cx="-19" cy="14" r="1.7"/><circle cx="-7" cy="14" r="1.7"/><circle cx="5" cy="14" r="1.7"/><circle cx="17" cy="14" r="1.7"/>
   </g>
-  <g fill="#FFFFFF">
-    <circle cx="-12" cy="-18" r="5"/><circle cx="0" cy="-18" r="5"/><circle cx="12" cy="-18" r="5"/>
-  </g>
   <g fill="{accent}">
-    <circle cx="-12" cy="-18" r="2"/><circle cx="0" cy="-18" r="2"/><circle cx="12" cy="-18" r="2"/>
+    <circle cx="-12" cy="-18" r="5"/><circle cx="0" cy="-18" r="5"/><circle cx="12" cy="-18" r="5"/>
   </g>
 </g>'''
 
@@ -200,6 +197,7 @@ def main():
         rendered = frame(theme)
         (A / f"profile-activity-{theme}.svg").write_text(rendered, encoding="utf-8")
         (A / f"profile-activity-final-{theme}.svg").write_text(rendered, encoding="utf-8")
+
 
 if __name__ == "__main__":
     main()
