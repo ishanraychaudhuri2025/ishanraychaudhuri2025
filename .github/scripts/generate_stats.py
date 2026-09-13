@@ -118,11 +118,9 @@ def stat_icon(kind: str, x: int, y: int, color: str) -> str:
 
     if kind == "repo":
         body = (
-            f'<path d="M-7 -6.5 H5.5 C6.3 -6.5 7 -5.8 7 -5 V6.5 H-5.5 C-6.3 6.5 -7 5.8 -7 5 Z" {common}/>'
-            f'<path d="M-4.2 -6.5 V6.5" {common}/>'
-            f'<path d="M-2  -2.5 H4" {common}/>'
-            f'<path d="M-2 1 H4" {common}/>'
-            f'<path d="M-2 4.5 H2" {common}/>'
+            f'<path d="M-8 -4.5 H-1.5 L0 -3 H8 V6 H-8 Z" {common}/>'
+            f'<path d="M-5 0 H5" {common}/>'
+            f'<path d="M-5 3 H3" {common}/>'
         )
     elif kind == "star":
         body = f'<path d="M0 -8 L2.1 -2.6 L7.8 -2.1 L3.4 1.5 L4.8 7.4 L0 4.3 L-4.8 7.4 L-3.4 1.5 L-7.8 -2.1 L-2.1 -2.6 Z" {common}/>'
@@ -135,10 +133,8 @@ def stat_icon(kind: str, x: int, y: int, color: str) -> str:
         )
     elif kind == "commit":
         body = (
-            f'<circle cx="0" cy="0" r="7.2" {common}/>'
-            f'<path d="M0 -4 V0 L2.9 2" {common}/>'
-            f'<path d="M-6.1 0 H-4.5 M4.5 0 H6.1" {common}/>'
-            f'<path d="M-5.2 -4.8 C-6.5 -3.4 -7  -1.9 -7 0" {common}/>'
+            f'<path d="M-8 0 H-3 M3 0 H8" {common}/>'
+            f'<circle cx="0" cy="0" r="3.4" fill="{color}" stroke="none"/>'
         )
     elif kind == "pr":
         body = (
@@ -155,7 +151,7 @@ def stat_icon(kind: str, x: int, y: int, color: str) -> str:
             f'<circle cx="0" cy="4.2" r="0.75" fill="{color}" stroke="none"/>'
         )
 
-    return f'<g transform="translate({x} {y}) scale(0.62)">{body}</g>'
+    return f'<g transform="translate({x} {y}) scale(0.55)">{body}</g>'
 
 
 def make_stats(data: dict[str, Any], theme: str) -> str:
