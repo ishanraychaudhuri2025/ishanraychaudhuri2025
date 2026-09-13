@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate self-contained GitHub stats SVGs without a third-party stats host."""
+"""Generate compact GitHub stats SVGs with the supplied reference-style symbols."""
 from __future__ import annotations
 
 import html
@@ -14,7 +14,7 @@ from typing import Any
 
 USER = "ishanraychaudhuri2025"
 W = 500
-H = 240
+H = 220
 
 THEMES = {
     "dark": {
@@ -51,10 +51,7 @@ def api(path: str, token: str) -> Any:
             if exc.code not in {408, 429, 500, 502, 503, 504}:
                 raise
             retry_after = exc.headers.get("Retry-After")
-            if retry_after and retry_after.isdigit():
-                delay = min(30, int(retry_after))
-            else:
-                delay = 2 ** attempt
+            delay = min(30, int(retry_after)) if retry_after and retry_after.isdigit() else 2 ** attempt
             time.sleep(delay)
         except (urllib.error.URLError, TimeoutError, ConnectionError) as exc:
             last_error = exc
@@ -122,24 +119,39 @@ def shell(t: dict[str, str], title: str) -> list[str]:
 
 
 def stat_icon(kind: str, x: int, y: int, color: str) -> str:
-    """Use the supplied compact reference symbols in GitHub red."""
-    common = f'fill="none" stroke="{color}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"'
+    """Use compact reference-style symbols, all explicitly rendered in GitHub red."""
+    common = f'fill="none" stroke="{color}" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"'
+
     if kind == "repo":
-        # Reference monitor/repository symbol.
-        body = f'<rect x="-7" y="-5.5" width="14" height="11" rx="1.6" {common}/><path d="M-7 2.5 H7" {common}/><path d="M-2.5 7 H2.5" {common}/>'
+        body = (
+            f'<rect x="-7" y="-5.5" width="14" height="11" rx="1.5" {common}/>'
+            f'<path d="M-7 2.5 H7" {common}/>'
+            f'<path d="M-2.7 7 H2.7" {common}/>'
+        )
     elif kind == "star":
-        # Reference outlined star symbol.
-        body = f'<path d="M0 -8.5 L2.2 -2.5 L8 -2.2 L3.5 1.4 L4.8 7.5 L0 4.2 L-4.8 7.5 L-3.5 1.4 L-8 -2.2 L-2.2 -2.5 Z" {common}/>'
+        body = f'<path d="M0 -8 L2.2 -2.5 L8 -2 L3.5 1.5 L4.7 7.5 L0 4.1 L-4.7 7.5 L-3.5 1.5 L-8 -2 L-2.2 -2.5 Z" {common}/>'
     elif kind == "followers":
-        # Reference history/clock symbol.
-        body = f'<circle cx="0" cy="0" r="7.2" {common}/><path d="M0 -4 V0 L-3 2" {common}/><path d="M-7 -4 L-9 -5.5" {common}/>'
+        body = (
+            f'<circle cx="0" cy="0" r="7.1" {common}/>'
+            f'<path d="M0 -4.2 V0 L-3.1 2" {common}/>'
+            f'<path d="M-7 -4.3 L-9 -5.5" {common}/>'
+        )
     elif kind in {"commit", "pr"}:
-        # Reference Git branch symbol; used for both commit and pull-request stats.
-        body = f'<circle cx="-5.5" cy="-6" r="2.3" {common}/><circle cx="-5.5" cy="6" r="2.3" {common}/><circle cx="5.5" cy="-6" r="2.3" {common}/><path d="M-5.5 -3.7 V3.7" {common}/><path d="M-3.1 6 C2.5 6 5.5 3 5.5 -2 V-3.7" {common}/>'
+        body = (
+            f'<circle cx="-5.2" cy="-6" r="2.25" {common}/>'
+            f'<circle cx="-5.2" cy="6" r="2.25" {common}/>'
+            f'<circle cx="5.2" cy="-6" r="2.25" {common}/>'
+            f'<path d="M-5.2 -3.75 V3.75" {common}/>'
+            f'<path d="M-3 6 C2.6 6 5.2 3 5.2 -2 V-3.75" {common}/>'
+        )
     else:
-        # Reference circled exclamation symbol.
-        body = f'<circle cx="0" cy="0" r="7.2" {common}/><path d="M0 -3.5 V1.2" {common}/><circle cx="0" cy="4.1" r="0.75" fill="{color}" stroke="none"/>'
-    return f'<g transform="translate({x} {y}) scale(0.90)">{body}</g>'
+        body = (
+            f'<circle cx="0" cy="0" r="7.1" {common}/>'
+            f'<path d="M0 -3.4 V1.25" {common}/>'
+            f'<circle cx="0" cy="4" r="0.75" fill="{color}" stroke="none"/>'
+        )
+
+    return f'<g transform="translate({x} {y}) scale(0.78)">{body}</g>'
 
 
 def make_stats(data: dict[str, Any], theme: str) -> str:
@@ -150,12 +162,25 @@ def make_stats(data: dict[str, Any], theme: str) -> str:
         ("Followers", data["followers"], "followers"), ("Commits", data["commits"], "commit"),
         ("Pull Requests", data["prs"], "pr"), ("Issues", data["issues"], "issue"),
     ]
-    positions = [(24, 75), (260, 75), (24, 130), (260, 130), (24, 185), (260, 185)]
+    positions = [(24, 70), (260, 70), (24, 124), (260, 124), (24, 178), (260, 178)]
+
     for (label, value, icon), (x, y) in zip(items, positions):
-        parts.append(stat_icon(icon, x + 7, y - 4, t["red"]))
-        parts.append(f'<text x="{x + 19}" y="{y}" fill="{t["muted"]}" font-size="11" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">{esc(label)}</text>')
-        parts.append(f'<text x="{x + 19}" y="{y+25}" fill="{t["text"]}" font-size="22" font-weight="700" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">{esc(value)}</text>')
-    parts.append(f'<text x="24" y="228" fill="{t["gold"]}" font-size="9.5" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">generated by GitHub Actions</text>')
+        parts.append(stat_icon(icon, x + 7, y - 3, t["red"]))
+        parts.append(
+            f'<text x="{x + 20}" y="{y}" fill="{t["muted"]}" font-size="10.5" '
+            'font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-weight="600">'
+            f'{esc(label)}</text>'
+        )
+        parts.append(
+            f'<text x="{x + 20}" y="{y + 23}" fill="{t["text"]}" font-size="19" '
+            'font-weight="700" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">'
+            f'{esc(value)}</text>'
+        )
+
+    parts.append(
+        f'<text x="24" y="211" fill="{t["gold"]}" font-size="9" '
+        'font-family="ui-monospace,SFMono-Regular,Menlo,monospace">generated by GitHub Actions</text>'
+    )
     parts.append('</svg>')
     return ''.join(parts)
 
@@ -165,31 +190,28 @@ def make_langs(data: dict[str, Any], theme: str) -> str:
     parts = shell(t, "Top Languages")
     langs = sorted(data["languages"].items(), key=lambda kv: kv[1], reverse=True)[:8]
     total = sum(v for _, v in langs) or 1
-    bar_x, bar_y, bar_w, bar_h = 24, 56, 452, 12
+    bar_x, bar_y, bar_w, bar_h = 24, 54, 452, 11
     cursor = bar_x
+
     for idx, (_, amount) in enumerate(langs):
         frac = amount / total
         width = max(2, bar_w * frac)
-        if idx == 0:
-            color = t["red"]
-        elif idx == 1:
-            color = t["gold"]
-        else:
-            color = f'rgba(200,16,46,{max(0.25, 0.82 - idx*0.07):.2f})'
+        color = t["red"] if idx == 0 else (t["gold"] if idx == 1 else f'rgba(200,16,46,{max(0.25, 0.82 - idx*0.07):.2f})')
         parts.append(f'<rect x="{cursor:.1f}" y="{bar_y}" width="{width:.1f}" height="{bar_h}" fill="{color}"/>')
         cursor += width
 
-    y = 91
+    y = 88
     for idx, (lang, amount) in enumerate(langs):
         pct = amount / total * 100
         color = t["red"] if idx == 0 else (t["gold"] if idx == 1 else t["muted"])
-        parts.append(f'<circle cx="28" cy="{y-4}" r="4" fill="{color}"/>')
-        parts.append(f'<text x="42" y="{y}" fill="{t["text"]}" font-size="11.5" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">{esc(lang)}</text>')
-        parts.append(f'<text x="450" y="{y}" text-anchor="end" fill="{t["muted"]}" font-size="11.5" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">{pct:.1f}%</text>')
-        y += 17
-        if y > 210:
+        parts.append(f'<circle cx="28" cy="{y-3.5}" r="3.6" fill="{color}"/>')
+        parts.append(f'<text x="42" y="{y}" fill="{t["text"]}" font-size="11" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">{esc(lang)}</text>')
+        parts.append(f'<text x="450" y="{y}" text-anchor="end" fill="{t["muted"]}" font-size="11" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">{pct:.1f}%</text>')
+        y += 16
+        if y > 204:
             break
-    parts.append(f'<text x="24" y="229" fill="{t["gold"]}" font-size="9.5" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">calculated from GitHub language bytes</text>')
+
+    parts.append(f'<text x="24" y="211" fill="{t["gold"]}" font-size="9" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">calculated from GitHub language bytes</text>')
     parts.append('</svg>')
     return ''.join(parts)
 
