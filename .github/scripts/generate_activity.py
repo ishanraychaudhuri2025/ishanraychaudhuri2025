@@ -95,7 +95,7 @@ def fmt_range(start, end):
 
 
 def calendar_icon(accent):
-    return f'''<g transform="translate(196.67 39)">
+    return f'''<g transform="translate(196.67 34) scale(0.78)">
   <defs>
     <linearGradient id="calendarRed" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#FF4A3D"/>
@@ -125,7 +125,7 @@ def calendar_icon(accent):
 
 
 def trophy_icon(gold):
-    return f'''<g transform="translate(983.33 39)">
+    return f'''<g transform="translate(983.33 34) scale(0.78)">
   <defs>
     <linearGradient id="trophyGold" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#FFE88A"/>
@@ -165,8 +165,8 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
   <line x1="786.67" y1="28" x2="786.67" y2="170" stroke="{accent}" stroke-width="1"/>
 
   {calendar_icon(accent)}
-  <text x="196.67" y="91" text-anchor="middle" fill="{accent}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">{active_days}</text>
-  <text x="196.67" y="121" text-anchor="middle" fill="{accent}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Active Days</text>
+  <text x="196.67" y="94" text-anchor="middle" fill="{accent}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">{active_days}</text>
+  <text x="196.67" y="124" text-anchor="middle" fill="{accent}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Active Days</text>
   <text x="196.67" y="148" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">last 400 days</text>
   <rect x="172" y="158" width="49" height="4" rx="2" fill="{accent}"/>
 
@@ -177,8 +177,8 @@ def streak_card(theme, active_days, current, longest, current_start, current_end
   <text x="590" y="166" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-weight="400" font-size="12">{current_range}</text>
 
   {trophy_icon(gold)}
-  <text x="983.33" y="91" text-anchor="middle" fill="{gold}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">{longest}</text>
-  <text x="983.33" y="121" text-anchor="middle" fill="{gold}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Longest Streak</text>
+  <text x="983.33" y="94" text-anchor="middle" fill="{gold}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">{longest}</text>
+  <text x="983.33" y="124" text-anchor="middle" fill="{gold}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Longest Streak</text>
   <text x="983.33" y="148" text-anchor="middle" fill="{muted}" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">{longest_range}</text>
   <rect x="958" y="158" width="51" height="4" rx="2" fill="{gold}"/>
 </g>
