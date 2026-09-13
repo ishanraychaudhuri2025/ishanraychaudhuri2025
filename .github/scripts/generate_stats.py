@@ -119,7 +119,7 @@ def shell(t: dict[str, str], title: str) -> list[str]:
 
 
 def stat_icon(kind: str, x: int, y: int, color: str) -> str:
-    """Use compact reference-style symbols, all explicitly rendered in GitHub red."""
+    """Render compact reference-style symbols with distinct icons per statistic."""
     common = f'fill="none" stroke="{color}" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"'
 
     if kind == "repo":
@@ -132,11 +132,19 @@ def stat_icon(kind: str, x: int, y: int, color: str) -> str:
         body = f'<path d="M0 -8 L2.2 -2.5 L8 -2 L3.5 1.5 L4.7 7.5 L0 4.1 L-4.7 7.5 L-3.5 1.5 L-8 -2 L-2.2 -2.5 Z" {common}/>'
     elif kind == "followers":
         body = (
-            f'<circle cx="0" cy="0" r="7.1" {common}/>'
-            f'<path d="M0 -4.2 V0 L-3.1 2" {common}/>'
-            f'<path d="M-7 -4.3 L-9 -5.5" {common}/>'
+            f'<circle cx="-2.8" cy="-2.4" r="3.5" {common}/>'
+            f'<path d="M-8 7 C-7.2 2.8 -5.1 1.1 -2.8 1.1 C-0.5 1.1 1.7 2.8 2.4 7" {common}/>'
+            f'<circle cx="5.2" cy="-1.3" r="2.6" {common}/>'
+            f'<path d="M3.1 2.1 C6.1 2.1 7.8 3.6 8.4 6.2" {common}/>'
         )
-    elif kind in {"commit", "pr"}:
+    elif kind == "commit":
+        body = (
+            f'<circle cx="0" cy="0" r="7.2" {common}/>'
+            f'<path d="M0 -4.1 V0 L3.1 2.1" {common}/>'
+            f'<path d="M-5.4 -6.1 C-7 -4.6 -8 -2.5 -8 0" {common}/>'
+            f'<path d="M-8 0 L-6.2 -0.6 M-8 0 L-6.8 1.6" {common}/>'
+        )
+    elif kind == "pr":
         body = (
             f'<circle cx="-5.2" cy="-6" r="2.25" {common}/>'
             f'<circle cx="-5.2" cy="6" r="2.25" {common}/>'
