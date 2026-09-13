@@ -20,9 +20,9 @@
 <!-- ===== STREAK + STATS + LANGUAGES + SNAKE : ONE RED FRAME ===== -->
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-activity-dark.svg?v=202609131331">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/profile-activity-light.svg?v=202609131331">
-  <img width="100%" src="./assets/profile-activity-light.svg?v=202609131331" alt="GitHub streak, stats, top languages and contribution snake">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-activity-dark.svg?v=202609131348">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/profile-activity-light.svg?v=202609131348">
+  <img width="100%" src="./assets/profile-activity-light.svg?v=202609131348" alt="GitHub streak, stats, top languages and contribution snake">
 </picture>
 </div>
 
