@@ -9,29 +9,22 @@
   <line x1="786.67" y1="28" x2="786.67" y2="170" stroke="#C8102E" stroke-width="1"/>
 
   <g transform="translate(196.67 34) scale(0.78)">
-  <defs>
-    <linearGradient id="calendarRed" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FF4A3D"/>
-      <stop offset="0.55" stop-color="#C8102E"/>
-      <stop offset="1" stop-color="#8F0B20"/>
-    </linearGradient>
-  </defs>
   <ellipse cx="0" cy="29" rx="25" ry="4" fill="#000000" opacity="0.12"/>
-  <rect x="-28" y="-18" width="56" height="48" rx="7" fill="url(#calendarRed)"/>
-  <rect x="-28" y="-18" width="56" height="16" rx="7" fill="#FF4038"/>
-  <rect x="-28" y="-10" width="56" height="8" fill="#E5232E"/>
+  <rect x="-28" y="-18" width="56" height="48" rx="7" fill="#C8102E"/>
+  <rect x="-28" y="-18" width="56" height="16" rx="7" fill="#C8102E"/>
+  <rect x="-28" y="-10" width="56" height="8" fill="#C8102E"/>
   <rect x="-23" y="-1" width="46" height="26" rx="3" fill="#FFFFFF"/>
-  <g fill="none" stroke="#E5232E" stroke-width="1.7">
+  <g fill="none" stroke="#C8102E" stroke-width="1.7">
     <path d="M-12 -6 V-20"/><path d="M0 -6 V-20"/><path d="M12 -6 V-20"/>
   </g>
-  <g fill="#E5232E">
+  <g fill="#C8102E">
     <circle cx="-19" cy="5" r="1.7"/><circle cx="-7" cy="5" r="1.7"/><circle cx="5" cy="5" r="1.7"/><circle cx="17" cy="5" r="1.7"/>
     <circle cx="-19" cy="14" r="1.7"/><circle cx="-7" cy="14" r="1.7"/><circle cx="5" cy="14" r="1.7"/><circle cx="17" cy="14" r="1.7"/>
   </g>
   <g fill="#FFFFFF">
     <circle cx="-12" cy="-18" r="5"/><circle cx="0" cy="-18" r="5"/><circle cx="12" cy="-18" r="5"/>
   </g>
-  <g fill="#E5232E">
+  <g fill="#C8102E">
     <circle cx="-12" cy="-18" r="2"/><circle cx="0" cy="-18" r="2"/><circle cx="12" cy="-18" r="2"/>
   </g>
 </g>
@@ -47,21 +40,12 @@
   <text x="590" y="166" text-anchor="middle" fill="#8A8F98" font-family="Segoe UI,Ubuntu,sans-serif" font-weight="400" font-size="12">Sep 13</text>
 
   <g transform="translate(983.33 34) scale(0.78)">
-  <defs>
-    <linearGradient id="trophyGold" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFE88A"/>
-      <stop offset="0.42" stop-color="#F4C542"/>
-      <stop offset="0.75" stop-color="#A87800"/>
-      <stop offset="1" stop-color="#A86A00"/>
-    </linearGradient>
-  </defs>
   <ellipse cx="0" cy="29" rx="27" ry="4" fill="#000000" opacity="0.12"/>
-  <path d="M-10 -20 H10 V-3 C10 7 5 14 0 17 C-5 14 -10 7 -10 -3 Z" fill="url(#trophyGold)"/>
-  <path d="M-10 -15 H-22 V-5 C-22 6 -15 13 -7 13 V7 C-12 6 -15 2 -15 -4 H-10 Z" fill="url(#trophyGold)"/>
-  <path d="M10 -15 H22 V-5 C22 6 15 13 7 13 V7 C12 6 15 2 15 -4 H10 Z" fill="url(#trophyGold)"/>
-  <path d="M-3 15 H3 V23 H-3 Z" fill="url(#trophyGold)"/>
-  <rect x="-18" y="22" width="36" height="8" rx="3" fill="url(#trophyGold)"/>
-  <path d="M-7 -14 C-3 -17 3 -17 7 -14" fill="none" stroke="#FFF2B0" stroke-width="2" opacity="0.8" stroke-linecap="round"/>
+  <path d="M-10 -20 H10 V-3 C10 7 5 14 0 17 C-5 14 -10 7 -10 -3 Z" fill="#A87800"/>
+  <path d="M-10 -15 H-22 V-5 C-22 6 -15 13 -7 13 V7 C-12 6 -15 2 -15 -4 H-10 Z" fill="#A87800"/>
+  <path d="M10 -15 H22 V-5 C22 6 15 13 7 13 V7 C12 6 15 2 15 -4 H10 Z" fill="#A87800"/>
+  <path d="M-3 15 H3 V23 H-3 Z" fill="#A87800"/>
+  <rect x="-18" y="22" width="36" height="8" rx="3" fill="#A87800"/>
 </g>
   <text x="983.33" y="94" text-anchor="middle" fill="#A87800" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">5</text>
   <text x="983.33" y="124" text-anchor="middle" fill="#A87800" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Longest Streak</text>
