@@ -122,23 +122,24 @@ def shell(t: dict[str, str], title: str) -> list[str]:
 
 
 def stat_icon(kind: str, x: int, y: int, color: str) -> str:
-    """Small red icons sized to sit neatly beside each stat heading."""
-    common = f'fill="none" stroke="{color}" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"'
+    """Use the supplied compact reference symbols in GitHub red."""
+    common = f'fill="none" stroke="{color}" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"'
     if kind == "repo":
-        body = f'<rect x="-6" y="-7" width="12" height="14" rx="2" {common}/><path d="M-3.5 -3 H3.5 M-3.5 0 H3.5 M-3.5 3 H1" {common}/>'
+        # Reference monitor/repository symbol.
+        body = f'<rect x="-7" y="-5.5" width="14" height="11" rx="1.6" {common}/><path d="M-7 2.5 H7" {common}/><path d="M-2.5 7 H2.5" {common}/>'
     elif kind == "star":
-        body = f'<path d="M0 -8 L2.2 -2.5 L8 -2.2 L3.5 1.5 L5 7.5 L0 4.4 L-5 7.5 L-3.5 1.5 L-8 -2.2 L-2.2 -2.5 Z" fill="{color}" stroke="none"/>'
+        # Reference outlined star symbol.
+        body = f'<path d="M0 -8.5 L2.2 -2.5 L8 -2.2 L3.5 1.4 L4.8 7.5 L0 4.2 L-4.8 7.5 L-3.5 1.4 L-8 -2.2 L-2.2 -2.5 Z" {common}/>'
     elif kind == "followers":
-        body = f'<circle cx="-3" cy="-3.5" r="2.8" {common}/><path d="M-8 6 C-8 2 -5.8 0 -3 0 C-0.2 0 2 2 2 6" {common}/><circle cx="5" cy="-2" r="2.1" {common}/><path d="M4 1.5 C6.5 1.8 8 3.4 8 6" {common}/>'
-    elif kind == "commit":
-        # Git commit: a commit node with the branch line passing through it.
-        body = f'<path d="M-8 0 H-3 M3 0 H8" {common}/><circle cx="0" cy="0" r="3.5" {common}/>'
-    elif kind == "pr":
-        # GitHub-style pull request: two base nodes connected to a raised head node.
-        body = f'<circle cx="-5.5" cy="-6" r="2.4" {common}/><circle cx="-5.5" cy="6" r="2.4" {common}/><circle cx="5.5" cy="-6" r="2.4" {common}/><path d="M-5.5 -3.5 V3.5" {common}/><path d="M-3.1 6 H0 C3 6 5.5 3.5 5.5 0 V-3.5" {common}/>'
-    else:  # issue
-        body = f'<circle cx="0" cy="0" r="7" {common}/><path d="M0 -3.5 V1" {common}/><circle cx="0" cy="4" r="0.7" fill="{color}" stroke="none"/>'
-    return f'<g transform="translate({x} {y})">{body}</g>'
+        # Reference history/clock symbol.
+        body = f'<circle cx="0" cy="0" r="7.2" {common}/><path d="M0 -4 V0 L-3 2" {common}/><path d="M-7 -4 L-9 -5.5" {common}/>'
+    elif kind in {"commit", "pr"}:
+        # Reference Git branch symbol; used for both commit and pull-request stats.
+        body = f'<circle cx="-5.5" cy="-6" r="2.3" {common}/><circle cx="-5.5" cy="6" r="2.3" {common}/><circle cx="5.5" cy="-6" r="2.3" {common}/><path d="M-5.5 -3.7 V3.7" {common}/><path d="M-3.1 6 C2.5 6 5.5 3 5.5 -2 V-3.7" {common}/>'
+    else:
+        # Reference circled exclamation symbol.
+        body = f'<circle cx="0" cy="0" r="7.2" {common}/><path d="M0 -3.5 V1.2" {common}/><circle cx="0" cy="4.1" r="0.75" fill="{color}" stroke="none"/>'
+    return f'<g transform="translate({x} {y}) scale(0.90)">{body}</g>'
 
 
 def make_stats(data: dict[str, Any], theme: str) -> str:
