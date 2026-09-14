@@ -2,9 +2,9 @@
 <!-- profile-render-mainbox-v13 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg?v=20260914-visualmap-embedded-v2">
-  <source media="(prefers-color-scheme: light)" srcset="./light.svg?v=20260914-visualmap-embedded-v2">
-  <img alt="Ishan Ray Chaudhuri" src="./light.svg?v=20260914-visualmap-embedded-v2">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/visual-map-final-dark.svg?v=202609142240">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/visual-map-final-light.svg?v=202609142240">
+  <img alt="Ishan Ray Chaudhuri" src="./assets/visual-map-final-light.svg?v=202609142240">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
