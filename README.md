@@ -1,22 +1,24 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
-<!-- profile-render-mainbox-v20 -->
+<!-- profile-render-mainbox-v21 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg?v=20260915-clean">
-  <source media="(prefers-color-scheme: light)" srcset="./light.svg?v=20260915-clean">
-  <img alt="Ishan Ray Chaudhuri" src="./light.svg?v=20260915-clean">
+  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg?v=20260915-fixed">
+  <source media="(prefers-color-scheme: light)" srcset="./light.svg?v=20260915-fixed">
+  <img alt="Ishan Ray Chaudhuri" src="./light.svg?v=20260915-fixed">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
 <div align="center">
-  <img width="100%" src="./assets/signature-stripe.svg" alt="Ishan signature stripe">
+  <img width="100%" src="./assets/signature-stripe.svg?v=20260915" alt="Ishan signature stripe">
 </div>
+
 <!-- ===== SOCIAL ===== -->
 <div align="center">
 <a href="https://www.linkedin.com/in/ishan-ray-chaudhuri/"><img src="https://img.shields.io/badge/LinkedIn-C8102E?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
 &nbsp;&nbsp;
 <a href="https://github.com/IshanRayC"><img src="https://img.shields.io/badge/IshanRayC-FFFFFF?style=for-the-badge&logo=github&logoColor=C8102E&labelColor=FFFFFF" alt="Main GitHub"></a>
 </div>
+
 <!-- ===== STREAK + STATS + LANGUAGES + SNAKE : ONE RED FRAME ===== -->
 <div align="center">
 <picture>
