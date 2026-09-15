@@ -2,14 +2,14 @@
 <!-- profile-render-mainbox-v22 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg?v=20260915-eye-glaze">
-  <source media="(prefers-color-scheme: light)" srcset="./light.svg?v=20260915-eye-glaze">
-  <img alt="Ishan Ray Chaudhuri" src="./light.svg?v=20260915-eye-glaze">
+  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg?v=20260915-eye-fix">
+  <source media="(prefers-color-scheme: light)" srcset="./light.svg?v=20260915-eye-fix">
+  <img alt="Ishan Ray Chaudhuri" src="./light.svg?v=20260915-eye-fix">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
 <div align="center">
-  <img width="100%" src="./assets/signature-stripe.svg?v=20260915" alt="Ishan signature stripe">
+  <img width="100%" src="./assets/signature-stripe.svg?v=20260915-eye-fix" alt="Ishan signature stripe">
 </div>
 
 <!-- ===== SOCIAL ===== -->
@@ -22,9 +22,9 @@
 <!-- ===== STREAK + STATS + LANGUAGES + SNAKE : ONE RED FRAME ===== -->
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-activity-dark.svg?v=202609151654">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/profile-activity-light.svg?v=202609151654">
-  <img width="100%" src="./assets/profile-activity-light.svg?v=202609151654" alt="GitHub streak, stats, top languages and contribution snake">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/profile-activity-dark.svg?v=202609151647">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/profile-activity-light.svg?v=202609151647">
+  <img width="100%" src="./assets/profile-activity-light.svg?v=202609151647" alt="GitHub streak, stats, top languages and contribution snake">
 </picture>
 </div>
 
