@@ -2,9 +2,9 @@
 <!-- profile-render-mainbox-v13 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/visual-map-final2-dark.svg?v=20260915-hires-glaze2">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/visual-map-final2-light.svg?v=20260915-hires-glaze2">
-  <img alt="Ishan Ray Chaudhuri" src="./assets/visual-map-final2-light.svg?v=20260915-hires-glaze2">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/visual-map-final3-dark.svg?v=20260915-particle-glaze-final">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/visual-map-final3-light.svg?v=20260915-particle-glaze-final">
+  <img alt="Ishan Ray Chaudhuri" src="./assets/visual-map-final3-light.svg?v=20260915-particle-glaze-final">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
