@@ -1,0 +1,101 @@
+[
+  {
+    "name": "VITalWatch",
+    "repo": "ishanraychaudhuri2025/VITalWatch",
+    "description": "",
+    "tags": [
+      "Software",
+      "VIT",
+      "Building"
+    ],
+    "stars": 0,
+    "forks": 0,
+    "pushed_at": null,
+    "languages": {}
+  },
+  {
+    "name": "Web-Dev-For-Beginners",
+    "repo": "ishanraychaudhuri2025/Web-Dev-For-Beginners",
+    "description": "24 Lessons, 12 Weeks, Get Started as a Web Developer",
+    "tags": [
+      "Web",
+      "Learning",
+      "JavaScript"
+    ],
+    "stars": 1,
+    "forks": 0,
+    "pushed_at": "2025-10-29T14:18:26Z",
+    "languages": {
+      "JavaScript": 107130,
+      "HTML": 43239,
+      "CSS": 26464,
+      "Vue": 11749,
+      "Python": 6654
+    }
+  },
+  {
+    "name": "Agent Lightning",
+    "repo": "ishanraychaudhuri2025/agent-lightning",
+    "description": "The absolute trainer to light up AI agents.",
+    "tags": [
+      "AI",
+      "Agents",
+      "Python"
+    ],
+    "stars": 0,
+    "forks": 0,
+    "pushed_at": "2025-10-30T04:16:34Z",
+    "languages": {
+      "Python": 1182006,
+      "Shell": 6926,
+      "JavaScript": 4284,
+      "Dockerfile": 343
+    }
+  },
+  {
+    "name": "Paid Internship List",
+    "repo": "ishanraychaudhuri2025/Paid-Internship-List",
+    "description": "Paid internship list with details .",
+    "tags": [
+      "Resources",
+      "Internships",
+      "Career"
+    ],
+    "stars": 0,
+    "forks": 0,
+    "pushed_at": "2023-12-15T11:54:50Z",
+    "languages": {
+      "JavaScript": 15490,
+      "CSS": 4370,
+      "HTML": 1589
+    }
+  },
+  {
+    "name": "250 Company List",
+    "repo": "ishanraychaudhuri2025/250CompanyList",
+    "description": "250 Companies List that hire for technical roles in India and pay 15 or more Lakhs per annum",
+    "tags": [
+      "Career",
+      "Companies",
+      "Research"
+    ],
+    "stars": 1,
+    "forks": 0,
+    "pushed_at": "2025-08-30T19:31:51Z",
+    "languages": {}
+  },
+  {
+    "name": "Coding Interview University",
+    "repo": "ishanraychaudhuri2025/coding-interview-university",
+    "description": "A complete computer science study plan to become a software engineer.",
+    "tags": [
+      "CS",
+      "DSA",
+      "Interviews"
+    ],
+    "stars": 1,
+    "forks": 0,
+    "pushed_at": "2025-08-28T14:42:47Z",
+    "languages": {}
+  }
+]
