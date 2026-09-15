@@ -2,9 +2,9 @@
 <!-- profile-render-mainbox-v20 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/deb983fb22cf9318821aea2ef39bb2d2f4982be2/dark.svg?v=20260915-original-glaze">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/deb983fb22cf9318821aea2ef39bb2d2f4982be2/light.svg?v=20260915-original-glaze">
-  <img alt="Ishan Ray Chaudhuri" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/deb983fb22cf9318821aea2ef39bb2d2f4982be2/light.svg?v=20260915-original-glaze">
+  <source media="(prefers-color-scheme: dark)" srcset="./dark.svg?v=20260915-clean">
+  <source media="(prefers-color-scheme: light)" srcset="./light.svg?v=20260915-clean">
+  <img alt="Ishan Ray Chaudhuri" src="./light.svg?v=20260915-clean">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
@@ -34,5 +34,3 @@
   <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260909-frame4" alt="Ishan's projects">
 </picture>
 </div>
-
-<!-- Detailed setup and maintenance instructions: PROFILE_SETUP.md -->
