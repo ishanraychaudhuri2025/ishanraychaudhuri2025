@@ -1,10 +1,10 @@
 <!-- ===== 2008-INSPIRED RED / WHITE PROFILE ===== -->
-<!-- profile-render-mainbox-v17 -->
+<!-- profile-render-mainbox-v18 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./assets/visual-map-fixed-dark.svg?v=20260915-static-only-2102">
-  <source media="(prefers-color-scheme: light)" srcset="./assets/visual-map-fixed-light.svg?v=20260915-static-only-2102">
-  <img alt="Ishan Ray Chaudhuri" src="./assets/visual-map-fixed-light.svg?v=20260915-static-only-2102">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/visual-map-logo-shine-dark.svg?v=20260915-logo-shine">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/visual-map-logo-shine-light.svg?v=20260915-logo-shine">
+  <img alt="Ishan Ray Chaudhuri" src="./assets/visual-map-logo-shine-light.svg?v=20260915-logo-shine">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
