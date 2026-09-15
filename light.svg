@@ -1,17 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1180" height="610" viewBox="0 0 1180 610" role="img" aria-label="Ishan Ray Chaudhuri GitHub profile">
 <defs>
   <path id="mark" d="M 1464,126 1393,247 1421,428 1337,428 1365,246 1295,126 1227,246 1255,428 1171,430 1198,246 1127,125 1059,246 1086,551 1246,553 1247,632 1014,706 1085,598 963,498 1064,149 964,150 899,8 814,150 735,148 659,4 588,147 481,147 652,479 552,636 631,860 535,1028 472,704 562,492 457,396 386,180 335,235 223,202 119,362 2,337 62,572 220,459 343,478 254,600 331,659 354,1246 408,1339 560,1354 537,1691 653,2041 804,2022 907,1933 792,1711 901,1579 775,1290 1185,1680 1187,1291 1081,1242 1089,1102 950,1129 1041,974 1247,1083 1247,1699 1339,1698 1342,1070 1415,837 1346,553 1506,551 1533,247 Z" fill-rule="evenodd"/>
+  <clipPath id="logoClip"><use href="#mark" transform="translate(131.5 166) scale(.17)"/></clipPath>
   <clipPath id="visualClip"><rect x="52" y="130" width="420" height="420" rx="14"/></clipPath>
-  <linearGradient id="glaze" x1="0" y1="0" x2="1" y2="0">
-    <stop offset="0" stop-color="#fff" stop-opacity="0"/>
-    <stop offset="42%" stop-color="#fff" stop-opacity="0"/>
-    <stop offset="50%" stop-color="#fff" stop-opacity=".98"/>
-    <stop offset="58%" stop-color="#fff" stop-opacity="0"/>
-    <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+  <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#C8102E" stop-opacity="0"/>
+    <stop offset="35%" stop-color="#C8102E" stop-opacity="0"/>
+    <stop offset="48%" stop-color="#FFFFFF" stop-opacity="0"/>
+    <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1"/>
+    <stop offset="52%" stop-color="#FFFFFF" stop-opacity="0"/>
+    <stop offset="65%" stop-color="#C8102E" stop-opacity="0"/>
+    <stop offset="100%" stop-color="#C8102E" stop-opacity="0"/>
   </linearGradient>
 </defs>
 <rect width="1180" height="610" rx="18" fill="#F6F3F3"/>
-<rect x="18" y="18" width="1144" height="574" rx="16" fill="#fff" stroke="#E0C8CE"/>
+<rect x="18" y="18" width="1144" height="574" rx="16" fill="#FFFFFF" stroke="#E0C8CE"/>
 <rect x="42" y="42" width="1100" height="44" rx="10" fill="#C8102E"/>
 <circle cx="66" cy="64" r="6" fill="#fff"/><circle cx="86" cy="64" r="6" fill="#fff"/><circle cx="106" cy="64" r="6" fill="#fff"/>
 <text x="134" y="70" fill="#fff" font-size="14" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">profile.sh --live</text>
@@ -21,18 +24,9 @@
 <text x="504" y="116" fill="#A16D00" font-size="13" font-family="ui-monospace,monospace">SYSTEM.INFO</text>
 <rect x="52" y="130" width="420" height="420" rx="14" fill="#050608" stroke="#C8102E" stroke-width="2"/>
 <g clip-path="url(#visualClip)">
-  <g id="frame1">
-    <use href="#mark" transform="translate(131.5 166) scale(.17)" fill="#C8102E"/>
-    <animate attributeName="opacity" values="1;1;0;0;0;0;1" keyTimes="0;.318;.337;.346;.658;.679;1" dur="8.16s" repeatCount="indefinite"/>
-  </g>
-  <image id="frame2" x="52" y="130" width="420" height="420" preserveAspectRatio="xMidYMid slice" href="./assets/visual-frame-2-20260915.png">
-    <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;.321;.346;.658;.679;.683;1" dur="8.16s" repeatCount="indefinite"/>
-  </image>
-  <image id="frame3" x="52" y="130" width="420" height="420" preserveAspectRatio="xMidYMid slice" href="./assets/visual-frame-3-20260915.png">
-    <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;.658;.679;.683;.683;.999;1" dur="8.16s" repeatCount="indefinite"/>
-  </image>
-  <rect x="-38" y="130" width="90" height="420" fill="url(#glaze)" opacity=".95">
-    <animate attributeName="x" values="-38;392;392;-38;-38;392;392;-38;-38;392;392;-38" keyTimes="0;.318;.337;.346;.658;.658;.679;.688;.999;.999;.999;1" dur="8.16s" repeatCount="indefinite"/>
+  <use href="#mark" transform="translate(131.5 166) scale(.17)" fill="#C8102E"/>
+  <rect x="52" y="130" width="90" height="420" fill="url(#shine)" clip-path="url(#logoClip)">
+    <animate attributeName="x" values="0;392;0" dur="2.8s" repeatCount="indefinite"/>
   </rect>
 </g>
 <g font-size="14" font-family="ui-monospace,SFMono-Regular,Menlo,monospace">
