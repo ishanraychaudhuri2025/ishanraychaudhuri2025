@@ -9,7 +9,7 @@
 
 <!-- ===== SIGNATURE STRIPE ===== -->
 <div align="center">
-  <img width="100%" src="./assets/signature-stripe.svg?v=20260915-eye-fix" alt="Ishan signature stripe">
+  <img width="100%" src="./assets/signature-stripe.svg?v=20260916-eye-fix" alt="Ishan signature stripe">
 </div> 
 
 <!-- ===== SOCIAL ===== -->
