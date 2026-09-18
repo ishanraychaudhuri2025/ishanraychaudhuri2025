@@ -13,38 +13,54 @@
 </div>
 
 <!-- ===== SOCIAL ===== -->
-<p align="center">
-  <a href="https://www.linkedin.com/in/ishan-ray-chaudhuri/" style="text-decoration:none;">
-    <img
-      src="https://img.shields.io/badge/LINKEDIN-DA0A16?style=for-the-badge&logo=linkedin&logoColor=white"
-      alt="LinkedIn"
-    />
-  </a>
-  <a href="https://github.com/IshanRayC" style="text-decoration:none;">
-    <img
-      src="https://img.shields.io/badge/ISHANRAYC-F5F5F5?style=for-the-badge&logo=github&logoColor=DA0A16"
-      alt="GitHub"
-    />
-  </a>
-  <a href="https://leetcode.com/u/IshanRayC" style="text-decoration:none;">
-    <img
-      src="https://img.shields.io/badge/LEETCODE-DA0A16?style=for-the-badge&logo=leetcode&logoColor=white"
-      alt="LeetCode"
-    />
-  </a>
-  <a href="https://codeforces.com/profile/IshanRayC" style="text-decoration:none;">
-    <img
-      src="https://img.shields.io/badge/CODEFORCES-F5F5F5?style=for-the-badge&logo=codeforces&logoColor=111111"
-      alt="Codeforces"
-    />
-  </a>
-  <a href="https://www.kaggle.com/ishanrayc" style="text-decoration:none;">
-    <img
-      src="https://img.shields.io/badge/KAGGLE-DA0A16?style=for-the-badge&logo=kaggle&logoColor=white"
-      alt="Kaggle"
-    />
-  </a>
-</p>
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/ishan-ray-chaudhuri/">
+        <img
+          src="https://img.shields.io/badge/LINKEDIN-DA0A16?style=for-the-badge&logo=linkedin&logoColor=white"
+          alt="LinkedIn"
+        />
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://github.com/IshanRayC">
+        <img
+          src="https://img.shields.io/badge/ISHANRAYC-F5F5F5?style=for-the-badge&logo=github&logoColor=DA0A16"
+          alt="GitHub"
+        />
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://leetcode.com/u/IshanRayC">
+        <img
+          src="https://img.shields.io/badge/LEETCODE-DA0A16?style=for-the-badge&logo=leetcode&logoColor=white"
+          alt="LeetCode"
+        />
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://codeforces.com/profile/IshanRayC">
+        <img
+          src="https://img.shields.io/badge/CODEFORCES-F5F5F5?style=for-the-badge&logo=codeforces&logoColor=111111"
+          alt="Codeforces"
+        />
+      </a>
+    </td>
+
+    <td align="center">
+      <a href="https://www.kaggle.com/ishanrayc">
+        <img
+          src="https://img.shields.io/badge/KAGGLE-DA0A16?style=for-the-badge&logo=kaggle&logoColor=white"
+          alt="Kaggle"
+        />
+      </a>
+    </td>
+  </tr>
+</table>
 
 <!-- ===== STREAK + STATS + LANGUAGES + SNAKE : ONE RED FRAME ===== -->
 <div align="center">
