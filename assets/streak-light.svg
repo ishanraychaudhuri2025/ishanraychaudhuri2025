@@ -35,7 +35,7 @@
     <circle cx="-12" cy="-18" r="2"/><circle cx="0" cy="-18" r="2"/><circle cx="12" cy="-18" r="2"/>
   </g>
 </g>
-  <text x="196.67" y="94" text-anchor="middle" fill="#C8102E" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">21</text>
+  <text x="196.67" y="94" text-anchor="middle" fill="#C8102E" font-family="Segoe UI,Ubuntu,sans-serif" font-size="30" font-weight="700">22</text>
   <text x="196.67" y="124" text-anchor="middle" fill="#C8102E" font-family="Segoe UI,Ubuntu,sans-serif" font-size="14" font-weight="700">Active Days</text>
   <text x="196.67" y="148" text-anchor="middle" fill="#8A8F98" font-family="Segoe UI,Ubuntu,sans-serif" font-size="12">last 400 days</text>
   <rect x="172" y="158" width="49" height="4" rx="2" fill="#C8102E"/>
