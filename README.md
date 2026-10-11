@@ -2,9 +2,9 @@
 <!-- profile-render-mainbox-v23 -->
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/deb983fb22cf9318821aea2ef39bb2d2f4982be2/dark.svg?v=20260912-original-glaze">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/deb983fb22cf9318821aea2ef39bb2d2f4982be2/light.svg?v=20260912-original-glaze">
-  <img alt="Ishan Ray Chaudhuri" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/deb983fb22cf9318821aea2ef39bb2d2f4982be2/light.svg?v=20260912-original-glaze">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/profile-visual-dark.svg?v=20261011-visual-map-sync">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/profile-visual-light.svg?v=20261011-visual-map-sync">
+  <img alt="Ishan Ray Chaudhuri" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/main/profile-visual-light.svg?v=20261011-visual-map-sync">
 </picture>
 
 <!-- ===== SIGNATURE STRIPE ===== -->
@@ -59,8 +59,8 @@
 <!-- ===== PROJECTS ===== -->
 <div align="center">
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20260909-frame4">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260909-frame4">
-  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20260909-frame4" alt="Ishan's projects">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20261011-ospc-med-alchemist">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20261011-ospc-med-alchemist">
+  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20261011-ospc-med-alchemist" alt="Ishan's projects">
 </picture>
 </div>
