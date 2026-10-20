@@ -56,41 +56,43 @@
 </picture>
 </div>
 
-<!-- ===== FEATURED PROJECTS ===== -->
-<div align="center">
-
-  <h2>Featured Projects</h2>
-  <p><sub>SELECTED BUILDS · SOFTWARE · PRODUCT</sub></p>
-
-  <table width="100%" border="1" bordercolor="#DA0A16" cellpadding="5" cellspacing="8">
-    <tr>
-      <td width="33%" align="center" valign="top">
-        <a href="https://github.com/ishanraychaudhuri2025/Tracker">
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence.svg?v=20261020-red1">
-            <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence-light.svg?v=20261020-red1">
-            <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence.svg?v=20261020-red1" alt="Cadence — habit and task tracker">
-          </picture>
-        </a>
-      </td>
-      <td width="33%" align="center" valign="top">
-        <a href="https://github.com/ishanraychaudhuri2025/OSPC_task">
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced.svg?v=20261020-red1">
-            <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced-light.svg?v=20261020-red1">
-            <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced.svg?v=20261020-red1" alt="WHY, PRACTICED — interactive learning experience">
-          </picture>
-        </a>
-      </td>
-      <td width="33%" align="center" valign="top">
-        <a href="https://github.com/ishanraychaudhuri2025/UniGig">
-          <picture>
-            <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig.svg?v=20261020-red1">
-            <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig-light.svg?v=20261020-red1">
-            <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig.svg?v=20261020-red1" alt="UniGig — campus freelance marketplace">
-          </picture>
-        </a>
-      </td>
-    </tr>
-  </table>
-</div>
+<!-- ===== FEATURED PROJECTS : RED FRAME ===== -->
+<table width="100%" border="1" bordercolor="#650D17" cellpadding="8" cellspacing="0">
+  <tr>
+    <td align="center">
+      <p><strong><sub><font color="#DA0A16">P R O J E C T S</font></sub></strong></p>
+      <p><sub><font color="#650D17">· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·</font></sub></p>
+      <table width="100%" border="0" cellpadding="3" cellspacing="4">
+        <tr>
+          <td width="33%" align="center" valign="top">
+            <a href="https://github.com/ishanraychaudhuri2025/Tracker">
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence.svg?v=20261020-red1">
+                <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence-light.svg?v=20261020-red1">
+                <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence.svg?v=20261020-red1" alt="Cadence — habit and task tracker">
+              </picture>
+            </a>
+          </td>
+          <td width="33%" align="center" valign="top">
+            <a href="https://github.com/ishanraychaudhuri2025/OSPC_task">
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced.svg?v=20261020-red1">
+                <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced-light.svg?v=20261020-red1">
+                <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced.svg?v=20261020-red1" alt="WHY, PRACTICED — interactive learning experience">
+              </picture>
+            </a>
+          </td>
+          <td width="33%" align="center" valign="top">
+            <a href="https://github.com/ishanraychaudhuri2025/UniGig">
+              <picture>
+                <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig.svg?v=20261020-red1">
+                <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig-light.svg?v=20261020-red1">
+                <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig.svg?v=20261020-red1" alt="UniGig — campus freelance marketplace">
+              </picture>
+            </a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
