@@ -56,11 +56,29 @@
 </picture>
 </div>
 
-<!-- ===== PROJECTS ===== -->
+<!-- ===== FEATURED PROJECTS ===== -->
 <div align="center">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20261011-project-reorder2">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20261011-project-reorder2">
-  <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20261011-project-reorder2" alt="Ishan's projects">
-</picture>
+
+  <h2>Featured Projects</h2>
+  <p><sub>SELECTED BUILDS · SOFTWARE · PRODUCT</sub></p>
+
+  <a href="https://github.com/ishanraychaudhuri2025/Tracker">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence.svg?v=20261020">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence-light.svg?v=20261020">
+      <img width="32.8%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence.svg?v=20261020" alt="Cadence — research-informed habit and task tracker">
+    </picture>
+  </a><a href="https://github.com/ishanraychaudhuri2025/OSPC_task">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced.svg?v=20261020">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced-light.svg?v=20261020">
+      <img width="32.8%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced.svg?v=20261020" alt="WHY, PRACTICED — interactive learning experience">
+    </picture>
+  </a><a href="https://github.com/ishanraychaudhuri2025/UniGig">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig.svg?v=20261020">
+      <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig-light.svg?v=20261020">
+      <img width="32.8%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig.svg?v=20261020" alt="UniGig — campus-only freelance marketplace">
+    </picture>
+  </a>
 </div>
