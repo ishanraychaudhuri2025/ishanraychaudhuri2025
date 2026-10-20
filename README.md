@@ -56,15 +56,15 @@
 </picture>
 </div>
 
-<!-- ===== PROJECTS : ORIGINAL RED FRAME / THREE CLICKABLE CARDS ===== -->
-<table width="100%" border="1" bordercolor="#650D17" cellpadding="8" cellspacing="0">
+<!-- ===== PROJECTS : MATCH PROFILE ACTIVITY FRAME ===== -->
+<table width="100%" bgcolor="#06080B" border="1" bordercolor="#4A0E18" cellpadding="12" cellspacing="0">
   <tr>
-    <td align="center">
+    <td align="center" bgcolor="#06080B">
       <p><strong><sub><font color="#DA0A16">PROJECTS</font></sub></strong></p>
-      <p><sub><font color="#650D17">· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·</font></sub></p>
-      <a href="https://github.com/ishanraychaudhuri2025/Tracker"><img width="32%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence.svg?v=20261020-layout3" alt="Cadence — habit and task tracker"></a>
-      <a href="https://github.com/ishanraychaudhuri2025/OSPC_task"><img width="32%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced.svg?v=20261020-layout3" alt="WHY, PRACTICED — interactive learning experience"></a>
-      <a href="https://github.com/ishanraychaudhuri2025/UniGig"><img width="32%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig.svg?v=20261020-layout3" alt="UniGig — campus freelance marketplace"></a>
+      <p><sub><font color="#4A0E18">· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·</font></sub></p>
+      <a href="https://github.com/ishanraychaudhuri2025/Tracker"><img width="32%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence.svg?v=20261020-matchframe4" alt="Cadence — habit and task tracker"></a>
+      <a href="https://github.com/ishanraychaudhuri2025/OSPC_task"><img width="32%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced.svg?v=20261020-matchframe4" alt="WHY, PRACTICED — interactive learning experience"></a>
+      <a href="https://github.com/ishanraychaudhuri2025/UniGig"><img width="32%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig.svg?v=20261020-matchframe4" alt="UniGig — campus freelance marketplace"></a>
     </td>
   </tr>
 </table>
