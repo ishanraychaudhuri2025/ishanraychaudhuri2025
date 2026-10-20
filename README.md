@@ -56,15 +56,11 @@
 </picture>
 </div>
 
-<!-- ===== PROJECTS : MATCH PROFILE ACTIVITY FRAME ===== -->
-<table width="100%" bgcolor="#06080B" border="1" bordercolor="#4A0E18" cellpadding="12" cellspacing="0">
-  <tr>
-    <td align="center" bgcolor="#06080B">
-      <p><strong><sub><font color="#DA0A16">PROJECTS</font></sub></strong></p>
-      <p><sub><font color="#4A0E18">· · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·</font></sub></p>
-      <a href="https://github.com/ishanraychaudhuri2025/Tracker"><img width="32%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-cadence.svg?v=20261020-matchframe4" alt="Cadence — habit and task tracker"></a>
-      <a href="https://github.com/ishanraychaudhuri2025/OSPC_task"><img width="32%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-why-practiced.svg?v=20261020-matchframe4" alt="WHY, PRACTICED — interactive learning experience"></a>
-      <a href="https://github.com/ishanraychaudhuri2025/UniGig"><img width="32%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/project-unigig.svg?v=20261020-matchframe4" alt="UniGig — campus freelance marketplace"></a>
-    </td>
-  </tr>
-</table>
+<!-- ===== PROJECTS : SINGLE RED-FRAMED SVG PANEL ===== -->
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20261020-2219-framefix">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg?v=20261020-2219-framefix">
+    <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg?v=20261020-2219-framefix" alt="Projects: Cadence, WHY Practiced, and UniGig">
+  </picture>
+</div>
