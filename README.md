@@ -57,13 +57,16 @@
 </div>
 
 <!-- ===== PROJECTS : WHOLE-CARD REPOSITORY LINKS ===== -->
-<table width="100%">
-  <tr>
-    <td colspan="3" align="center"><strong>PROJECTS</strong></td>
-  </tr>
-  <tr>
-    <td width="33%" align="center" valign="top"><a href="https://github.com/ishanraychaudhuri2025/Tracker"><img src="./assets/featured-card-cadence.svg?v=20261021-cardlink" width="100%" alt="Cadence — open the Cadence repository"></a></td>
-    <td width="34%" align="center" valign="top"><a href="https://github.com/ishanraychaudhuri2025/OSPC_task"><img src="./assets/featured-card-ospc-task.svg?v=20261021-cardlink" width="100%" alt="OSPC Task — open the OSPC Task repository"></a></td>
-    <td width="33%" align="center" valign="top"><a href="https://github.com/ishanraychaudhuri2025/UniGig"><img src="./assets/featured-card-unigig.svg?v=20261021-cardlink" width="100%" alt="UniGig — open the UniGig repository"></a></td>
-  </tr>
-</table>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects-heading-dark.svg?v=20261021-cards-final">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/projects-heading-light.svg?v=20261021-cards-final">
+    <img width="100%" src="./assets/projects-heading-dark.svg?v=20261021-cards-final" alt="Projects">
+  </picture>
+</div>
+
+<p align="center">
+  <a href="https://github.com/ishanraychaudhuri2025/Tracker"><picture><source media="(prefers-color-scheme: light)" srcset="./assets/featured-card-cadence-light.svg?v=20261021-cards-final"><img width="32%" src="./assets/featured-card-cadence.svg?v=20261021-cards-final" alt="Cadence project — click anywhere on this card to open the repository"></picture></a>
+  <a href="https://github.com/ishanraychaudhuri2025/OSPC_task"><picture><source media="(prefers-color-scheme: light)" srcset="./assets/featured-card-ospc-task-light.svg?v=20261021-cards-final"><img width="32%" src="./assets/featured-card-ospc-task.svg?v=20261021-cards-final" alt="OSPC Task project — click anywhere on this card to open the repository"></picture></a>
+  <a href="https://github.com/ishanraychaudhuri2025/UniGig"><picture><source media="(prefers-color-scheme: light)" srcset="./assets/featured-card-unigig-light.svg?v=20261021-cards-final"><img width="32%" src="./assets/featured-card-unigig.svg?v=20261021-cards-final" alt="UniGig project — click anywhere on this card to open the repository"></picture></a>
+</p>
