@@ -59,8 +59,17 @@
 <!-- ===== PROJECTS : CLEAN RED FRAME ===== -->
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-panel-v4-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-panel-v4-light.svg">
-    <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-panel-v4-dark.svg" alt="Projects: Cadence, WHY Practiced, and UniGig">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-light.svg">
+    <img width="100%" src="https://raw.githubusercontent.com/ishanraychaudhuri2025/ishanraychaudhuri2025/projects/projects-dark.svg" alt="Featured projects: VITalWatch, Web Dev for Beginners, Agent Lightning, Paid Internship List, 250 Company List, and Coding Interview University">
   </picture>
 </div>
+
+<p align="center">
+  <a href="https://github.com/ishanraychaudhuri2025/VITalWatch">VITalWatch</a> ·
+  <a href="https://github.com/ishanraychaudhuri2025/Web-Dev-For-Beginners">Web Dev for Beginners</a> ·
+  <a href="https://github.com/ishanraychaudhuri2025/agent-lightning">Agent Lightning</a><br>
+  <a href="https://github.com/ishanraychaudhuri2025/Paid-Internship-List">Paid Internship List</a> ·
+  <a href="https://github.com/ishanraychaudhuri2025/250CompanyList">250 Company List</a> ·
+  <a href="https://github.com/ishanraychaudhuri2025/coding-interview-university">Coding Interview University</a>
+</p>
