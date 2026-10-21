@@ -2,7 +2,7 @@
   <rect x="1" y="1" width="1178" height="358" rx="14" fill="#F7F7F8" stroke="#D9B8BE" stroke-width="2"/>
   <text x="590" y="25" text-anchor="middle" fill="#C8102E" font-size="13" letter-spacing="1.2">PROJECTS</text>
   <path d="M22 21 H500 M680 21 H1158" stroke="#C8102E" stroke-opacity=".48" stroke-dasharray="2 7"/>
-  <a href="https://github.com/ishanraychaudhuri2025/Tracker" target="_blank">
+  <a href="https://github.com/ishanraychaudhuri2025/Tracker">
     <g>
       <rect x="20" y="44" width="366" height="292" rx="12" fill="#FFFFFF" stroke="#D9B8BE" stroke-width="1.5"/>
       <text x="42" y="78" fill="#62626C" font-size="10">01 / PRODUCTIVITY</text>
@@ -19,7 +19,7 @@
       <text x="42" y="315" fill="#74747E" font-size="11">EXPLORE REPOSITORY ↗</text>
     </g>
   </a>
-  <a href="https://github.com/ishanraychaudhuri2025/OSPC_task" target="_blank">
+  <a href="https://github.com/ishanraychaudhuri2025/OSPC_task">
     <g>
       <rect x="407" y="44" width="366" height="292" rx="12" fill="#FFFFFF" stroke="#D9B8BE" stroke-width="1.5"/>
       <text x="429" y="78" fill="#62626C" font-size="10">02 / WEB EXPERIENCE</text>
@@ -36,7 +36,7 @@
       <text x="429" y="315" fill="#74747E" font-size="11">EXPLORE REPOSITORY ↗</text>
     </g>
   </a>
-  <a href="https://github.com/ishanraychaudhuri2025/UniGig" target="_blank">
+  <a href="https://github.com/ishanraychaudhuri2025/UniGig">
     <g>
       <rect x="794" y="44" width="366" height="292" rx="12" fill="#FFFFFF" stroke="#D9B8BE" stroke-width="1.5"/>
       <text x="816" y="78" fill="#62626C" font-size="10">03 / PLATFORM</text>
