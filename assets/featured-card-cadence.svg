@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="366" height="292" viewBox="0 0 366 292" role="img" aria-label="Cadence project card" font-family="Inter,Segoe UI,Arial,sans-serif">
+  <rect x="1" y="1" width="364" height="290" rx="12" fill="#111116" stroke="#4A0E18" stroke-width="1.5"/>
+  <text x="18" y="28" fill="#A8A8B0" font-size="10" letter-spacing=".2">01 / PRODUCTIVITY</text>
+  <text x="18" y="69" fill="#F5F5F5" font-size="27" font-weight="700">Cadence</text>
+  <text x="18" y="101" fill="#C8102E" font-size="11.5" letter-spacing=".8">FIND YOUR RHYTHM</text>
+  <text x="18" y="145" fill="#B8B8C2" font-size="13">A focused habit and task tracker</text>
+  <text x="18" y="165" fill="#B8B8C2" font-size="13">designed to help build consistency.</text>
+  <rect x="30" y="225" width="78" height="25" rx="12.5" fill="#1B1015" stroke="#63202B"/><text x="69" y="241" fill="#D4AF37" text-anchor="middle" font-size="11">Habits</text><rect x="116" y="225" width="72" height="25" rx="12.5" fill="#1B1015" stroke="#63202B"/><text x="152" y="241" fill="#D4AF37" text-anchor="middle" font-size="11">Focus</text><rect x="196" y="225" width="88" height="25" rx="12.5" fill="#1B1015" stroke="#63202B"/><text x="240" y="241" fill="#D4AF37" text-anchor="middle" font-size="11">Insights</text>
+  <text x="18" y="275" fill="#777780" font-size="10" letter-spacing=".2">EXPLORE REPOSITORY ↗</text>
+</svg>
