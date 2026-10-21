@@ -56,29 +56,14 @@
 </picture>
 </div>
 
-<!-- ===== PROJECTS : CLICKABLE REPOSITORY CARDS ===== -->
-<table>
+<!-- ===== PROJECTS : WHOLE-CARD REPOSITORY LINKS ===== -->
+<table width="100%">
   <tr>
-    <td width="33%" valign="top">
-      <p><sub>01 / PRODUCTIVITY</sub></p>
-      <h3><a href="https://github.com/ishanraychaudhuri2025/Tracker">Cadence ↗</a></h3>
-      <p><sub>FIND YOUR RHYTHM</sub></p>
-      <p>A focused habit and task tracker designed to help build consistency.</p>
-      <p><code>Habits</code> <code>Focus</code> <code>Insights</code></p>
-    </td>
-    <td width="34%" valign="top">
-      <p><sub>02 / WEB EXPERIENCE</sub></p>
-      <h3><a href="https://github.com/ishanraychaudhuri2025/OSPC_task">OSPC Task ↗</a></h3>
-      <p><sub>DESIGN · BUILD · SHIP</sub></p>
-      <p>A polished web project focused on visual detail and user experience.</p>
-      <p><code>Frontend</code> <code>Design</code> <code>Deployment</code></p>
-    </td>
-    <td width="33%" valign="top">
-      <p><sub>03 / PLATFORM</sub></p>
-      <h3><a href="https://github.com/ishanraychaudhuri2025/UniGig">UniGig ↗</a></h3>
-      <p><sub>CONNECT · COLLABORATE</sub></p>
-      <p>A student-focused platform concept for discovering opportunities.</p>
-      <p><code>Community</code> <code>Platform</code> <code>In progress</code></p>
-    </td>
+    <td colspan="3" align="center"><strong>PROJECTS</strong></td>
+  </tr>
+  <tr>
+    <td width="33%" align="center" valign="top"><a href="https://github.com/ishanraychaudhuri2025/Tracker"><img src="./assets/featured-card-cadence.svg?v=20261021-cardlink" width="100%" alt="Cadence — open the Cadence repository"></a></td>
+    <td width="34%" align="center" valign="top"><a href="https://github.com/ishanraychaudhuri2025/OSPC_task"><img src="./assets/featured-card-ospc-task.svg?v=20261021-cardlink" width="100%" alt="OSPC Task — open the OSPC Task repository"></a></td>
+    <td width="33%" align="center" valign="top"><a href="https://github.com/ishanraychaudhuri2025/UniGig"><img src="./assets/featured-card-unigig.svg?v=20261021-cardlink" width="100%" alt="UniGig — open the UniGig repository"></a></td>
   </tr>
 </table>
