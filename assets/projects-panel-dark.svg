@@ -2,7 +2,7 @@
   <rect x="1" y="1" width="1178" height="358" rx="14" fill="#0B0B0F" stroke="#4A0E18" stroke-width="2"/>
   <text x="590" y="25" text-anchor="middle" fill="#C8102E" font-size="13" letter-spacing="1.2">PROJECTS</text>
   <path d="M22 21 H500 M680 21 H1158" stroke="#C8102E" stroke-opacity=".48" stroke-dasharray="2 7"/>
-  <a href="https://github.com/ishanraychaudhuri2025/Cadence" target="_blank">
+  <a href="https://github.com/ishanraychaudhuri2025/Tracker" target="_blank">
     <g>
       <rect x="20" y="44" width="366" height="292" rx="12" fill="#111116" stroke="#4A0E18" stroke-width="1.5"/>
       <rect x="20" y="44" width="366" height="5" rx="2.5" fill="#C8102E"/>
