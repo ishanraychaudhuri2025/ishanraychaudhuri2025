@@ -59,16 +59,9 @@
 <!-- ===== PROJECTS : CLEAN RED FRAME ===== -->
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects-panel-dark.svg?v=20261021-clickfix2">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/projects-panel-light.svg?v=20261021-clickfix2">
-    <img width="100%" src="./assets/projects-panel-dark.svg?v=20261021-clickfix2" alt="Featured projects: Cadence, OSPC Task, and UniGig. Use the repository links below to open each project.">
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/projects-panel-dark.svg?v=20261021-cardlinks">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/projects-panel-light.svg?v=20261021-cardlinks">
+    <img width="100%" src="./assets/projects-panel-dark.svg?v=20261021-cardlinks" alt="Featured projects: Cadence, OSPC Task, and UniGig. Hover over or click a project card to open its repository.">
   </picture>
 </div>
 
-<p align="center">
-  <a href="https://github.com/ishanraychaudhuri2025/Tracker"><strong>Cadence ↗</strong></a>
-  &nbsp; · &nbsp;
-  <a href="https://github.com/ishanraychaudhuri2025/OSPC_task"><strong>OSPC Task ↗</strong></a>
-  &nbsp; · &nbsp;
-  <a href="https://github.com/ishanraychaudhuri2025/UniGig"><strong>UniGig ↗</strong></a>
-</p>
